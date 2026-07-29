@@ -20,12 +20,12 @@
     <div class="flex flex-col justify-between min-h-screen">
         
         <!-- Header -->
-        <header class="h-[60px] px-6 md:px-10 flex justify-between items-center border-b border-[#1f242d]">
+        <header class="h-[60px] px-4 sm:px-6 md:px-10 flex justify-between items-center border-b border-[#1f242d]">
             <div class="flex items-center gap-3">
                 <a href="./hisob3.html" class="text-[#8b93a0] hover:text-white transition-colors text-lg mr-2">
                     &larr;
                 </a>
-                <div class="font-cinzel text-lg font-bold tracking-[1.5px] text-[#dfb954]">
+                <div class="font-cinzel text-base sm:text-lg font-bold tracking-[1.5px] text-[#dfb954]">
                     ZAR INVEST
                 </div>
             </div>
@@ -41,17 +41,17 @@
         </header>
 
         <!-- Main Content -->
-        <main class="flex flex-col md:flex-row flex-1">
+        <main class="flex flex-col lg:flex-row flex-1">
             
             <!-- Left Panel: Form & Payment Selection -->
-            <section class="flex-1 flex justify-center items-center p-6 md:p-10 border-b md:border-b-0 md:border-r border-[#1f242d]">
-                <div class="max-w-[440px] w-full py-4">
+            <section class="flex-1 flex justify-center items-center p-5 sm:p-8 md:p-10 border-b lg:border-b-0 lg:border-r border-[#1f242d]">
+                <div class="max-w-[440px] w-full py-2 sm:py-4">
                     
-                    <h1 class="font-cinzel text-3xl md:text-4xl font-normal leading-tight mb-8 text-white">
+                    <h1 class="font-cinzel text-2xl sm:text-3xl md:text-4xl font-normal leading-tight mb-6 sm:mb-8 text-white">
                         Hisob ochish
                     </h1>
 
-                    <form id="payment-form" action="./hisob5.html" method="GET" class="flex flex-col gap-6">
+                    <form id="payment-form" action="./hisob5.html" method="GET" class="flex flex-col gap-5 sm:gap-6">
                         
                         <!-- TO'LOV USULINI TANLANING -->
                         <div>
@@ -109,7 +109,7 @@
                                                 </svg>
                                             </div>
                                             <div>
-                                                <div class="flex items-center gap-2">
+                                                <div class="flex items-center gap-2 flex-wrap">
                                                     <span class="font-semibold text-sm text-white">SWIFT / Xalqaro</span>
                                                     <span class="text-[9px] bg-[#26d07c]/10 text-[#26d07c] border border-[#26d07c]/20 px-1.5 py-0.5 rounded font-mono uppercase tracking-wider">FAOL</span>
                                                 </div>
@@ -142,7 +142,7 @@
                             </p>
                         </div>
 
-                        <!-- Submit Button (To'g'rilangan tugma) -->
+                        <!-- Submit Button -->
                         <div>
                             <button 
                                 type="submit" 
@@ -161,8 +161,8 @@
             </section>
 
             <!-- Right Panel: Certificate & Summary -->
-            <section class="flex-1 flex justify-center items-center p-6 md:p-10 bg-[#090b0e]">
-                <div class="max-w-[420px] w-full flex flex-col gap-6">
+            <section class="flex-1 flex justify-center items-center p-5 sm:p-8 md:p-10 bg-[#090b0e] lg:min-h-full">
+                <div class="max-w-[420px] w-full flex flex-col gap-6 pb-8 lg:pb-0">
                     
                     <!-- SERTIFIKAT PREVYU -->
                     <div>
@@ -170,13 +170,13 @@
                             SERTIFIKAT PREVYU
                         </div>
 
-                        <div class="w-full border border-[#1f242d] rounded-xl p-6 bg-[#0c0e12] relative overflow-hidden">
+                        <div class="w-full border border-[#1f242d] rounded-xl p-5 sm:p-6 bg-[#0c0e12] relative overflow-hidden">
                             <div class="absolute -right-6 -bottom-6 w-36 h-36 border border-[#dfb954]/5 rounded-full pointer-events-none"></div>
 
                             <div class="flex justify-between items-start mb-6">
                                 <div>
                                     <div class="text-[9px] tracking-[1.5px] text-[#8b93a0] font-semibold uppercase">O'ZBEKISTON RESPUBLIKASI</div>
-                                    <div class="font-cinzel text-xl text-white font-normal mt-1">Ulush Sertifikati</div>
+                                    <div class="font-cinzel text-lg sm:text-xl text-white font-normal mt-1">Ulush Sertifikati</div>
                                 </div>
                                 <div class="w-8 h-8 rounded border border-[#dfb954]/30 bg-[#dfb954]/10 flex items-center justify-center text-[#dfb954]">
                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -194,7 +194,7 @@
                             <div class="flex justify-between items-end border-t border-[#1f242d] pt-4">
                                 <div>
                                     <div class="text-[9px] text-[#8b93a0] uppercase tracking-wider mb-0.5">NOMINAL QIYMATI</div>
-                                    <div class="text-base font-semibold text-[#dfb954] font-mono">
+                                    <div class="text-sm sm:text-base font-semibold text-[#dfb954] font-mono">
                                         25 000 000 <span class="text-xs font-sans text-white">UZS</span>
                                     </div>
                                 </div>

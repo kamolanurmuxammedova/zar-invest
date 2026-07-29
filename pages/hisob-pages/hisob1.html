@@ -29,37 +29,37 @@
     <div class="flex flex-col justify-between min-h-screen">
       <!-- Header -->
       <header
-        class="h-[70px] px-6 md:px-10 flex justify-between items-center border-b border-[#242933]"
+        class="h-[70px] px-4 sm:px-6 md:px-10 flex justify-between items-center border-b border-[#242933]"
       >
         <div
-          class="font-cinzel text-lg font-bold tracking-[1.5px] text-[#dfb954] relative py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-60 after:h-[2px] after:bg-[#dfb954]"
+          class="font-cinzel text-base sm:text-lg font-bold tracking-[1.5px] text-[#dfb954] relative py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-36 sm:after:w-60 after:h-[2px] after:bg-[#dfb954]"
         >
           ZAR INVEST
         </div>
-        <div class="text-[#8b93a0] text-sm font-medium tracking-widest">
+        <div class="text-[#8b93a0] text-xs sm:text-sm font-medium tracking-widest">
           1 / 4
         </div>
       </header>
 
       <!-- Main Content -->
-      <main class="flex flex-col md:flex-row flex-1">
+      <main class="flex flex-col lg:flex-row flex-1">
         <!-- Left Panel (Form) -->
         <section
-          class="flex-1 flex justify-center items-center p-6 md:p-10 border-b md:border-b-0 md:border-r border-[#242933]"
+          class="flex-1 flex justify-center items-center p-5 sm:p-8 md:p-10 border-b lg:border-b-0 lg:border-r border-[#242933]"
         >
           <div class="max-w-[380px] w-full">
             <h1
-              class="font-cinzel text-3xl md:text-4xl font-normal leading-tight mb-3 text-[#f1f3f5]"
+              class="font-cinzel text-2xl sm:text-3xl md:text-4xl font-normal leading-tight mb-3 text-[#f1f3f5]"
             >
               Telefon raqamini<br />tasdiqlash
             </h1>
-            <p class="text-[#8b93a0] text-sm mb-8">
+            <p class="text-[#8b93a0] text-xs sm:text-sm mb-6 sm:mb-8">
               Xavfsizlik uchun raqamingizni tasdiqlang.
             </p>
 
             <form
               id="phone-form"
-              class="flex flex-col gap-4 mb-10"
+              class="flex flex-col gap-4 mb-8 sm:mb-10"
             >
               <label
                 for="phone"
@@ -75,18 +75,18 @@
                   value="+998 90 123 45 67"
                   placeholder="+998 90 123 45 67"
                   required
-                  class="w-full h-[50px] bg-[#1a1e26] border border-transparent focus:border-[#dfb954] rounded px-4 text-white text-base font-medium tracking-wide outline-none transition-colors duration-200"
+                  class="w-full h-[48px] sm:h-[50px] bg-[#1a1e26] border border-transparent focus:border-[#dfb954] rounded px-4 text-white text-sm sm:text-base font-medium tracking-wide outline-none transition-colors duration-200"
                 />
               </div>
               <button
                 type="submit"
-                class="w-full h-[50px] bg-[#dfb954] hover:bg-[#cb9f3f] text-[#101216] font-semibold text-base rounded flex items-center justify-center gap-2 cursor-pointer transition-colors duration-200"
+                class="w-full h-[48px] sm:h-[50px] bg-[#dfb954] hover:bg-[#cb9f3f] text-[#101216] font-semibold text-sm sm:text-base rounded flex items-center justify-center gap-2 cursor-pointer transition-colors duration-200"
               >
                 Keyingisi <span>&rarr;</span>
               </button>
             </form>
 
-            <div class="border-t border-[#242933] pt-6">
+            <div class="border-t border-[#242933] pt-5 sm:pt-6">
               <p class="text-xs leading-relaxed text-[#8b93a0]">
                 <strong class="text-[#dfb954]">ZAR INVEST</strong> – bu Shariat
                 tamoyillariga asoslangan ishonchli investitsiya ekotizimi.
@@ -98,20 +98,20 @@
 
         <!-- Right Panel (Preview Card) -->
         <section
-          class="flex-1 flex justify-center items-center p-6 md:p-10 bg-[#0d0e12]"
+          class="flex-1 flex justify-center items-center p-5 sm:p-8 md:p-10 bg-[#0d0e12]"
         >
           <div class="flex flex-col items-center max-w-[420px] w-full">
             <div
-              class="w-full h-[250px] border border-[#242933] rounded-lg p-6 flex flex-col justify-between bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#151922] to-[#0d0e12]"
+              class="w-full h-[230px] sm:h-[250px] border border-[#242933] rounded-lg p-5 sm:p-6 flex flex-col justify-between bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#151922] to-[#0d0e12]"
             >
               <div>
                 <div
-                  class="flex justify-between text-[10px] tracking-[1.2px] text-[#8b93a0]"
+                  class="flex justify-between text-[9px] sm:text-[10px] tracking-[1.2px] text-[#8b93a0]"
                 >
                   <span>O'ZBEKISTON RESPUBLIKASI</span>
                   <span>REYESTh IP</span>
                 </div>
-                <div class="font-cinzel text-[#dfb954] text-lg mt-2">
+                <div class="font-cinzel text-[#dfb954] text-base sm:text-lg mt-2">
                   Ulush Sertifikati
                 </div>
                 <div class="text-[#242933] text-xs tracking-[2px]">
@@ -122,11 +122,12 @@
               <!-- Lock Icon Wrapper -->
               <div class="flex justify-center items-center my-auto">
                 <div
-                  class="w-[60px] h-[60px] rounded-xl border border-[#dfb954]/20 bg-[#dfb954]/5 flex justify-center items-center"
+                  class="w-[50px] h-[50px] sm:w-[60px] sm:h-[60px] rounded-xl border border-[#dfb954]/20 bg-[#dfb954]/5 flex justify-center items-center"
                 >
                   <svg
-                    width="32"
-                    height="32"
+                    width="28"
+                    height="28"
+                    class="sm:w-[32px] sm:h-[32px]"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="#e6c253"
@@ -157,7 +158,7 @@
             </div>
 
             <p
-              class="text-[10px] tracking-[1.5px] text-[#8b93a0] mt-6 text-center"
+              class="text-[9px] sm:text-[10px] tracking-[1.5px] text-[#8b93a0] mt-5 sm:mt-6 text-center"
             >
               AKKREDITATSIYADAN O'TGANDAN SO'NG SERTIFIKAT FAOL BO'LADI
             </p>
@@ -167,10 +168,10 @@
 
       <!-- Footer -->
       <footer
-        class="h-[60px] px-6 md:px-10 flex flex-col sm:flex-row justify-between items-center border-t border-[#242933] text-xs text-[#8b93a0] gap-2 sm:gap-0 py-4 sm:py-0"
+        class="min-h-[60px] px-4 sm:px-6 md:px-10 flex flex-col sm:flex-row justify-between items-center border-t border-[#242933] text-xs text-[#8b93a0] gap-3 sm:gap-0 py-4"
       >
         <div>© 2024 ZAR INVEST. Barcha huquqlar himoyalangan.</div>
-        <div class="flex gap-5">
+        <div class="flex gap-4 sm:gap-5">
           <a href="#" class="hover:text-white transition-colors duration-200">Yordam</a>
           <a href="#" class="hover:text-white transition-colors duration-200">Maxfiylik</a>
           <a href="#" class="hover:text-white transition-colors duration-200">Litsenziya</a>
