@@ -275,9 +275,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const authContainer = document.getElementById('auth-container');
     const savedAvatar = localStorage.getItem('user_avatar');
-    const savedName = localStorage.getItem('user_firstname');
+    const savedFirstname = localStorage.getItem('user_firstname') || '';
+    const savedLastname = localStorage.getItem('user_lastname') || '';
 
-    if (authContainer && (savedAvatar || savedName)) {
+    if (authContainer && (savedAvatar || savedFirstname || savedLastname)) {
         const isInsideHisobPages = window.location.pathname.includes('/pages/hisob-pages/');
 
         const profilePath = isInsideHisobPages 
@@ -289,10 +290,12 @@ document.addEventListener('DOMContentLoaded', () => {
             : './images/default-avatar.png';
 
         const userImg = savedAvatar || defaultImage;
+        const fullName = `${savedFirstname} ${savedLastname}`.trim();
 
         authContainer.innerHTML = `
             <a href="${profilePath}" class="flex items-center gap-3 group">
-                <div class="w-10 h-10 rounded-full border-2 border-[#ECC246] overflow-hidden group-hover:border-white transition-colors cursor-pointer">
+                <span class="text-white text-sm font-medium group-hover:text-[#ECC246] transition-colors">${fullName}</span>
+                <div class="w-10 h-10 rounded-full border-2 border-[#ECC246] overflow-hidden group-hover:border-white transition-colors cursor-pointer shrink-0">
                     <img src="${userImg}" alt="User Avatar" class="w-full h-full object-cover" />
                 </div>
             </a>
