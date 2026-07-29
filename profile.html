@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <title>Zar Invest - Profil</title>
+  </head>
+  <body class="bg-[#0D0E12] text-[#D1C5AF] font-sans antialiased min-h-screen flex">
+
+    <!-- SIDEBAR -->
+    <aside class="w-[280px] bg-[#090A0D] border-r border-[#2A2F3A] p-6 flex flex-col justify-between min-h-screen shrink-0">
+      <div>
+        <div class="mb-8 border-b border-[#2A2F3A] pb-6">
+          <h2 id="sidebar-user-name" class="text-xl font-bold text-white tracking-wide">Foydalanuvchi</h2>
+          <p class="text-xs text-[#ECC246] font-medium mt-1">Investor / Premium xaridor</p>
+        </div>
+
+        <!-- Menyu (Tugmalar) -->
+        <nav class="space-y-2" id="sidebar-nav">
+          <button data-target="asosiy" class="nav-btn w-full flex items-center gap-3 px-4 py-3 rounded-xl bg-[#221E14] text-[#ECC246] border border-[#ECC246]/20 font-medium transition-all cursor-pointer">
+            <i class="fa-solid fa-house w-5 text-center"></i>
+            <span>Asosiy</span>
+          </button>
+
+          <button data-target="buyurtmalar" class="nav-btn w-full flex items-center gap-3 px-4 py-3 rounded-xl text-[#99A0AC] border border-transparent hover:bg-[#14171F] hover:text-white hover:border-[#ECC246]/30 transition-all cursor-pointer">
+            <i class="fa-solid fa-box-archive w-5 text-center"></i>
+            <span>Buyurtmalar (Savat)</span>
+          </button>
+
+          <button data-target="saqlanganlar" class="nav-btn w-full flex items-center gap-3 px-4 py-3 rounded-xl text-[#99A0AC] border border-transparent hover:bg-[#14171F] hover:text-white hover:border-[#ECC246]/30 transition-all cursor-pointer">
+            <i class="fa-regular fa-heart w-5 text-center"></i>
+            <span>Saqlanganlar</span>
+          </button>
+
+          <button data-target="xabarlar" class="nav-btn w-full flex items-center gap-3 px-4 py-3 rounded-xl text-[#99A0AC] border border-transparent hover:bg-[#14171F] hover:text-white hover:border-[#ECC246]/30 transition-all cursor-pointer">
+            <i class="fa-regular fa-bell w-5 text-center"></i>
+            <span>Xabarlar</span>
+          </button>
+
+          <button data-target="sozlamalar" class="nav-btn w-full flex items-center gap-3 px-4 py-3 rounded-xl text-[#99A0AC] border border-transparent hover:bg-[#14171F] hover:text-white hover:border-[#ECC246]/30 transition-all cursor-pointer">
+            <i class="fa-solid fa-gear w-5 text-center"></i>
+            <span>Sozlamalar</span>
+          </button>
+        </nav>
+      </div>
+
+      <!-- Chiqish tugmasi -->
+      <button id="logout-btn" class="w-full flex items-center justify-center gap-2 py-3 rounded-xl border border-[#2A2F3A] text-[#99A0AC] hover:bg-[#2A2F3A]/30 hover:text-white transition-all cursor-pointer">
+        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+        <span>Chiqish</span>
+      </button>
+    </aside>
+
+    <!-- ASOSIY QISM -->
+    <main class="flex-1 p-8 sm:p-12 overflow-y-auto">
+      
+      <!-- 1. ASOSIY (PROFIL) TAB -->
+      <div id="tab-asosiy" class="tab-content block">
+        <div class="flex items-center justify-between mb-8">
+          <h1 class="text-2xl font-bold text-white tracking-wide">Foydalanuvchi ma'lumotlari</h1>
+          <div class="flex items-center gap-3">
+            <a href="./pages/hisob-pages/hisob5.html" class="flex items-center gap-2 px-4 py-2 bg-[#14171F] border border-[#2A2F3A] hover:border-[#ECC246] rounded-lg text-[#ECC246] hover:bg-[#ECC246]/10 transition-all text-sm font-medium">
+              <i class="fa-regular fa-pen-to-square"></i>
+              <span>Tahrirlash</span>
+            </a>
+            <button id="delete-account-btn" class="flex items-center gap-2 px-4 py-2 bg-[#1C1213] border border-[#421B1D] rounded-lg text-red-400 hover:bg-red-950/60 hover:border-red-500 transition-all text-sm font-medium cursor-pointer">
+              <i class="fa-regular fa-trash-can"></i>
+              <span>Hisobni o'chirish</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="space-y-6">
+          <!-- MAIN PROFILE CARD -->
+          <div class="bg-[#12141A] border border-[#2A2F3A] hover:border-[#ECC246]/50 rounded-2xl p-6 flex flex-wrap lg:flex-nowrap items-center gap-6 shadow-xl transition-all duration-300">
+            <div class="w-28 h-28 rounded-2xl border-2 border-[#ECC246] overflow-hidden shrink-0 bg-[#090A0D] hover:scale-105 transition-transform duration-300">
+              <img id="profile-page-avatar" src="./images/default-avatar.png" alt="User Avatar" class="w-full h-full object-cover" />
+            </div>
+            <div class="flex-1 min-w-[200px] bg-[#0D0E12] border border-[#2A2F3A] hover:border-[#ECC246]/40 hover:bg-[#151821] p-4 rounded-xl transition-all duration-300">
+              <p class="text-[11px] text-[#5C6470] font-semibold tracking-wider uppercase mb-1">ISM VA FAMILIYA</p>
+              <h3 id="profile-page-name" class="text-lg font-semibold text-white">Kiritilmagan</h3>
+            </div>
+            <div class="flex-1 min-w-[200px] bg-[#0D0E12] border border-[#2A2F3A] hover:border-[#ECC246]/40 hover:bg-[#151821] p-4 rounded-xl transition-all duration-300">
+              <p class="text-[11px] text-[#5C6470] font-semibold tracking-wider uppercase mb-1">TELEFON RAQAM</p>
+              <p id="profile-phone" class="text-lg font-semibold text-white">+998 -- --- -- --</p>
+            </div>
+            <button id="back-btn" class="flex items-center justify-center gap-2 px-6 py-4 bg-[#ECC246] hover:bg-[#d8ae3a] hover:scale-105 text-[#0D0E12] font-semibold rounded-xl transition-all duration-300 shrink-0 w-full sm:w-auto cursor-pointer shadow-lg shadow-[#ECC246]/10">
+              <i class="fa-solid fa-arrow-left"></i>
+              <span>Ortga qaytish</span>
+            </button>
+          </div>
+
+          <!-- ADDITIONAL DETAILS GRID -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-[#12141A] border border-[#2A2F3A] hover:border-[#ECC246]/50 hover:bg-[#181B22] hover:-translate-y-1 p-5 rounded-2xl transition-all duration-300 cursor-default shadow-lg">
+              <p class="text-[11px] text-[#5C6470] font-semibold tracking-wider uppercase mb-1">YOSHI</p>
+              <p id="profile-age" class="text-base font-medium text-white">Kiritilmagan</p>
+            </div>
+            <div class="bg-[#12141A] border border-[#2A2F3A] hover:border-[#ECC246]/50 hover:bg-[#181B22] hover:-translate-y-1 p-5 rounded-2xl transition-all duration-300 cursor-default shadow-lg">
+              <p class="text-[11px] text-[#5C6470] font-semibold tracking-wider uppercase mb-1">JINSI</p>
+              <p id="profile-gender" class="text-base font-medium text-white">Kiritilmagan</p>
+            </div>
+            <div class="bg-[#12141A] border border-[#2A2F3A] hover:border-[#ECC246]/50 hover:bg-[#181B22] hover:-translate-y-1 p-5 rounded-2xl transition-all duration-300 cursor-default shadow-lg">
+              <p class="text-[11px] text-[#5C6470] font-semibold tracking-wider uppercase mb-1">INVESTITSIYA MAQSADI</p>
+              <p id="profile-goal" class="text-base font-medium text-[#ECC246]">Kiritilmagan</p>
+            </div>
+            <div class="bg-[#12141A] border border-[#2A2F3A] hover:border-[#ECC246]/50 hover:bg-[#181B22] hover:-translate-y-1 p-5 rounded-2xl transition-all duration-300 cursor-default shadow-lg">
+              <p class="text-[11px] text-[#5C6470] font-semibold tracking-wider uppercase mb-1">INVESTITSIYA MUDDATI</p>
+              <p id="profile-term" class="text-base font-medium text-white">Kiritilmagan</p>
+            </div>
+            <div class="bg-[#12141A] border border-[#2A2F3A] hover:border-[#ECC246]/50 hover:bg-[#181B22] hover:-translate-y-1 p-5 rounded-2xl transition-all duration-300 cursor-default shadow-lg">
+              <p class="text-[11px] text-[#5C6470] font-semibold tracking-wider uppercase mb-1">XAVF DARAJASI</p>
+              <p id="profile-risk" class="text-base font-medium text-white">Kiritilmagan</p>
+            </div>
+            <div class="bg-[#12141A] border border-[#2A2F3A] hover:border-[#ECC246]/50 hover:bg-[#181B22] hover:-translate-y-1 p-5 rounded-2xl transition-all duration-300 cursor-default shadow-lg">
+              <p class="text-[11px] text-[#5C6470] font-semibold tracking-wider uppercase mb-1">TO'LOV USULI</p>
+              <p id="profile-payment" class="text-base font-medium text-white">Kiritilmagan</p>
+            </div>
+            <div class="bg-[#12141A] border border-[#2A2F3A] hover:border-[#ECC246]/50 hover:bg-[#181B22] hover:-translate-y-1 p-5 rounded-2xl md:col-span-2 lg:col-span-3 transition-all duration-300 cursor-default shadow-lg">
+              <p class="text-[11px] text-[#5C6470] font-semibold tracking-wider uppercase mb-1">YUKLANGAN HUJJAT</p>
+              <p id="profile-doc" class="text-base font-medium text-emerald-400">Yuklanmagan</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. BUYURTMALAR TAB -->
+      <div id="tab-buyurtmalar" class="tab-content hidden animate-fade-in">
+        <h1 class="text-2xl font-bold text-white tracking-wide mb-8">Buyurtmalar (Savat)</h1>
+        <div class="bg-[#12141A] border border-[#2A2F3A] p-10 rounded-2xl text-center">
+            <i class="fa-solid fa-box-open text-4xl text-[#2A2F3A] mb-4"></i>
+            <p class="text-[#99A0AC]">Hozircha buyurtmalar ro'yxati bo'sh.</p>
+        </div>
+      </div>
+
+      <!-- 3. SAQLANGANLAR TAB -->
+      <div id="tab-saqlanganlar" class="tab-content hidden animate-fade-in">
+        <h1 class="text-2xl font-bold text-white tracking-wide mb-8">Saqlanganlar</h1>
+        <div class="bg-[#12141A] border border-[#2A2F3A] p-10 rounded-2xl text-center">
+            <i class="fa-regular fa-heart text-4xl text-[#2A2F3A] mb-4"></i>
+            <p class="text-[#99A0AC]">Sizda saqlangan loyihalar yo'q.</p>
+        </div>
+      </div>
+
+      <!-- 4. XABARLAR TAB -->
+      <div id="tab-xabarlar" class="tab-content hidden animate-fade-in">
+        <h1 class="text-2xl font-bold text-white tracking-wide mb-8">Xabarlar</h1>
+        <div class="bg-[#12141A] border border-[#2A2F3A] p-10 rounded-2xl text-center">
+            <i class="fa-regular fa-bell text-4xl text-[#2A2F3A] mb-4"></i>
+            <p class="text-[#99A0AC]">Yangi xabarlar yo'q.</p>
+        </div>
+      </div>
+
+      <!-- 5. SOZLAMALAR TAB -->
+      <div id="tab-sozlamalar" class="tab-content hidden animate-fade-in">
+        <h1 class="text-2xl font-bold text-white tracking-wide mb-8">Sozlamalar</h1>
+        <div class="bg-[#12141A] border border-[#2A2F3A] p-10 rounded-2xl text-center">
+            <i class="fa-solid fa-gear text-4xl text-[#2A2F3A] mb-4"></i>
+            <p class="text-[#99A0AC]">Tizim sozlamalari ushbu bo'limda joylashadi.</p>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- Kichik animatsiya classi (ixtiyoriy, chiroyli ochilishi uchun) -->
+    <style>
+      .animate-fade-in {
+        animation: fadeIn 0.3s ease-in-out;
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(5px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+    </style>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
