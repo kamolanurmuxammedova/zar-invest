@@ -1,177 +1,155 @@
-[04.08.2026 14:39] --JARAS--: <!DOCTYPE html>
+<!doctype html>
 <html lang="uz">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hisob ochish — 2/4 — ZAR INVEST</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hisob ochish — 2/5 — ZAR INVEST</title>
+
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <style type="text/css">
-        body { font-family: 'Inter', sans-serif; }
-        .font-cinzel { font-family: 'Cinzel', serif; }
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <style>
+      body { font-family: "Inter", sans-serif; }
+      .font-cinzel { font-family: "Cinzel", serif; }
+      ::selection { background: #ECC246; color: #0D0E12; }
     </style>
-</head>
-<body class="bg-[#101216] text-white min-h-screen">
+  </head>
+  <body data-page="hisob" class="bg-[#0D0E12] text-white min-h-screen">
+    <site-loader></site-loader>
 
     <div class="flex flex-col justify-between min-h-screen">
-        
-        <!-- Header -->
-        <header class="h-[70px] px-4 sm:px-6 md:px-10 flex justify-between items-center border-b border-[#242933]">
-            <div class="font-cinzel text-base sm:text-lg font-bold tracking-[1.5px] text-[#dfb954]">
-                ZAR INVEST
+      <header class="h-[70px] px-4 sm:px-6 md:px-10 flex justify-between items-center border-b border-[#2A2F3A]">
+        <a href="../../index.html" class="font-cinzel text-base sm:text-lg font-bold tracking-[1.5px] text-[#ECC246]">ZAR INVEST</a>
+        <div class="flex items-center gap-4 sm:gap-6">
+          <div class="flex items-center gap-2 sm:gap-3 text-xs tracking-wider">
+            <span class="text-[#99A0AC] hidden sm:inline">QADAM</span>
+            <span class="text-white font-semibold">2 / 5</span>
+            <div class="w-16 sm:w-24 h-1 bg-[#2A2F3A] rounded-full overflow-hidden ml-1 sm:ml-2">
+              <div class="h-full bg-[#ECC246] transition-all duration-500" style="width:40%"></div>
             </div>
-            
-            <div class="flex items-center gap-4 sm:gap-6">
-                <div class="flex items-center gap-2 sm:gap-3 text-xs tracking-wider">
-                    <span class="text-[#8b93a0] hidden sm:inline">QADAM</span>
-                    <span class="text-white font-semibold">2 / 4</span>
-                    <div class="w-16 sm:w-24 h-1 bg-[#242933] rounded-full overflow-hidden ml-1 sm:ml-2">
-                        <div class="w-1/2 h-full bg-[#dfb954]"></div>
-                    </div>
-                </div>
-                <a href="./hisob.html" class="text-xs text-[#8b93a0] hover:text-white flex items-center gap-1">
-                    <span>✕</span> <span class="hidden sm:inline">Chiqish</span>
-                </a>
+          </div>
+          <a href="../../index.html" class="text-xs text-[#99A0AC] hover:text-white flex items-center gap-1"><span>✕</span> <span class="hidden sm:inline">Chiqish</span></a>
+        </div>
+      </header>
+
+      <main class="flex flex-col lg:flex-row flex-1">
+        <section class="flex-1 flex justify-center items-center p-5 sm:p-8 md:p-10 border-b lg:border-b-0 lg:border-r border-[#2A2F3A]">
+          <div data-animate="fade-up" class="max-w-[400px] w-full py-2 sm:py-4">
+            <h1 class="font-cinzel text-xl sm:text-2xl text-[#ECC246] font-normal mb-2">Shaxsni tasdiqlash</h1>
+            <p class="text-[#99A0AC] text-xs leading-relaxed mb-6">
+              Qonun talabi: investor shaxsi tasdiqlanishi shart. Bu sizning sarmoyalaringiz xavfsizligini ta'minlaydi.
+            </p>
+
+            <div class="text-[10px] tracking-[1.5px] text-[#99A0AC] font-semibold uppercase mb-2">ID-KARTA YOKI PASSPORT</div>
+
+            <div id="upload-box" class="w-full h-40 sm:h-44 border border-dashed border-[#ECC246]/50 rounded-lg bg-[#15171C] flex flex-col justify-center items-center p-4 cursor-pointer hover:border-[#ECC246] transition-colors mb-4">
+              <input type="file" id="file-input" aria-label="Hujjat rasmini yuklash" class="hidden" accept="image/*" />
+              <div class="text-[#ECC246] mb-2">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                  <circle cx="12" cy="13" r="4"></circle>
+                  <path d="M12 9v8m-4-4h8" stroke-linecap="round"></path>
+                </svg>
+              </div>
+              <p id="upload-text" class="text-xs text-[#99A0AC] text-center">Hujjatning old tomonini ramka ichiga joylashtiring</p>
             </div>
-        </header>
 
-        <!-- Main Content -->
-        <main class="flex flex-col lg:flex-row flex-1">
-            
-            <!-- Left Panel -->
-            <section class="flex-1 flex justify-center items-center p-5 sm:p-8 md:p-10 border-b lg:border-b-0 lg:border-r border-[#242933]">
-                <div class="max-w-[400px] w-full py-2 sm:py-4">
-                    
-                    <h1 class="font-cinzel text-xl sm:text-2xl text-[#dfb954] font-normal mb-2">
-                        Shaxsni tasdiqlash
-                    </h1>
-                    <p class="text-[#8b93a0] text-xs leading-relaxed mb-6">
-                        Qonun talabi: investor shaxsi tasdiqlanishi shart. Bu sizning sarmoyalaringiz xavfsizligini ta'minlaydi.
-                    </p>
-
-                    <div class="text-[10px] tracking-[1.5px] text-[#8b93a0] font-semibold uppercase mb-2">
-                        ID-KARTA YOKI PASSPORT
-                    </div>
-
-                    <!-- Upload Box -->
-                    <div id="upload-box" class="w-full h-40 sm:h-44 border border-dashed border-[#dfb954]/50 rounded-lg bg-[#14171d] flex flex-col justify-center items-center p-4 cursor-pointer hover:border-[#dfb954] transition-colors mb-4">
-                        <input type="file" id="file-input" class="hidden" accept="image/*">
-                        <div class="text-[#dfb954] mb-2">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
-                                <circle cx="12" cy="13" r="4"></circle>
-                                <path d="M12 9v8m-4-4h8" stroke-linecap="round"></path>
-                            </svg>
-                        </div>
-                        <p id="upload-text" class="text-xs text-[#8b93a0] text-center">
-                            Hujjatning old tomonini ramka ichiga joylashtiring
-                        </p>
-                    </div>
-[04.08.2026 14:39] --JARAS--: <!-- Example Thumbnails -->
-                    <div class="grid grid-cols-2 gap-3 mb-6">
-                        <div class="flex flex-col items-center">
-                            <div class="w-full h-18 sm:h-20 bg-[#14171d] border border-red-500/30 rounded flex items-center justify-center relative">
-                                <span class="absolute top-1 right-1 text-red-500 text-xs">✕</span>
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6b7280" stroke-width="1.5">
-                                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
-                                    <line x1="1" y1="1" x2="23" y2="23" stroke="#ef4444" stroke-width="1.5"></line>
-                                </svg>
-                            </div>
-                            <span class="text-[11px] text-[#8b93a0] mt-1.5 font-mono">Xira yoki soya</span>
-                        </div>
-                        
-                        <div class="flex flex-col items-center">
-                            <div class="w-full h-18 sm:h-20 bg-[#14171d] border border-[#26d07c]/50 rounded flex items-center justify-center relative">
-                                <span class="absolute top-1 right-1 text-[#26d07c] text-xs">✓</span>
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#26d07c" stroke-width="1.5">
-                                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
-                                    <circle cx="12" cy="13" r="3"></circle>
-                                </svg>
-                            </div>
-                            <span class="text-[11px] text-[#26d07c] mt-1.5 font-mono">Tiniq va yorug'</span>
-                        </div>
-                    </div>
-
-                    <!-- Buttons -->
-                    <button id="next-btn" type="button" class="w-full h-11 bg-[#dfb954] hover:bg-[#cb9f3f] text-[#101216] font-semibold text-xs rounded uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer transition-colors mb-3">
-                        DAVOM ETISH <span>&rarr;</span>
-                    </button>
-                    <button id="reselect-btn" type="button" class="w-full h-11 border border-[#242933] hover:border-[#8b93a0] text-xs font-semibold text-[#8b93a0] hover:text-white rounded uppercase tracking-wider cursor-pointer transition-colors">
-                        BOSHQA HUJJATNI TANLASH
-                    </button>
-
+            <div class="grid grid-cols-2 gap-3 mb-6">
+              <div class="flex flex-col items-center">
+                <div class="w-full h-18 sm:h-20 bg-[#15171C] border border-red-500/30 rounded flex items-center justify-center relative">
+                  <span class="absolute top-1 right-1 text-red-500 text-xs">✕</span>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6b7280" stroke-width="1.5">
+                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                    <line x1="1" y1="1" x2="23" y2="23" stroke="#ef4444" stroke-width="1.5"></line>
+                  </svg>
                 </div>
-            </section>
-[04.08.2026 14:39] --JARAS--: <!-- Right Panel -->
-            <section class="flex-1 flex justify-center items-center p-5 sm:p-8 md:p-10 bg-[#0d0e12]">
-                <div class="flex flex-col items-center max-w-[420px] w-full">
-                    
-                    <div class="w-full h-[230px] sm:h-[250px] border border-[#242933] rounded-lg p-4 sm:p-5 flex flex-col justify-between bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#151922] to-[#0d0e12] relative overflow-hidden">
-                        
-                        <div class="flex justify-between items-start">
-                            <div>
-                                <div class="text-[9px] tracking-[1px] text-[#8b93a0]">O'ZBEKISTON RESPUBLIKASI</div>
-                                <div class="font-cinzel text-[#dfb954] text-sm sm:text-base font-semibold mt-1">ULUSH SERTIFIKATI</div>
-                            </div>
-                            <div class="flex flex-col items-end">
-                                <div class="text-[9px] tracking-[1px] text-[#8b93a0]">REYESTh IP</div>
-                                <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-[#dfb954]/30 flex items-center justify-center mt-1 text-[7px] text-[#dfb954] text-center leading-tight">
-                                    SHARIAT<br>SEAL
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="my-auto">
-                            <div class="text-[9px] text-[#8b93a0] tracking-wider mb-1">INVESTOR F.I.SH.</div>
-                            <div id="status-badge" class="inline-block bg-[#242118] text-[#dfb954] text-xs font-mono px-3 py-1 rounded border border-[#dfb954]/30 tracking-widest transition-colors">
-                                KUTILMOQDA...
-                            </div>
-                        </div>
-
-                        <div class="border-t border-[#242933] pt-3 flex justify-between items-end">
-                            <div>
-                                <div class="text-[8px] text-[#8b93a0]">SERTIFIKAT RAQAMI</div>
-                                <div class="text-xs font-mono text-white tracking-wider mt-0.5">UZ-7782-9901-PRE</div>
-                            </div>
-                            <div class="flex items-center gap-1 bg-[#1a1e26] px-2 py-0.5 rounded border border-[#242933]">
-                                <span class="w-1.5 h-1.5 rounded-full bg-red-500"></span>
-                                <span class="text-[8px] text-[#8b93a0] uppercase">TASDIQLANMAGAN</span>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="flex items-center gap-3 mt-5 sm:mt-6 text-[#8b93a0]">
-                        <div class="w-7 h-7 rounded bg-[#14171d] border border-[#242933] flex items-center justify-center shrink-0 text-[#dfb954]">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="3" y="3" width="18" height="18" rx="2"></rect>
-                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
-                                <polyline points="21 15 16 10 5 21"></polyline>
-                            </svg>
-                        </div>
-                        <p class="text-[11px] leading-tight">
-                            Hujjat rasmini yuklang va sertifikat o'z egasini tanib oladi.
-                        </p>
-                    </div>
-
+                <span class="text-[11px] text-[#99A0AC] mt-1.5 font-mono">Xira yoki soya</span>
+              </div>
+              <div class="flex flex-col items-center">
+                <div class="w-full h-18 sm:h-20 bg-[#15171C] border border-[#26d07c]/50 rounded flex items-center justify-center relative">
+                  <span class="absolute top-1 right-1 text-[#26d07c] text-xs">✓</span>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#26d07c" stroke-width="1.5">
+                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                    <circle cx="12" cy="13" r="3"></circle>
+                  </svg>
                 </div>
-            </section>
-        </main>
- <!-- Footer -->
-        <footer class="min-h-[60px] px-4 sm:px-6 md:px-10 flex flex-col sm:flex-row justify-between items-center border-t border-[#242933] text-xs text-[#8b93a0] gap-3 sm:gap-0 py-4">
-            <div class="font-cinzel text-[#dfb954] font-semibold">ZAR INVEST</div>
-            <div class="flex flex-wrap justify-center gap-4 sm:gap-6">
-                <a href="#" class="hover:text-white transition-colors">Yordam markazi</a>
-                <a href="#" class="hover:text-white transition-colors">Maxfiylik siyosati</a>
-                <a href="#" class="hover:text-white transition-colors">Litsenziyalar</a>
+                <span class="text-[11px] text-[#26d07c] mt-1.5 font-mono">Tiniq va yorug'</span>
+              </div>
             </div>
-            <div>© 2024 ZAR INVEST. Barcha huquqlar himoyalangan.</div>
-        </footer>
 
+            <button id="next-btn" type="button" class="w-full h-11 bg-[#ECC246] hover:bg-[#d8ae3a] text-[#0D0E12] font-semibold text-xs rounded uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer transition-colors mb-3">
+              DAVOM ETISH <span>&rarr;</span>
+            </button>
+            <button id="reselect-btn" type="button" class="w-full h-11 border border-[#2A2F3A] hover:border-[#99A0AC] text-xs font-semibold text-[#99A0AC] hover:text-white rounded uppercase tracking-wider cursor-pointer transition-colors">
+              BOSHQA HUJJATNI TANLASH
+            </button>
+          </div>
+        </section>
+
+        <section class="flex-1 flex justify-center items-center p-5 sm:p-8 md:p-10 bg-[#0B0C0F]">
+          <div data-animate="scale-in" data-delay="0.1" class="flex flex-col items-center max-w-[420px] w-full">
+            <div class="w-full h-[230px] sm:h-[250px] border border-[#2A2F3A] rounded-xl p-4 sm:p-5 flex flex-col justify-between bg-gradient-to-br from-[#151922] to-[#0D0E12] relative overflow-hidden">
+              <div class="flex justify-between items-start">
+                <div>
+                  <div class="text-[9px] tracking-[1px] text-[#99A0AC]">O'ZBEKISTON RESPUBLIKASI</div>
+                  <div class="font-cinzel text-[#ECC246] text-sm sm:text-base font-semibold mt-1">ULUSH SERTIFIKATI</div>
+                </div>
+                <div class="flex flex-col items-end">
+                  <div class="text-[9px] tracking-[1px] text-[#99A0AC]">REYESTR IP</div>
+                  <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-[#ECC246]/30 flex items-center justify-center mt-1 text-[7px] text-[#ECC246] text-center leading-tight">SHARIAT<br />SEAL</div>
+                </div>
+              </div>
+
+              <div class="my-auto">
+                <div class="text-[9px] text-[#99A0AC] tracking-wider mb-1">INVESTOR F.I.SH.</div>
+                <div id="status-badge" class="inline-block bg-[#242118] text-[#ECC246] text-xs font-mono px-3 py-1 rounded border border-[#ECC246]/30 tracking-widest transition-colors">KUTILMOQDA...</div>
+              </div>
+
+              <div class="border-t border-[#2A2F3A] pt-3 flex justify-between items-end">
+                <div>
+                  <div class="text-[8px] text-[#99A0AC]">SERTIFIKAT RAQAMI</div>
+                  <div class="text-xs font-mono text-white tracking-wider mt-0.5">UZ-7782-9901-PRE</div>
+                </div>
+                <div class="flex items-center gap-1 bg-[#15171C] px-2 py-0.5 rounded border border-[#2A2F3A]">
+                  <span class="w-1.5 h-1.5 rounded-full bg-red-500"></span>
+                  <span class="text-[8px] text-[#99A0AC] uppercase">TASDIQLANMAGAN</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3 mt-5 sm:mt-6 text-[#99A0AC]">
+              <div class="w-7 h-7 rounded bg-[#15171C] border border-[#2A2F3A] flex items-center justify-center shrink-0 text-[#ECC246]">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                  <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                  <polyline points="21 15 16 10 5 21"></polyline>
+                </svg>
+              </div>
+              <p class="text-[11px] leading-tight">Hujjat rasmini yuklang va sertifikat o'z egasini tanib oladi.</p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="min-h-[60px] px-4 sm:px-6 md:px-10 flex flex-col sm:flex-row justify-between items-center border-t border-[#2A2F3A] text-xs text-[#99A0AC] gap-3 sm:gap-0 py-4">
+        <div class="font-cinzel text-[#ECC246] font-semibold">ZAR INVEST</div>
+        <div class="flex flex-wrap justify-center gap-4 sm:gap-6">
+          <a href="#" class="hover:text-white transition-colors">Yordam markazi</a>
+          <a href="#" class="hover:text-white transition-colors">Maxfiylik siyosati</a>
+          <a href="#" class="hover:text-white transition-colors">Litsenziyalar</a>
+        </div>
+        <div>© 2024–2026 ZAR INVEST</div>
+      </footer>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="../../js/storage.js"></script>
+    <script src="../../js/partials.js"></script>
     <script src="../../js/main.js"></script>
-</body>
+    <script src="../../js/animations.js"></script>
+  </body>
 </html>

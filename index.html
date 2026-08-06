@@ -3,57 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="ZAR Invest — O'zbekistondagi ilk shariatga muvofiq ko'chmas mulk kraudfanding platformasi. Shaffof, xavfsiz va qonuniy sarmoyalar." />
+    <title>ZAR Invest — Ko'chmas mulk investitsiyalari</title>
+
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>Zar Invest</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <style>
+      html { scroll-behavior: smooth; }
+      body { font-family: "Inter", sans-serif; }
+      .font-cinzel { font-family: "Cinzel", serif; }
+      ::selection { background: #ECC246; color: #0D0E12; }
+      ::-webkit-scrollbar { width: 10px; height: 10px; }
+      ::-webkit-scrollbar-track { background: #0D0E12; }
+      ::-webkit-scrollbar-thumb { background: #2A2F3A; border-radius: 999px; }
+      @view-transition { navigation: auto; }
+    </style>
   </head>
-  <body class="bg-[#0D0E12] text-[#D1C5AF]">
-    <header class="border-b border-[#2A2F3A]">
-      <div
-        class="max-w-[1450px] mx-auto px-[24px] py-[15px] flex justify-between items-center"
-      >
-        <!-- LOGO -->
-        <a href="./index.html">
-          <img src="./images/logo.svg" alt="Zar Invest Logo" class="h-[28px]" />
-        </a>
+  <body data-page="index" class="bg-[#0D0E12] text-[#D1C5AF] antialiased">
+    <site-loader></site-loader>
+    <site-header base="./"></site-header>
 
-        <!-- NAV LINKS -->
-        <nav class="hidden md:flex items-center gap-[32px] text-[14px]">
-          <a href="#" class="hover:text-white transition-colors">Loyihalar</a>
-          <a href="#" class="hover:text-white transition-colors"
-            >Qanday ishlaydi</a
-          >
-          <a href="#" class="hover:text-white transition-colors"
-            >San'at kengashi</a
-          >
-          <a href="#" class="hover:text-white transition-colors">Hisobotlar</a>
-          <a href="#" class="hover:text-white transition-colors">Kalkulyator</a>
-        </nav>
-
-        <!-- AUTH CONTAINER -->
-        <div id="auth-container" class="flex items-center gap-4">
-          <a
-            href="./pages/hisob-pages/hisob1.html"
-            class="text-[#99A0AC] hover:text-[#ECC246] transition-colors text-[14px]"
-            >Kirish</a
-          >
-          <a
-            href="./pages/hisob-pages/hisob1.html"
-            class="bg-[#ECC246] text-[#0D0E12] px-4 py-2 rounded-lg font-medium text-[14px]"
-            >Hisob ochish</a
-          >
-        </div>
-      </div>
-    </header>
-
-    <main class="mx-auto py-[50px]">
-      <section class="w-full bg-[#101012] px-8 py-14 md:px-16 md:py-16">
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-          <!-- Left column -->
+    <main>
+      <!-- HERO -->
+      <section class="w-full bg-[#101012] px-8 py-16 md:px-16 md:py-24 overflow-hidden relative">
+        <div class="max-w-[1450px] mx-auto grid md:grid-cols-2 gap-12 items-center relative">
           <div>
-            <!-- Eyebrow -->
-            <div
-              class="flex items-center gap-3 text-[11px] tracking-[0.2em] font-semibold text-emerald-400 mb-6 uppercase"
-            >
+            <div data-animate="fade-in" class="flex items-center gap-3 text-[11px] tracking-[0.2em] font-semibold text-emerald-400 mb-6 uppercase">
               <span>O'zbekiston</span>
               <span class="text-white/20">•</span>
               <span>Kraudfanding</span>
@@ -61,100 +40,55 @@
               <span>Shariatga muvofiq</span>
             </div>
 
-            <!-- Heading -->
-            <h1
-              class="font-serif text-4xl md:text-5xl leading-[1.15] text-white mb-6"
-            >
+            <h1 data-animate="fade-up" data-delay="0.05" class="font-cinzel font-normal text-4xl md:text-5xl leading-[1.15] text-white mb-6">
               Qurilayotgan binoning<br />
               bir bo'lagi — <span class="text-[#ECC246]">sizniki</span><br />
               bo'lishi mumkin.
             </h1>
 
-            <!-- Subtext -->
-            <p class="text-white/50 text-base leading-relaxed mb-8 max-w-md">
-              O'zbekistondagi ilk shariatga muvofiq ko'chmas mulk investitsiya
-              platformasi. Shaffof, xavfsiz va qonuniy.
+            <p data-animate="fade-up" data-delay="0.1" class="text-white/50 text-base leading-relaxed mb-8 max-w-md">
+              O'zbekistondagi ilk shariatga muvofiq ko'chmas mulk investitsiya platformasi. Shaffof, xavfsiz va qonuniy.
             </p>
 
-            <!-- Buttons -->
-            <div class="flex flex-wrap items-center gap-4 mb-14">
-              <button
-                class="bg-[#ECC246] text-black font-semibold text-sm px-6 py-3.5 rounded-lg hover:bg-gold/90 transition"
-              >
+            <div data-animate="fade-up" data-delay="0.15" class="flex flex-wrap items-center gap-4 mb-14">
+              <a href="./pages/katalog.html" class="bg-[#ECC246] text-black font-semibold text-sm px-6 py-3.5 rounded-lg hover:bg-[#d8ae3a] hover:-translate-y-0.5 transition-all shadow-lg shadow-[#ECC246]/10">
                 Loyihalarni ko'rish
-              </button>
-              <button
-                class="flex items-center gap-2 border border-white/15 text-white font-semibold text-sm px-6 py-3.5 rounded-lg hover:bg-white/5 transition"
-              >
+              </a>
+              <a href="#jarayon" class="flex items-center gap-2 border border-white/15 text-white font-semibold text-sm px-6 py-3.5 rounded-lg hover:bg-white/5 transition">
                 Qanday ishlaydi
                 <span aria-hidden="true">→</span>
-              </button>
+              </a>
             </div>
 
-            <!-- Stats -->
-            <div class="flex flex-wrap gap-10">
-              <div>
-                <div class="text-2xl font-bold text-gold">$12.4M+</div>
-                <div
-                  class="text-[11px] tracking-wider text-white/40 uppercase mt-1"
-                >
-                  Sarmoya hajmi
-                </div>
+            <div data-stagger="0.1" class="flex flex-wrap gap-10">
+              <div data-animate-item>
+                <div class="text-2xl font-bold text-[#ECC246]"><span data-count-to="12.4" data-count-prefix="$" data-count-suffix="M+" data-count-decimals="1">$0.0M+</span></div>
+                <div class="text-[11px] tracking-wider text-white/40 uppercase mt-1">Sarmoya hajmi</div>
               </div>
-              <div>
-                <div class="text-2xl font-bold text-gold">3,450+</div>
-                <div
-                  class="text-[11px] tracking-wider text-white/40 uppercase mt-1"
-                >
-                  Investorlar
-                </div>
+              <div data-animate-item>
+                <div class="text-2xl font-bold text-[#ECC246]"><span data-count-to="3450" data-count-suffix="+">0+</span></div>
+                <div class="text-[11px] tracking-wider text-white/40 uppercase mt-1">Investorlar</div>
               </div>
-              <div>
-                <div class="text-2xl font-bold text-gold">12% – 18%</div>
-                <div
-                  class="text-[11px] tracking-wider text-white/40 uppercase mt-1"
-                >
-                  Kutilayotgan daromad
-                </div>
+              <div data-animate-item>
+                <div class="text-2xl font-bold text-[#ECC246]">12% – 18%</div>
+                <div class="text-[11px] tracking-wider text-white/40 uppercase mt-1">Kutilayotgan daromad</div>
               </div>
             </div>
           </div>
 
           <!-- Right column: certificate card -->
           <div class="relative flex justify-center md:justify-end">
-            <!-- ghost card behind -->
-            <div
-              class="absolute w-full max-w-sm h-56 bg-[#151517] border border-white/5 rounded-2xl translate-x-3 translate-y-3"
-            ></div>
+            <div data-animate="fade-in" data-delay="0.2" class="absolute w-full max-w-sm h-56 bg-[#151517] border border-white/5 rounded-2xl translate-x-3 translate-y-3"></div>
 
-            <!-- main card -->
-            <div
-              class="relative w-full max-w-sm bg-gradient-to-br from-[#17171a] to-[#0f0f11] border border-gold/20 rounded-2xl p-7 shadow-2xl"
-            >
+            <div data-animate="scale-in" data-delay="0.15" class="relative w-full max-w-sm bg-gradient-to-br from-[#17171a] to-[#0f0f11] border border-[#ECC246]/20 rounded-2xl p-7 shadow-2xl">
               <div class="flex items-start justify-between mb-6">
                 <div>
-                  <div
-                    class="text-[10px] tracking-[0.2em] text-white/40 uppercase mb-2"
-                  >
-                    Ulush sertifikati
-                  </div>
-                  <div class="text-white text-lg font-semibold tracking-wide">
-                    000458-ZS
-                  </div>
+                  <div class="text-[10px] tracking-[0.2em] text-white/40 uppercase mb-2">Ulush sertifikati</div>
+                  <div class="text-white text-lg font-semibold tracking-wide">000458-ZS</div>
                 </div>
-                <div
-                  class="w-10 h-10 rounded-full bg-gold flex items-center justify-center shrink-0"
-                >
-                  <svg
-                    class="w-5 h-5 text-black"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M10 1l7 3v6c0 5-3.5 8-7 9-3.5-1-7-4-7-9V4l7-3zm-1 12l5-5-1.4-1.4L9 10.2 7.4 8.6 6 10l3 3z"
-                      clip-rule="evenodd"
-                    />
+                <div class="w-10 h-10 rounded-full bg-[#ECC246] flex items-center justify-center shrink-0">
+                  <svg class="w-5 h-5 text-black" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 1l7 3v6c0 5-3.5 8-7 9-3.5-1-7-4-7-9V4l7-3zm-1 12l5-5-1.4-1.4L9 10.2 7.4 8.6 6 10l3 3z" clip-rule="evenodd" />
                   </svg>
                 </div>
               </div>
@@ -162,36 +96,20 @@
               <div class="border-t border-white/10 my-5"></div>
 
               <div class="mb-6">
-                <div
-                  class="text-[10px] tracking-[0.2em] text-white/40 uppercase mb-2"
-                >
-                  Obyekt
-                </div>
-                <div class="text-white text-base font-medium">
-                  ZAR Residence — Blok A
-                </div>
+                <div class="text-[10px] tracking-[0.2em] text-white/40 uppercase mb-2">Obyekt</div>
+                <div class="text-white text-base font-medium">ZAR Residence — Blok A</div>
               </div>
 
               <div class="border-t border-white/10 my-5"></div>
 
               <div class="flex items-end justify-between">
                 <div>
-                  <div
-                    class="text-[10px] tracking-[0.2em] text-white/40 uppercase mb-2"
-                  >
-                    Sarmoyador
-                  </div>
+                  <div class="text-[10px] tracking-[0.2em] text-white/40 uppercase mb-2">Sarmoyador</div>
                   <div class="text-white text-sm font-medium">ABDULLAEV A.</div>
                 </div>
                 <div class="text-right">
-                  <div
-                    class="text-[10px] tracking-[0.2em] text-white/40 uppercase mb-2"
-                  >
-                    Tasdiqlangan
-                  </div>
-                  <div class="text-gold text-sm font-semibold">
-                    10,000,000 UZS
-                  </div>
+                  <div class="text-[10px] tracking-[0.2em] text-white/40 uppercase mb-2">Tasdiqlangan</div>
+                  <div class="text-[#ECC246] text-sm font-semibold">10,000,000 UZS</div>
                 </div>
               </div>
             </div>
@@ -199,591 +117,222 @@
         </div>
       </section>
 
-      <section class="bg-[#0D0E12] border-t border-[#2A2F3A]">
-        <div class="grid grid-cols-1 md:grid-cols-3 max-w-[1460px] mx-auto">
-          <!-- Column 1 -->
-          <div
-            class="px-[40px] py-[50px] border-b md:border-b-0 md:border-r border-[#2A2F3A]"
-          >
-            <img src="./images/bank.svg" alt="" class="py-[14px]" />
-            <h3 class="text-[18px] text-[#F4F1EA] mb-[16px]">
-              Eskrou hisobvarag'i
-            </h3>
-            <p class="text-[20px] text-[#99A0AC] leading-[40px]">
-              Barcha mablag'lar "Kapitalbank" ATBdagi <br />maxsus eskrou
-              hisobida saqlanadi. <br />
-              Quruvchi pulni faqat ish yakunlangach oladi.
+      <!-- TRUST SECTION -->
+      <section id="shariat-kengashi" class="bg-[#0D0E12] border-t border-[#2A2F3A]">
+        <div data-stagger="0.12" class="grid grid-cols-1 md:grid-cols-3 max-w-[1460px] mx-auto">
+          <div data-animate-item class="px-[40px] py-[56px] border-b md:border-b-0 md:border-r border-[#2A2F3A] hover:bg-[#101216] transition-colors">
+            <img src="./images/bank.svg" alt="" class="py-[14px] h-[48px]" />
+            <h3 class="text-[18px] text-[#F4F1EA] mb-[16px]">Eskrou hisobvarag'i</h3>
+            <p class="text-[15px] text-[#99A0AC] leading-[1.8]">
+              Barcha mablag'lar "Kapitalbank" ATBdagi maxsus eskrou hisobida saqlanadi. Quruvchi pulni faqat ish yakunlangach oladi.
             </p>
           </div>
 
-          <!-- Column 2 -->
-          <div
-            class="px-[40px] py-[50px] border-b md:border-b-0 md:border-r border-[#2A2F3A]"
-          >
-            <img src="./images/doc.svg" alt="" class="py-[14px]" />
+          <div id="hisobotlar" data-animate-item class="px-[40px] py-[56px] border-b md:border-b-0 md:border-r border-[#2A2F3A] hover:bg-[#101216] transition-colors">
+            <img src="./images/doc.svg" alt="" class="py-[14px] h-[48px]" />
             <h3 class="text-[18px] text-[#F4F1EA] mb-[16px]">Mustaqil Audit</h3>
-            <p class="text-[20px] text-[#99A0AC] leading-[40px] mb-[20px]">
-              Har bir loyiha KPMG yoki PWC kabi xalqaro auditorlar tomonidan
-              tekshiriladi. Hisobotlar barcha investorlar uchun ochiq.
+            <p class="text-[15px] text-[#99A0AC] leading-[1.8] mb-[20px]">
+              Har bir loyiha KPMG yoki PWC kabi xalqaro auditorlar tomonidan tekshiriladi. Hisobotlar barcha investorlar uchun ochiq.
             </p>
-            <a
-              href="#"
-              class="inline-flex items-center gap-[8px] text-[12px] tracking-[0.05em] text-[#ECC246]"
-            >
+            <a href="#" class="inline-flex items-center gap-[8px] text-[12px] tracking-[0.05em] text-[#ECC246] hover:gap-[12px] transition-all">
               AUDIT HISOBOTINI YUKLASH (.PDF)
-              <svg
-                width="12"
-                height="12"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="#ECC246"
-                stroke-width="2"
-              >
-                <path
-                  d="M12 4v12m0 0l-4-4m4 4l4-4"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ECC246" stroke-width="2">
+                <path d="M12 4v12m0 0l-4-4m4 4l4-4" stroke-linecap="round" stroke-linejoin="round" />
                 <path d="M4 20h16" stroke-linecap="round" />
               </svg>
             </a>
           </div>
 
-          <!-- Column 3 -->
-          <div class="px-[40px] py-[30px]">
-            <img src="./images/secure.svg" alt="" class="py-[14px]" />
-            <h3 class="text-[18px] text-[#F4F1EA] mb-[16px]">
-              Shariat Kengashi
-            </h3>
-            <p class="text-[20px] text-[#99A0AC] leading-[40px] mb-[20px]">
-              Moliyaviy operatsiyalar va shartnomalar tan olingan ulamolar va
-              islom moliyasi ekspertlari nazorati ostida.
+          <div data-animate-item class="px-[40px] py-[56px] hover:bg-[#101216] transition-colors">
+            <img src="./images/secure.svg" alt="" class="py-[14px] h-[48px]" />
+            <h3 class="text-[18px] text-[#F4F1EA] mb-[16px]">Shariat Kengashi</h3>
+            <p class="text-[15px] text-[#99A0AC] leading-[1.8] mb-[20px]">
+              Moliyaviy operatsiyalar va shartnomalar tan olingan ulamolar va islom moliyasi ekspertlari nazorati ostida.
             </p>
-            <img src="./images/Container.svg" alt="" />
+            <img src="./images/Container.svg" alt="" class="h-[28px]" />
           </div>
         </div>
       </section>
 
-      <section
-        class="bg-[#0D0E12] text-[#D1C5AF] py-[80px] max-[400px]:py-[48px] border-t-[1px] border-[#1F2229]"
-      >
-        <div
-          class="max-w-[1450px] text-[20px] mx-auto px-[24px] max-[400px]:px-[16px]"
-          id="steps-wrapper"
-        >
-          <p class="tracking-[0.2em] text-[#ECC246] mb-[16px]">JARAYON</p>
-          <h2
-            class="font-['Playfair_Display'] text-[34px] max-[400px]:text-[24px] text-[#F4F1EA] mb-[56px] max-[400px]:mb-[36px]"
-          >
+      <!-- PROCESS -->
+      <section id="jarayon" class="bg-[#0D0E12] text-[#D1C5AF] py-[80px] max-[400px]:py-[48px] border-t-[1px] border-[#1F2229]">
+        <div class="max-w-[1450px] text-[20px] mx-auto px-[24px] max-[400px]:px-[16px]" id="steps-wrapper">
+          <p data-animate="fade-up" class="tracking-[0.2em] text-[#ECC246] mb-[16px] text-[12px]">JARAYON</p>
+          <h2 data-animate="fade-up" data-delay="0.05" class="font-cinzel text-[34px] max-[400px]:text-[24px] text-[#F4F1EA] mb-[56px] max-[400px]:mb-[36px]">
             Sarmoya kiritish bosqichlari
           </h2>
 
-          <!-- Hidden radios: single source of truth for which step is active -->
           <input type="radio" name="step" id="step-1" class="hidden" checked />
           <input type="radio" name="step" id="step-2" class="hidden" />
           <input type="radio" name="step" id="step-3" class="hidden" />
           <input type="radio" name="step" id="step-4" class="hidden" />
 
-          <div
-            class="grid grid-cols-4 max-[900px]:grid-cols-2 max-[500px]:grid-cols-1 gap-x-[40px] gap-y-[40px]"
-          >
-            <!-- Step 1 -->
-            <div>
-              <label
-                for="step-1"
-                class="cursor-pointer w-[52px] h-[52px] flex items-center justify-center border text-[20px] font-semibold mb-[24px] transition-colors duration-200 border-[#2A2F3A] text-[#5C6470] [#steps-wrapper:has(#step-1:checked)_&]:border-[#ECC246] [#steps-wrapper:has(#step-1:checked)_&]:text-[#ECC246]"
-              >
-                01
-              </label>
-              <h3 class="text-[20px] font-semibold text-[#F4F1EA] mb-[10px]">
-                Hisob ochish
-              </h3>
-              <p class="text-[20px] text-[#99A0AC] leading-[1.6] mb-[18px]">
-                Shaxsingizni tasdiqlang va sarmoyador profilini yarating.
-              </p>
-              <span class="text-[20px] tracking-[0.1em] text-[#ECC246]"
-                >~ 5 MINUT</span
-              >
+          <div data-stagger="0.1" class="grid grid-cols-4 max-[900px]:grid-cols-2 max-[500px]:grid-cols-1 gap-x-[40px] gap-y-[40px]">
+            <div data-animate-item>
+              <label for="step-1" class="cursor-pointer w-[52px] h-[52px] flex items-center justify-center border text-[20px] font-semibold mb-[24px] transition-colors duration-200 border-[#2A2F3A] text-[#5C6470] [#steps-wrapper:has(#step-1:checked)_&]:border-[#ECC246] [#steps-wrapper:has(#step-1:checked)_&]:text-[#ECC246]">01</label>
+              <h3 class="text-[20px] font-semibold text-[#F4F1EA] mb-[10px]">Hisob ochish</h3>
+              <p class="text-[14px] text-[#99A0AC] leading-[1.6] mb-[18px]">Shaxsingizni tasdiqlang va sarmoyador profilini yarating.</p>
+              <span class="text-[13px] tracking-[0.1em] text-[#ECC246]">~ 5 MINUT</span>
             </div>
 
-            <!-- Step 2 -->
-            <div>
-              <label
-                for="step-2"
-                class="cursor-pointer w-[52px] h-[52px] flex items-center justify-center border text-[20px] font-semibold mb-[24px] transition-colors duration-200 border-[#2A2F3A] text-[#5C6470] [#steps-wrapper:has(#step-2:checked)_&]:border-[#ECC246] [#steps-wrapper:has(#step-2:checked)_&]:text-[#ECC246]"
-              >
-                02
-              </label>
-              <h3 class="text-[20px] font-semibold text-[#F4F1EA] mb-[10px]">
-                Loyihani tanlash
-              </h3>
-              <p class="text-[20px] text-[#99A0AC] leading-[1.6] mb-[18px]">
-                Mavjud obʼektlarni va ularning risklarini tahlil qiling.
-              </p>
-              <span class="text-[18px] tracking-[0.1em] text-[#ECC246]"
-                >CHEKSIZ</span
-              >
+            <div data-animate-item>
+              <label for="step-2" class="cursor-pointer w-[52px] h-[52px] flex items-center justify-center border text-[20px] font-semibold mb-[24px] transition-colors duration-200 border-[#2A2F3A] text-[#5C6470] [#steps-wrapper:has(#step-2:checked)_&]:border-[#ECC246] [#steps-wrapper:has(#step-2:checked)_&]:text-[#ECC246]">02</label>
+              <h3 class="text-[20px] font-semibold text-[#F4F1EA] mb-[10px]">Loyihani tanlash</h3>
+              <p class="text-[14px] text-[#99A0AC] leading-[1.6] mb-[18px]">Mavjud obʼektlarni va ularning risklarini tahlil qiling.</p>
+              <span class="text-[13px] tracking-[0.1em] text-[#ECC246]">CHEKSIZ</span>
             </div>
 
-            <!-- Step 3 -->
-            <div>
-              <label
-                for="step-3"
-                class="cursor-pointer w-[52px] h-[52px] flex items-center justify-center border text-[20px] font-semibold mb-[24px] transition-colors duration-200 border-[#2A2F3A] text-[#5C6470] [#steps-wrapper:has(#step-3:checked)_&]:border-[#ECC246] [#steps-wrapper:has(#step-3:checked)_&]:text-[#ECC246]"
-              >
-                03
-              </label>
-              <h3 class="text-[20px] font-semibold text-[#F4F1EA] mb-[10px]">
-                Ulush sotib olish
-              </h3>
-              <p class="text-[20px] text-[#99A0AC] leading-[1.6] mb-[18px]">
-                Kerakli sarmoya miqdorini kiritib, shartnomani imzolang.
-              </p>
-              <span class="text-[18px] tracking-[0.1em] text-[#ECC246]"
-                >INSTANT</span
-              >
+            <div data-animate-item>
+              <label for="step-3" class="cursor-pointer w-[52px] h-[52px] flex items-center justify-center border text-[20px] font-semibold mb-[24px] transition-colors duration-200 border-[#2A2F3A] text-[#5C6470] [#steps-wrapper:has(#step-3:checked)_&]:border-[#ECC246] [#steps-wrapper:has(#step-3:checked)_&]:text-[#ECC246]">03</label>
+              <h3 class="text-[20px] font-semibold text-[#F4F1EA] mb-[10px]">Ulush sotib olish</h3>
+              <p class="text-[14px] text-[#99A0AC] leading-[1.6] mb-[18px]">Kerakli sarmoya miqdorini kiritib, shartnomani imzolang.</p>
+              <span class="text-[13px] tracking-[0.1em] text-[#ECC246]">INSTANT</span>
             </div>
 
-            <!-- Step 4 -->
-            <div>
-              <label
-                for="step-4"
-                class="cursor-pointer w-[52px] h-[52px] flex items-center justify-center border text-[20px] font-semibold mb-[24px] transition-colors duration-200 border-[#2A2F3A] text-[#5C6470] [#steps-wrapper:has(#step-4:checked)_&]:border-[#ECC246] [#steps-wrapper:has(#step-4:checked)_&]:text-[#ECC246]"
-              >
-                04
-              </label>
-              <h3 class="text-[20px] font-semibold text-[#F4F1EA] mb-[10px]">
-                Daromad olish
-              </h3>
-              <p class="text-[20px] text-[#99A0AC] leading-[1.6] mb-[18px]">
-                Loyiha yakunida foydani oʻz hisobingizga qabul qiling.
-              </p>
-              <span class="text-[18px] tracking-[0.1em] text-[#ECC246]"
-                >OYLIK/KVARTAL</span
-              >
+            <div data-animate-item>
+              <label for="step-4" class="cursor-pointer w-[52px] h-[52px] flex items-center justify-center border text-[20px] font-semibold mb-[24px] transition-colors duration-200 border-[#2A2F3A] text-[#5C6470] [#steps-wrapper:has(#step-4:checked)_&]:border-[#ECC246] [#steps-wrapper:has(#step-4:checked)_&]:text-[#ECC246]">04</label>
+              <h3 class="text-[20px] font-semibold text-[#F4F1EA] mb-[10px]">Daromad olish</h3>
+              <p class="text-[14px] text-[#99A0AC] leading-[1.6] mb-[18px]">Loyiha yakunida foydani oʻz hisobingizga qabul qiling.</p>
+              <span class="text-[13px] tracking-[0.1em] text-[#ECC246]">OYLIK/KVARTAL</span>
             </div>
           </div>
 
-          <!-- Panels the number-buttons route to (pure CSS, no JS). Swap the text for real per-step content. -->
           <div class="mt-[40px]">
-            <div
-              class="hidden [#steps-wrapper:has(#step-1:checked)_&]:block border border-[#2A2F3A] p-[24px] text-[13px] text-[#99A0AC]"
-            >
-              <span class="text-[#ECC246]">01 — Hisob ochish:</span> shu yerga
-              birinchi bosqich uchun batafsil kontent qo‘yiladi.
+            <div class="hidden [#steps-wrapper:has(#step-1:checked)_&]:block border border-[#2A2F3A] rounded-lg p-[24px] text-[13px] text-[#99A0AC]">
+              <span class="text-[#ECC246]">01 — Hisob ochish:</span> Telefon raqamingizni tasdiqlaysiz, shaxsingizni ID-karta orqali isbotlaysiz va investor profilingizni (maqsad, muddat, xavf darajasi) shakllantirasiz.
             </div>
-            <div
-              class="hidden [#steps-wrapper:has(#step-2:checked)_&]:block border border-[#2A2F3A] p-[24px] text-[13px] text-[#99A0AC]"
-            >
-              <span class="text-[#ECC246]">02 — Loyihani tanlash:</span> shu
-              yerga ikkinchi bosqich uchun batafsil kontent qo‘yiladi.
+            <div class="hidden [#steps-wrapper:has(#step-2:checked)_&]:block border border-[#2A2F3A] rounded-lg p-[24px] text-[13px] text-[#99A0AC]">
+              <span class="text-[#ECC246]">02 — Loyihani tanlash:</span> Katalogdagi ochiq loyihalarni ko'rib chiqasiz, har birining daromadlilik, muddat va xavf ko'rsatkichlarini solishtirasiz.
             </div>
-            <div
-              class="hidden [#steps-wrapper:has(#step-3:checked)_&]:block border border-[#2A2F3A] p-[24px] text-[13px] text-[#99A0AC]"
-            >
-              <span class="text-[#ECC246]">03 — Ulush sotib olish:</span> shu
-              yerga uchinchi bosqich uchun batafsil kontent qo‘yiladi.
+            <div class="hidden [#steps-wrapper:has(#step-3:checked)_&]:block border border-[#2A2F3A] rounded-lg p-[24px] text-[13px] text-[#99A0AC]">
+              <span class="text-[#ECC246]">03 — Ulush sotib olish:</span> Kalkulyator yordamida summani belgilaysiz, to'lov usulini tanlaysiz va raqamli sertifikatingiz shu zahoti yaratiladi.
             </div>
-            <div
-              class="hidden [#steps-wrapper:has(#step-4:checked)_&]:block border border-[#2A2F3A] p-[24px] text-[13px] text-[#99A0AC]"
-            >
-              <span class="text-[#ECC246]">04 — Daromad olish:</span> shu yerga
-              to‘rtinchi bosqich uchun batafsil kontent qo‘yiladi.
+            <div class="hidden [#steps-wrapper:has(#step-4:checked)_&]:block border border-[#2A2F3A] rounded-lg p-[24px] text-[13px] text-[#99A0AC]">
+              <span class="text-[#ECC246]">04 — Daromad olish:</span> Loyiha jarayonida yoki yakunida shartnomada belgilangan daromad hisobingizga o'tkaziladi.
             </div>
           </div>
         </div>
       </section>
 
-      <section
-        class="bg-[#0D0E12] text-[#D1C5AF] py-[80px] max-[500px]:py-[48px]"
-      >
+      <!-- PROJECTS -->
+      <section id="loyihalar" class="bg-[#0D0E12] text-[#D1C5AF] py-[80px] max-[500px]:py-[48px]">
         <div class="max-w-[1450px] mx-auto px-[24px] max-[500px]:px-[16px]">
-          <!-- Heading row + filters -->
-          <div
-            class="flex items-end justify-between max-[700px]:flex-col max-[700px]:items-start max-[700px]:gap-[20px] mb-[40px]"
-          >
-            <div>
-              <p class="text-[12px] tracking-[0.2em] text-[#ECC246] mb-[14px]">
-                IMKONIYATLAR
-              </p>
-              <h2
-                class="font-['Playfair_Display'] text-[34px] max-[500px]:text-[24px] text-[#F4F1EA]"
-              >
-                Ochiq loyihalar
-              </h2>
+          <div class="flex items-end justify-between max-[700px]:flex-col max-[700px]:items-start max-[700px]:gap-[20px] mb-[40px]">
+            <div data-animate="fade-up">
+              <p class="text-[12px] tracking-[0.2em] text-[#ECC246] mb-[14px]">IMKONIYATLAR</p>
+              <h2 class="font-cinzel text-[34px] max-[500px]:text-[24px] text-[#F4F1EA]">Ochiq loyihalar</h2>
             </div>
 
-            <!-- data-filter drives the JS: "all" | "turar-joy" | "tijorat" | "yaqinda" -->
-            <div
-              id="filter-tabs"
-              class="flex gap-[28px] max-[500px]:gap-[16px] max-[500px]:flex-wrap text-[12px] tracking-[0.05em] pb-[6px]"
-            >
-              <button
-                data-filter="all"
-                class="filter-tab text-[#ECC246] border-b-2 border-[#ECC246] pb-[6px] transition-colors"
-              >
-                BARCHASI
-              </button>
-              <button
-                data-filter="turar-joy"
-                class="filter-tab text-[#99A0AC] border-b-2 border-transparent hover:text-[#D1C5AF] pb-[6px] transition-colors"
-              >
-                TURAR-JOY
-              </button>
-              <button
-                data-filter="tijorat"
-                class="filter-tab text-[#99A0AC] border-b-2 border-transparent hover:text-[#D1C5AF] pb-[6px] transition-colors"
-              >
-                TIJORAT
-              </button>
-              <button
-                data-filter="yaqinda"
-                class="filter-tab text-[#99A0AC] border-b-2 border-transparent hover:text-[#D1C5AF] pb-[6px] transition-colors"
-              >
-                YAQINDA
-              </button>
+            <div id="filter-tabs" data-animate="fade-up" data-delay="0.1" class="flex gap-[28px] max-[500px]:gap-[16px] max-[500px]:flex-wrap text-[12px] tracking-[0.05em] pb-[6px]">
+              <button type="button" data-filter="all" class="filter-tab text-[#ECC246] border-b-2 border-[#ECC246] pb-[6px] transition-colors">BARCHASI</button>
+              <button type="button" data-filter="turar-joy" class="filter-tab text-[#99A0AC] border-b-2 border-transparent hover:text-[#D1C5AF] pb-[6px] transition-colors">TURAR-JOY</button>
+              <button type="button" data-filter="tijorat" class="filter-tab text-[#99A0AC] border-b-2 border-transparent hover:text-[#D1C5AF] pb-[6px] transition-colors">TIJORAT</button>
+              <button type="button" data-filter="yaqinda" class="filter-tab text-[#99A0AC] border-b-2 border-transparent hover:text-[#D1C5AF] pb-[6px] transition-colors">YAQINDA</button>
             </div>
           </div>
 
-          <!-- Cards -->
-          <div
-            id="project-grid"
-            class="grid grid-cols-3 max-[900px]:grid-cols-2 max-[600px]:grid-cols-1 gap-[24px]"
-          >
-            <!-- Card 1 -->
-            <article class="project-card" data-category="turar-joy">
-              <div
-                class="bg-[#15171C] border border-[#2A2F3A] rounded-[10px] overflow-hidden flex flex-col h-full "
-              >
-                <div
-                  class="relative h-[340px] bg-[url('./images/uy1.svg')] bg-cover bg-center bg-no-repeat"
-                >
-                  <span
-                    class="absolute top-[14px] left-[14px] bg-[#ECC246] text-[#0D0E12] text-[10px] font-semibold tracking-[0.05em] px-[10px] py-[5px] rounded-[4px]"
-                    >OCHIQ</span
-                  >
-                </div>
+          <div id="project-grid" data-stagger="0.1" class="grid grid-cols-3 max-[900px]:grid-cols-2 max-[600px]:grid-cols-1 gap-[24px]"></div>
 
-                <div class="p-[22px] flex flex-col flex-1">
-                  <h3
-                    class="text-[17px] font-semibold text-[#F4F1EA] mb-[10px]"
-                  >
-                    Mirabad Avenue Tower
-                  </h3>
-                  <p class="text-[13px] text-[#99A0AC] leading-[1.6] mb-[20px]">
-                    Toshkent markazidagi premium darajadagi turar-joy majmuasi.
-                    18 oylik qurilish sikli.
-                  </p>
-
-                  <div class="flex items-center justify-between mb-[8px]">
-                    <span class="text-[10px] tracking-[0.1em] text-[#5C6470]"
-                      >YIGʻILGAN</span
-                    >
-                    <span class="text-[12px] text-[#E2E2E8]"
-                      ><span class="text-[#F4F1EA] font-medium">4.2 mlrd</span>
-                      / 6 mlrd</span
-                    >
-                  </div>
-                  <div
-                    class="w-full h-[4px] rounded-full bg-[#2A2F3A] overflow-hidden mb-[20px]"
-                  >
-                    <div
-                      class="h-full rounded-full bg-[#ECC246]"
-                      style="width: 70%"
-                    ></div>
-                  </div>
-
-                  <div
-                    class="flex justify-between border-t border-[#2A2F3A] pt-[16px] mb-[20px]"
-                  >
-                    <div>
-                      <p
-                        class="text-[9px] tracking-[0.1em] text-[#5C6470] mb-[6px]"
-                      >
-                        DAROMAD
-                      </p>
-                      <p class="text-[13px] text-[#ECC246]">16.5% yillik</p>
-                    </div>
-                    <div class="text-right">
-                      <p
-                        class="text-[9px] tracking-[0.1em] text-[#5C6470] mb-[6px]"
-                      >
-                        MUDDAT
-                      </p>
-                      <p class="text-[13px] text-[#D1C5AF]">18 oy</p>
-                    </div>
-                  </div>
-
-                  <button
-                    class="mt-auto border border-[#2A2F3A] text-[#D1C5AF] text-[12px] tracking-[0.05em] py-[12px] rounded-[6px] hover:border-[#ECC246] hover:text-[#ECC246] transition-colors"
-                  >
-                    BATAFSIL KOʻRISH
-                  </button>
-                </div>
-              </div>
-            </article>
-
-            <!-- Card 2 -->
-            <article class="project-card" data-category="tijorat">
-              <div
-                class="bg-[#15171C] border border-[#2A2F3A] rounded-[10px] overflow-hidden flex flex-col h-full"
-              >
-                <div
-                  class="relative h-[340px] bg-[url('./images/uy2.svg')] bg-cover bg-center bg-no-repeat"
-                >
-                  <span
-                    class="absolute top-[14px] left-[14px] bg-[#ECC246] text-[#0D0E12] text-[10px] font-semibold tracking-[0.05em] px-[10px] py-[5px] rounded-[4px]"
-                    >OCHIQ</span
-                  >
-                </div>
-                <div class="p-[22px] flex flex-col flex-1">
-                  <h3
-                    class="text-[17px] font-semibold text-[#F4F1EA] mb-[10px]"
-                  >
-                    Samarqand IT-Hub
-                  </h3>
-                  <p class="text-[13px] text-[#99A0AC] leading-[1.6] mb-[20px]">
-                    Tarixiy shahar markazidagi zamonaviy tijorat loyihasi. Ijara
-                    daromadiga yoʻnaltirilgan.
-                  </p>
-
-                  <div class="flex items-center justify-between mb-[8px]">
-                    <span class="text-[10px] tracking-[0.1em] text-[#5C6470]"
-                      >YIGʻILGAN</span
-                    >
-                    <span class="text-[12px] text-[#E2E2E8]"
-                      ><span class="text-[#F4F1EA] font-medium">1.8 mlrd</span>
-                      / 10 mlrd</span
-                    >
-                  </div>
-                  <div
-                    class="w-full h-[4px] rounded-full bg-[#2A2F3A] overflow-hidden mb-[20px]"
-                  >
-                    <div
-                      class="h-full rounded-full bg-[#ECC246]"
-                      style="width: 18%"
-                    ></div>
-                  </div>
-
-                  <div
-                    class="flex justify-between border-t border-[#2A2F3A] pt-[16px] mb-[20px]"
-                  >
-                    <div>
-                      <p
-                        class="text-[9px] tracking-[0.1em] text-[#5C6470] mb-[6px]"
-                      >
-                        DAROMAD
-                      </p>
-                      <p class="text-[13px] text-[#ECC246]">14.0% yillik</p>
-                    </div>
-                    <div class="text-right">
-                      <p
-                        class="text-[9px] tracking-[0.1em] text-[#5C6470] mb-[6px]"
-                      >
-                        MUDDAT
-                      </p>
-                      <p class="text-[13px] text-[#D1C5AF]">36 oy</p>
-                    </div>
-                  </div>
-
-                  <button
-                    class="mt-auto border border-[#2A2F3A] text-[#D1C5AF] text-[12px] tracking-[0.05em] py-[12px] rounded-[6px] hover:border-[#ECC246] hover:text-[#ECC246] transition-colors"
-                  >
-                    BATAFSIL KOʻRISH
-                  </button>
-                </div>
-              </div>
-            </article>
-
-            <!-- Card 3 -->
-            <article class="project-card" data-category="yaqinda">
-              <div
-                class="bg-[#15171C] border border-[#2A2F3A] rounded-[10px] overflow-hidden flex flex-col h-full opacity-90"
-              >
-                <div
-                  class="relative h-[340px] bg-[url('./images/uy3.svg')] bg-cover bg-center bg-no-repeat"
-                >
-                  <span
-                    class="absolute top-[14px] left-[14px] bg-[#ECC246] text-[#0D0E12] text-[10px] font-semibold tracking-[0.05em] px-[10px] py-[5px] rounded-[4px]"
-                    >OCHIQ</span
-                  >
-                </div>
-                <div class="p-[22px] flex flex-col flex-1">
-                  <h3
-                    class="text-[17px] font-semibold text-[#F4F1EA] mb-[10px]"
-                  >
-                    Bukhara Smart City
-                  </h3>
-                  <p class="text-[13px] text-[#99A0AC] leading-[1.6] mb-[20px]">
-                    Yashash va ishlash uchun integratsiyalashgan ekotizim.
-                    Loyiha arizalari kutilmoqda.
-                  </p>
-
-                  <div class="flex items-center justify-between mb-[8px]">
-                    <span class="text-[10px] tracking-[0.1em] text-[#5C6470]"
-                      >NAVBATDA</span
-                    >
-                    <span class="text-[12px] text-[#E2E2E8]"
-                      >1,240 investor</span
-                    >
-                  </div>
-                  <div
-                    class="w-full h-[4px] rounded-full bg-[#2A2F3A] overflow-hidden mb-[20px]"
-                  ></div>
-
-                  <div
-                    class="flex justify-between border-t border-[#2A2F3A] pt-[16px] mb-[20px]"
-                  >
-                    <div>
-                      <p
-                        class="text-[9px] tracking-[0.1em] text-[#5C6470] mb-[6px]"
-                      >
-                        DAROMAD
-                      </p>
-                      <p class="text-[13px] text-[#5C6470]">--% yillik</p>
-                    </div>
-                    <div class="text-right">
-                      <p
-                        class="text-[9px] tracking-[0.1em] text-[#5C6470] mb-[6px]"
-                      >
-                        MUDDAT
-                      </p>
-                      <p class="text-[13px] text-[#D1C5AF]">24 oy</p>
-                    </div>
-                  </div>
-
-                  <button
-                    class="mt-auto border border-[#2A2F3A] text-[#5C6470] text-[12px] tracking-[0.05em] py-[12px] rounded-[6px] cursor-not-allowed"
-                  >
-                    XABARDOR BOʻLISH
-                  </button>
-                </div>
-              </div>
-            </article>
-          </div>
-
-          <!-- Shown by JS when a filter has zero matching cards -->
-          <p
-            id="empty-state"
-            class="hidden text-center text-[13px] text-[#5C6470] py-[40px]"
-          >
+          <p id="empty-state" class="hidden text-center text-[13px] text-[#5C6470] py-[40px]">
             Ushbu turdagi loyihalar hozircha mavjud emas.
           </p>
+
+          <div data-animate="fade-up" class="text-center mt-[48px]">
+            <a href="./pages/katalog.html" class="inline-flex items-center gap-2 border border-[#2A2F3A] hover:border-[#ECC246] text-[#D1C5AF] hover:text-[#ECC246] text-[13px] tracking-[0.05em] px-[28px] py-[14px] rounded-lg transition-colors">
+              BARCHA LOYIHALARNI KO'RISH <span aria-hidden="true">→</span>
+            </a>
+          </div>
         </div>
       </section>
 
-      <section class="bg-[#0D0E12] text-[#D1C5AF] py-[80px] max-[500px]:py-[48px]">
-      <div class="max-w-[1000px] mx-auto px-[24px] max-[750px]:px-[16px]">
- 
-        <!-- Heading -->
-        <div class="text-center mb-[40px]">
-          <p class="text-[12px] tracking-[0.2em] text-[#ECC246] mb-[14px]">KALKULYATOR</p>
-          <h2 class="font-['Playfair_Display'] text-[32px] max-[500px]:text-[24px] text-[#F4F1EA]">Daromadingizni rejalashtiring</h2>
-        </div>
- 
-        <!-- Calculator card -->
-        <div id="calculator" class="grid grid-cols-2 max-[600px]:grid-cols-1 border border-[#2A2F3A] rounded-[10px] overflow-hidden">
- 
-          <!-- Left: inputs -->
-          <div class="bg-[#15171C] p-[28px] max-[500px]:p-[20px]">
- 
-            <!-- Amount -->
-            <div class="flex items-center justify-between mb-[14px]">
-              <span class="text-[11px] tracking-[0.08em] text-[#5C6470]">SARMOYA MIQDORI (UZS)</span>
-              <span id="amount-value" class="text-[16px] font-semibold text-[#ECC246]">10,000,000</span>
-            </div>
-            <input
-              type="range"
-              id="amount-slider"
-              min="1000000"
-              max="500000000"
-              step="500000"
-              value="10000000"
-              class="w-full accent-[#ECC246] h-[3px] bg-[#2A2F3A] rounded-full appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-[14px] [&::-webkit-slider-thumb]:h-[14px] [&::-webkit-slider-thumb]:bg-[#ECC246] [&::-webkit-slider-thumb]:rounded-[3px] [&::-webkit-slider-thumb]:cursor-pointer [&::-moz-range-thumb]:w-[14px] [&::-moz-range-thumb]:h-[14px] [&::-moz-range-thumb]:bg-[#ECC246] [&::-moz-range-thumb]:border-0 [&::-moz-range-thumb]:rounded-[3px]"
-            />
-            <div class="flex justify-between mt-[6px] mb-[28px]">
-              <span class="text-[10px] text-[#5C6470]">1,000,000</span>
-              <span class="text-[10px] text-[#5C6470]">500,000,000</span>
-            </div>
- 
-            <!-- Term -->
-            <div class="flex items-center justify-between mb-[14px]">
-              <span class="text-[11px] tracking-[0.08em] text-[#5C6470]">SARMOYA MUDDATI (OY)</span>
-              <span id="term-value" class="text-[16px] font-semibold text-[#ECC246]">12</span>
-            </div>
-            <input
-              type="range"
-              id="term-slider"
-              min="6"
-              max="48"
-              step="1"
-              value="12"
-              class="w-full accent-[#ECC246] h-[3px] bg-[#2A2F3A] rounded-full appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-[14px] [&::-webkit-slider-thumb]:h-[14px] [&::-webkit-slider-thumb]:bg-[#ECC246] [&::-webkit-slider-thumb]:rounded-[3px] [&::-webkit-slider-thumb]:cursor-pointer [&::-moz-range-thumb]:w-[14px] [&::-moz-range-thumb]:h-[14px] [&::-moz-range-thumb]:bg-[#ECC246] [&::-moz-range-thumb]:border-0 [&::-moz-range-thumb]:rounded-[3px]"
-            />
-            <div class="flex justify-between mt-[6px] mb-[28px]">
-              <span class="text-[10px] text-[#5C6470]">6 OY</span>
-              <span class="text-[10px] text-[#5C6470]">48 OY</span>
-            </div>
- 
-            <div class="border border-[#2A2F3A] rounded-[6px] p-[16px]">
-              <p class="text-[12px] text-[#99A0AC] italic leading-[1.6]">
-                "Ushbu hisob-kitoblar Musharaka va Ijara shartnomalari asosida taqsimlanadigan bashoratli foydani aks ettiradi."
-              </p>
-            </div>
+      <!-- CALCULATOR -->
+      <section id="kalkulyator" class="bg-[#0D0E12] text-[#D1C5AF] py-[80px] max-[500px]:py-[48px]">
+        <div class="max-w-[1000px] mx-auto px-[24px] max-[750px]:px-[16px]">
+          <div data-animate="fade-up" class="text-center mb-[40px]">
+            <p class="text-[12px] tracking-[0.2em] text-[#ECC246] mb-[14px]">KALKULYATOR</p>
+            <h2 class="font-cinzel text-[32px] max-[500px]:text-[24px] text-[#F4F1EA]">Daromadingizni rejalashtiring</h2>
           </div>
- 
-          <!-- Right: results -->
-          <div class="bg-[#1B2029] p-[28px] max-[500px]:p-[20px] flex flex-col">
-            <p class="text-[10px] tracking-[0.12em] text-[#4A5261] mb-[24px]">HISOBLANGAN LOYIHA</p>
- 
-            <div class="flex items-center justify-between py-[14px] border-b border-[#2A2F3A]">
-              <span class="text-[12px] text-[#99A0AC]">Kutilayotgan yillik daromad</span>
-              <span id="rate-value" class="text-[14px] font-semibold text-[#2DD4BF]">16.5%</span>
-            </div>
-            <div class="flex items-center justify-between py-[14px] border-b border-[#2A2F3A]">
-              <span class="text-[12px] text-[#99A0AC]">Umumiy foyda (bashorat)</span>
-              <span id="profit-value" class="text-[14px] font-semibold text-[#F4F1EA]">1,650,000 UZS</span>
-            </div>
-            <div class="flex items-center justify-between py-[14px] border-b border-[#2A2F3A] mb-[24px]">
-              <span class="text-[12px] text-[#99A0AC]">Platforma xizmati</span>
-              <span id="fee-value" class="text-[14px] font-semibold text-[#F4F1EA]">0 UZS</span>
-            </div>
- 
-            <div class="flex items-end justify-between mb-[24px]">
-              <span class="text-[13px] font-semibold text-[#F4F1EA]">Jami qaytim</span>
-              <div class="text-right">
-                <div id="total-value" class="text-[24px] font-semibold text-[#ECC246] leading-none">11,650,000</div>
-                <div class="text-[9px] tracking-[0.08em] text-[#5C6470] mt-[4px]">UZS (BASHORAT)</div>
+
+          <div id="calculator" data-animate="scale-in" class="grid grid-cols-2 max-[600px]:grid-cols-1 border border-[#2A2F3A] rounded-[14px] overflow-hidden shadow-2xl shadow-black/30">
+            <div class="bg-[#15171C] p-[28px] max-[500px]:p-[20px]">
+              <div class="flex items-center justify-between mb-[14px]">
+                <span class="text-[11px] tracking-[0.08em] text-[#5C6470]">SARMOYA MIQDORI (UZS)</span>
+                <span id="amount-value" class="text-[16px] font-semibold text-[#ECC246]">10,000,000</span>
+              </div>
+              <input type="range" id="amount-slider" aria-label="Sarmoya miqdori" min="1000000" max="500000000" step="500000" value="10000000"
+                class="w-full accent-[#ECC246] h-[3px] bg-[#2A2F3A] rounded-full appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-[14px] [&::-webkit-slider-thumb]:h-[14px] [&::-webkit-slider-thumb]:bg-[#ECC246] [&::-webkit-slider-thumb]:rounded-[3px] [&::-webkit-slider-thumb]:cursor-pointer [&::-moz-range-thumb]:w-[14px] [&::-moz-range-thumb]:h-[14px] [&::-moz-range-thumb]:bg-[#ECC246] [&::-moz-range-thumb]:border-0 [&::-moz-range-thumb]:rounded-[3px]" />
+              <div class="flex justify-between mt-[6px] mb-[28px]">
+                <span class="text-[10px] text-[#5C6470]">1,000,000</span>
+                <span class="text-[10px] text-[#5C6470]">500,000,000</span>
+              </div>
+
+              <div class="flex items-center justify-between mb-[14px]">
+                <span class="text-[11px] tracking-[0.08em] text-[#5C6470]">SARMOYA MUDDATI (OY)</span>
+                <span id="term-value" class="text-[16px] font-semibold text-[#ECC246]">12</span>
+              </div>
+              <input type="range" id="term-slider" aria-label="Sarmoya muddati" min="6" max="48" step="1" value="12"
+                class="w-full accent-[#ECC246] h-[3px] bg-[#2A2F3A] rounded-full appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-[14px] [&::-webkit-slider-thumb]:h-[14px] [&::-webkit-slider-thumb]:bg-[#ECC246] [&::-webkit-slider-thumb]:rounded-[3px] [&::-webkit-slider-thumb]:cursor-pointer [&::-moz-range-thumb]:w-[14px] [&::-moz-range-thumb]:h-[14px] [&::-moz-range-thumb]:bg-[#ECC246] [&::-moz-range-thumb]:border-0 [&::-moz-range-thumb]:rounded-[3px]" />
+              <div class="flex justify-between mt-[6px] mb-[28px]">
+                <span class="text-[10px] text-[#5C6470]">6 OY</span>
+                <span class="text-[10px] text-[#5C6470]">48 OY</span>
+              </div>
+
+              <div class="border border-[#2A2F3A] rounded-[6px] p-[16px]">
+                <p class="text-[12px] text-[#99A0AC] italic leading-[1.6]">
+                  "Ushbu hisob-kitoblar Musharaka va Ijara shartnomalari asosida taqsimlanadigan bashoratli foydani aks ettiradi."
+                </p>
               </div>
             </div>
- 
-            <button class="bg-[#ECC246] text-[#0D0E12] text-[13px] font-semibold tracking-[0.03em] py-[14px] rounded-[6px] mb-[16px]">
-              SARMOYA KIRITISHNI BOSHLASH
-            </button>
- 
-            <div class="flex gap-[10px] border border-[#5C2A2A] bg-[#2A1414] rounded-[6px] p-[12px]">
-              <span class="text-[#E27C7C] text-[13px] leading-none">⚠</span>
-              <p class="text-[10px] text-[#C99] leading-[1.6]">
-                Sarmoya kiritish har doim xavf bilan bogʻliq. Koʻchmas mulk narxi oʻzgarishi mumkin. Platforma daromadni 100% kafolatlamaydi.
-              </p>
+
+            <div class="bg-[#1B2029] p-[28px] max-[500px]:p-[20px] flex flex-col">
+              <p class="text-[10px] tracking-[0.12em] text-[#4A5261] mb-[24px]">HISOBLANGAN LOYIHA</p>
+
+              <div class="flex items-center justify-between py-[14px] border-b border-[#2A2F3A]">
+                <span class="text-[12px] text-[#99A0AC]">Kutilayotgan yillik daromad</span>
+                <span id="rate-value" class="text-[14px] font-semibold text-[#2DD4BF]">16.5%</span>
+              </div>
+              <div class="flex items-center justify-between py-[14px] border-b border-[#2A2F3A]">
+                <span class="text-[12px] text-[#99A0AC]">Umumiy foyda (bashorat)</span>
+                <span id="profit-value" class="text-[14px] font-semibold text-[#F4F1EA]">1,650,000 UZS</span>
+              </div>
+              <div class="flex items-center justify-between py-[14px] border-b border-[#2A2F3A] mb-[24px]">
+                <span class="text-[12px] text-[#99A0AC]">Platforma xizmati</span>
+                <span id="fee-value" class="text-[14px] font-semibold text-[#F4F1EA]">0 UZS</span>
+              </div>
+
+              <div class="flex items-end justify-between mb-[24px]">
+                <span class="text-[13px] font-semibold text-[#F4F1EA]">Jami qaytim</span>
+                <div class="text-right">
+                  <div id="total-value" class="text-[24px] font-semibold text-[#ECC246] leading-none">11,650,000</div>
+                  <div class="text-[9px] tracking-[0.08em] text-[#5C6470] mt-[4px]">UZS (BASHORAT)</div>
+                </div>
+              </div>
+
+              <button type="button" id="calc-cta-btn" class="bg-[#ECC246] hover:bg-[#d8ae3a] text-[#0D0E12] text-[13px] font-semibold tracking-[0.03em] py-[14px] rounded-[6px] mb-[16px] cursor-pointer transition-colors">
+                SARMOYA KIRITISHNI BOSHLASH
+              </button>
+
+              <div class="flex gap-[10px] border border-[#5C2A2A] bg-[#2A1414] rounded-[6px] p-[12px]">
+                <span class="text-[#E27C7C] text-[13px] leading-none">⚠</span>
+                <p class="text-[10px] text-[#C99] leading-[1.6]">
+                  Sarmoya kiritish har doim xavf bilan bogʻliq. Koʻchmas mulk narxi oʻzgarishi mumkin. Platforma daromadni 100% kafolatlamaydi.
+                </p>
+              </div>
             </div>
           </div>
- 
         </div>
-      </div>
-    </section>
+      </section>
     </main>
 
-    <footer class="border-t border-[#2A2F3A] py-[20px]">
-      <div
-        class="max-w-[1200px] mx-auto px-[24px] flex justify-between items-center text-[11px] text-[#5C6470]"
-      >
-        <p>© 2024 ZAR INVEST. BARCHA HUQUQLAR HIMOYALANGAN.</p>
-        <p>O‘ZBEKISTON RESPUBLIKASI MARKAZIY BANKI LITENZIYASI №0045-89</p>
-      </div>
-    </footer>
+    <site-footer base="./"></site-footer>
 
-    <script src="./js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="./js/projects-data.js"></script>
+    <script src="./js/storage.js"></script>
+    <script src="./js/partials.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/animations.js"></script>
   </body>
 </html>

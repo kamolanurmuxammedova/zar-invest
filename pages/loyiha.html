@@ -1,118 +1,130 @@
 <!doctype html>
-<html lang="en">
+<html lang="uz">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="ZAR Invest loyiha tafsilotlari — moliyaviy ko'rsatkichlar, muddat va sarmoya kiritish." />
+    <title>Loyiha — ZAR Invest</title>
+
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>Zar Invest</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <style>
+      html { scroll-behavior: smooth; }
+      body { font-family: "Inter", sans-serif; }
+      .font-cinzel { font-family: "Cinzel", serif; }
+      ::selection { background: #ECC246; color: #0D0E12; }
+      @view-transition { navigation: auto; }
+    </style>
   </head>
-  <body>
-    <header class="bg-[#0D0E12] text-[#D1C5AF]">
-      <input type="checkbox" id="nav-toggle" class="peer hidden" />
+  <body data-page="loyiha" class="bg-[#0D0E12] text-[#D1C5AF] antialiased">
+    <site-loader></site-loader>
+    <site-header base="../"></site-header>
 
-      
-      <div class="flex lg:hidden items-center justify-between px-[24px] max-[400px]:px-[14px] py-[15px] max-[400px]:py-[10px]">
-        <label for="nav-toggle" class="cursor-pointer shrink-0" aria-label="Menyu">
-          <svg width="22" height="16" viewBox="0 0 22 16" fill="none">
-            <rect width="22" height="2" rx="1" fill="#D1C5AF" />
-            <rect y="7" width="22" height="2" rx="1" fill="#D1C5AF" />
-            <rect y="14" width="22" height="2" rx="1" fill="#D1C5AF" />
-          </svg>
-        </label>
+    <main>
+      <!-- NOT FOUND (shown only if ?id= doesn't resolve) -->
+      <section id="not-found" class="hidden max-w-[600px] mx-auto text-center py-[120px] px-6">
+        <p class="text-[#ECC246] text-[13px] tracking-[0.2em] mb-4">404</p>
+        <h1 class="font-cinzel text-[28px] text-white mb-4">Loyiha topilmadi</h1>
+        <p class="text-[#99A0AC] mb-8">Siz izlagan loyiha mavjud emas yoki olib tashlangan bo'lishi mumkin.</p>
+        <a href="./katalog.html" class="inline-flex items-center gap-2 bg-[#ECC246] text-[#0D0E12] font-semibold text-sm px-6 py-3 rounded-lg hover:bg-[#d8ae3a] transition-colors">Katalogga qaytish</a>
+      </section>
 
-        <a href="../index.html" class="flex-1 flex justify-center">
-          <img src="../images/logo.svg" alt="" class="max-[400px]:h-[22px]" />
-        </a>
+      <div id="detail-content" class="hidden">
+        <!-- BREADCRUMB -->
+        <div class="max-w-[1250px] mx-auto px-6 max-[500px]:px-4 pt-8 text-[12px] text-[#5C6470] flex items-center gap-2 flex-wrap">
+          <a href="./katalog.html" class="hover:text-[#ECC246] transition-colors">Loyihalar</a>
+          <span>/</span>
+          <span id="breadcrumb-name" class="text-[#99A0AC]">...</span>
+        </div>
 
-        <button class="relative shrink-0" aria-label="Bildirishnomalar">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D1C5AF" stroke-width="1.6">
-            <path d="M18 8a6 6 0 10-12 0c0 7-3 9-3 9h18s-3-2-3-9" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M13.73 21a2 2 0 01-3.46 0" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-          <span class="absolute -top-[2px] -right-[2px] w-[7px] h-[7px] rounded-full bg-[#ECC246] border border-[#0D0E12]"></span>
-        </button>
-      </div>
+        <!-- HERO -->
+        <section class="max-w-[1250px] mx-auto px-6 max-[500px]:px-4 pt-6 pb-10">
+          <div class="grid lg:grid-cols-[1.5fr_1fr] gap-10">
+            <div data-animate="fade-up">
+              <div class="relative h-[320px] max-[500px]:h-[220px] rounded-2xl overflow-hidden border border-[#2A2F3A] mb-6">
+                <div id="hero-cover" class="absolute inset-0 bg-cover bg-center" data-parallax="0.08"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-[#0D0E12]/85 via-transparent to-transparent"></div>
+                <span id="status-badge-detail" class="absolute top-4 left-4 text-[10px] font-semibold tracking-[0.05em] px-[10px] py-[5px] rounded-[4px]"></span>
+                <button type="button" id="wishlist-btn-detail" aria-label="Saqlash" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-[#0D0E12]/70 backdrop-blur flex items-center justify-center text-[#D1C5AF] hover:text-[#ECC246] transition-colors">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.6l-1-1a5.5 5.5 0 00-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 000-7.8z"/></svg>
+                </button>
+              </div>
 
-      <div class="hidden lg:flex mx-auto px-[24px] py-[15px] items-center">
-        <a href="../index.html">
-          <img src="../images/logo.svg" alt="" />
-        </a>
-        <div class="flex justify-between w-full items-center">
-          <ul class="flex pl-[50px] gap-[30px]">
-            <li class="hover:text-[#ECC246] hover:border-b border-4px">Loyihalar</li>
-            <li class="hover:text-[#ECC246] hover:border-b border-4px">Qanday ishlaydi</li>
-            <li class="hover:text-[#ECC246] hover:border-b border-4px">Sanat kehgashi</li>
-            <li class="hover:text-[#ECC246] hover:border-b border-4px">Hisobatlar</li>
-            <li class="hover:text-[#ECC246] hover:border-b border-4px">Kalkulyator</li>
-          </ul>
+              <p id="category-label" class="text-[12px] tracking-[0.2em] text-[#ECC246] mb-3"></p>
+              <h1 id="project-name" class="font-cinzel text-[32px] max-[500px]:text-[24px] text-white mb-3"></h1>
+              <p id="project-location" class="flex items-center gap-2 text-[13px] text-[#99A0AC] mb-6"></p>
+              <p id="project-description" class="text-[15px] text-[#99A0AC] leading-[1.8] mb-8"></p>
 
-          <div class="flex gap-[30px] items-center">
-            <button class="px-[16px] py-[10px]">Kirish</button>
-            <button class="px-[16px] py-[10px] bg-[#ECC246] text-[#0D0E12]">Hisob ochish</button>
+              <ul id="highlights-list" class="grid sm:grid-cols-2 gap-3"></ul>
+            </div>
+
+            <!-- SIDEBAR CARD -->
+            <aside data-animate="scale-in" data-delay="0.1" class="bg-[#12141A] border border-[#2A2F3A] rounded-2xl p-6 h-fit lg:sticky lg:top-[100px]">
+              <div id="funding-block" class="mb-6">
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-[10px] tracking-[0.1em] text-[#5C6470]">YIG'ILGAN</span>
+                  <span class="text-[13px] text-[#E2E2E8]"><span id="funding-raised" class="text-white font-medium"></span> / <span id="funding-goal"></span></span>
+                </div>
+                <div class="w-full h-[6px] rounded-full bg-[#2A2F3A] overflow-hidden mb-2">
+                  <div id="funding-pct-bar" class="h-full rounded-full bg-[#ECC246] transition-all duration-700" style="width:0%"></div>
+                </div>
+                <p class="text-[11px] text-[#5C6470]"><span id="funding-investors"></span> investor qatnashmoqda</p>
+              </div>
+
+              <div class="grid grid-cols-2 gap-4 mb-6 border-t border-[#2A2F3A] pt-5">
+                <div>
+                  <p class="text-[9px] tracking-[0.1em] text-[#5C6470] mb-1">DAROMAD</p>
+                  <p id="fact-return" class="text-[15px] text-[#ECC246] font-semibold"></p>
+                </div>
+                <div>
+                  <p class="text-[9px] tracking-[0.1em] text-[#5C6470] mb-1">MUDDAT</p>
+                  <p id="fact-term" class="text-[15px] text-white font-semibold"></p>
+                </div>
+                <div>
+                  <p class="text-[9px] tracking-[0.1em] text-[#5C6470] mb-1">XAVF DARAJASI</p>
+                  <p id="fact-risk" class="text-[13px] text-[#D1C5AF]"></p>
+                </div>
+                <div>
+                  <p class="text-[9px] tracking-[0.1em] text-[#5C6470] mb-1">SHARTNOMA</p>
+                  <p id="fact-contract" class="text-[13px] text-[#D1C5AF]"></p>
+                </div>
+              </div>
+
+              <form id="invest-form" class="border-t border-[#2A2F3A] pt-5">
+                <label for="invest-amount" class="text-[11px] tracking-[0.08em] text-[#5C6470] block mb-2">SARMOYA MIQDORI (UZS) — min. <span id="fact-min"></span></label>
+                <input type="number" id="invest-amount" step="500000" required
+                  class="w-full bg-[#0D0E12] border border-[#2A2F3A] rounded-lg px-4 py-3 text-[15px] text-white focus:outline-none focus:border-[#ECC246] transition-colors mb-4" />
+                <p id="invest-payment-note" class="text-[11px] text-[#5C6470] mb-4"></p>
+                <button type="submit" id="invest-submit-btn" class="w-full bg-[#ECC246] hover:bg-[#d8ae3a] text-[#0D0E12] font-semibold text-[13px] tracking-[0.03em] py-[14px] rounded-lg cursor-pointer transition-colors">
+                  SARMOYA KIRITISH
+                </button>
+              </form>
+            </aside>
           </div>
-        </div>
-      </div>
+        </section>
 
-      <div class="hidden peer-checked:flex lg:hidden flex-col px-[24px] max-[400px]:px-[14px] pb-[20px] gap-[20px]">
-        <ul class="flex flex-col gap-[16px]">
-          <li class="hover:text-[#ECC246]">Loyihalar</li>
-          <li class="hover:text-[#ECC246]">Qanday ishlaydi</li>
-          <li class="hover:text-[#ECC246]">Sanat kehgashi</li>
-          <li class="hover:text-[#ECC246]">Hisobatlar</li>
-          <li class="hover:text-[#ECC246]">Kalkulyator</li>
-        </ul>
-        <div class="flex flex-col gap-[12px]">
-          <button class="px-[16px] py-[10px] border border-[#2A2F3A]">Kirish</button>
-          <button class="px-[16px] py-[10px] bg-[#ECC246] text-[#0D0E12]">Hisob ochish</button>
-        </div>
-      </div>
-    </header>
-
-    <footer class="bg-[#1A1C20] w-full py-[80px] max-[400px]:py-[40px] border-t-[1px] border-[#2A2F3A]">
-      <div class="container px-[24px] max-[400px]:px-[16px] pb-[80px] max-[400px]:pb-[40px] flex flex-wrap justify-between w-full gap-[30px]">
-        <div class="column-1 max-[400px]:w-full">
-          <img src="../images/ZAR INVEST (1).svg" alt="" class="max-[400px]:h-[24px]" />
-          <p class="text-[16px] max-[400px]:text-[13px] text-[#99A0AC] py-[40px] max-[400px]:py-[20px]">
-            Oʻzbekistondagi ilk islom moliya <br class="max-[400px]:hidden" /> tamoyillariga asoslangan
-            kraudfanding <br class="max-[400px]:hidden" /> platformasi.
-          </p>
-          <div class="flex gap-[20px]">
-            <a href="https://www.google.com/?hl=ru"><img src="../images/Link (1).svg" alt="" /></a>
-            <a href="https://web.telegram.org/"><img src="./images/Icon.svg" alt="" /></a>
-            <a href="https://gmail.google.com/mail/u/0/"><img src="../images/Link.svg" alt="" /></a>
+        <!-- RELATED -->
+        <section class="border-t border-[#2A2F3A] py-[64px]">
+          <div class="max-w-[1250px] mx-auto px-6 max-[500px]:px-4">
+            <h2 data-animate="fade-up" class="font-cinzel text-[24px] text-[#F4F1EA] mb-8">O'xshash loyihalar</h2>
+            <div id="related-grid" data-stagger="0.1" class="grid grid-cols-3 max-[900px]:grid-cols-2 max-[600px]:grid-cols-1 gap-[24px]"></div>
           </div>
-        </div>
-        <div class="column-2 max-[400px]:w-[45%]">
-          <h4 class="text-[10px] text-[#E2E2E8]">PLATFORMA</h4>
-          <ul class="text-[#99A0AC] text-[14px] max-[400px]:text-[12px] flex flex-col gap-[20px] max-[400px]:gap-[12px] pt-[32px] max-[400px]:pt-[16px]">
-            <li>Loyihalar</li>
-            <li>Qanday ishlaydi</li>
-            <li>Kalkulyator</li>
-            <li>Hisobotlar</li>
-          </ul>
-        </div>
-        <div class="column-3 max-[400px]:w-[45%]">
-          <h4 class="text-[10px] text-[#E2E2E8]">HUQUQIY</h4>
-          <ul class="text-[#99A0AC] text-[14px] max-[400px]:text-[12px] flex flex-col gap-[20px] max-[400px]:gap-[12px] pt-[32px] max-[400px]:pt-[16px]">
-            <li>Foydalanish shartlari</li>
-            <li>Maxfiylik siyosati</li>
-            <li>Ommaviy oferta</li>
-            <li>Shariat sertifikati</li>
-          </ul>
-        </div>
-        <div class="column-4 max-[400px]:w-full">
-          <h4 class="text-[10px] text-[#E2E2E8]">BOGʻLANISH</h4>
-          <ul class="text-[#99A0AC] text-[14px] max-[400px]:text-[12px] flex flex-col gap-[20px] max-[400px]:gap-[12px] pt-[32px] max-[400px]:pt-[16px]">
-            <li class="flex gap-[15px] items-start"><img src="../images/Container (2).svg" alt="" class="shrink-0" />+998 (71) 200-00-00</li>
-            <li class="flex gap-[15px] items-start"><img src="../images/Container (1).svg" alt="" class="shrink-0" />Toshkent sh., Mirabod tumani, 45</li>
-            <li class="flex gap-[15px] items-start"><img src="../images/Container.svg" alt="" class="shrink-0" />info@zarinvest.uz</li>
-          </ul>
-        </div>
+        </section>
       </div>
-      <div class="border-t-[1px] border-[#5C6470] text-[9px] w-full mx-auto max-w-[1500px] text-[#5C6470] flex flex-wrap gap-[8px] justify-between px-[24px] max-[400px]:px-[16px] pt-[40px] max-[400px]:pt-[20px]">
-        <h1>© 2024 ZAR INVEST. BARCHA HUQUQLAR HIMOYALANGAN.</h1>
-        <h1>OʻZBEKISTON RESPUBLIKASI MARKAZIY BANKI LITENZIYASI №0045-89</h1>
-      </div>
-    </footer>
+    </main>
+
+    <site-footer base="../"></site-footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="../js/projects-data.js"></script>
+    <script src="../js/storage.js"></script>
+    <script src="../js/partials.js"></script>
+    <script src="../js/animations.js"></script>
+    <script src="../js/loyiha.js"></script>
   </body>
 </html>
