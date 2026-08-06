@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Zar Invest - Hisob Ochish (5-Bosqich)</title>
+  </head>
+  <body class="bg-[#0D0E12] text-[#D1C5AF] min-h-screen flex flex-col justify-between">
+    <!-- Header -->
+    <header class="border-b border-[#2A2F3A]">
+      <div class="max-w-[1200px] mx-auto px-[24px] py-[15px] flex justify-between items-center">
+        <a href="../../index.html">
+          <img src="../../images/logo.svg" alt="Zar Invest Logo" class="h-[28px]" />
+        </a>
+        <a href="../../index.html" class="text-[#99A0AC] hover:text-[#ECC246] transition-colors text-[14px]">
+          Chiqish ✕
+        </a>
+      </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="flex-1 flex items-center justify-center py-[40px] px-[16px]">
+      <div class="w-full max-w-[540px] bg-[#1A1C20] border border-[#2A2F3A] rounded-2xl p-[24px] sm:p-[40px]">
+        
+        <!-- Progress Bar (5/5 bosqich) -->
+        <div class="mb-[32px]">
+          <div class="flex justify-between items-center mb-[8px] text-[12px] text-[#99A0AC]">
+            <span>Bosqich 5 dan 5</span>
+            <span class="text-[#ECC246] font-medium">100%</span>
+          </div>
+          <div class="w-full h-[6px] bg-[#2A2F3A] rounded-full overflow-hidden">
+            <div class="h-full bg-[#ECC246] rounded-full w-[100%] transition-all duration-300"></div>
+          </div>
+        </div>
+
+        <!-- Title & Subtitle -->
+        <div class="mb-[32px]">
+          <h1 class="text-[22px] sm:text-[26px] font-semibold text-[#E2E2E8] mb-[8px]">
+            Shaxsiy ma'lumotlar
+          </h1>
+          <p class="text-[#99A0AC] text-[14px]">
+            Hisobingizni to'liq faollashtirish uchun ma'lumotlaringizni kiriting.
+          </p>
+        </div>
+
+        <!-- Form -->
+        <form id="step5-form" class="flex flex-col gap-[20px]">
+          
+          <!-- Ism -->
+          <div class="flex flex-col gap-[8px]">
+            <label for="firstname" class="text-[13px] font-medium text-[#E2E2E8]">Ismingiz</label>
+            <input
+              type="text"
+              id="firstname"
+              required
+              placeholder="Masalan: Ali"
+              class="w-full bg-[#0D0E12] border border-[#2A2F3A] rounded-lg px-[16px] py-[12px] text-[14px] text-[#E2E2E8] placeholder-[#5C6470] focus:outline-none focus:border-[#ECC246] transition-colors"
+            />
+          </div>
+
+          <!-- Familiya -->
+          <div class="flex flex-col gap-[8px]">
+            <label for="lastname" class="text-[13px] font-medium text-[#E2E2E8]">Familiyangiz</label>
+            <input
+              type="text"
+              id="lastname"
+              required
+              placeholder="Masalan: Valiyev"
+              class="w-full bg-[#0D0E12] border border-[#2A2F3A] rounded-lg px-[16px] py-[12px] text-[14px] text-[#E2E2E8] placeholder-[#5C6470] focus:outline-none focus:border-[#ECC246] transition-colors"
+            />
+          </div>
+
+          <!-- Yosh -->
+          <div class="flex flex-col gap-[8px]">
+            <label for="age" class="text-[13px] font-medium text-[#E2E2E8]">Yoshingiz</label>
+            <input
+              type="number"
+              id="age"
+              min="18"
+              max="100"
+              required
+              placeholder="Masalan: 25"
+              class="w-full bg-[#0D0E12] border border-[#2A2F3A] rounded-lg px-[16px] py-[12px] text-[14px] text-[#E2E2E8] placeholder-[#5C6470] focus:outline-none focus:border-[#ECC246] transition-colors"
+            />
+          </div><!-- Jins -->
+          <div class="flex flex-col gap-[8px]">
+            <label class="text-[13px] font-medium text-[#E2E2E8]">Jinsingiz</label>
+            <div class="grid grid-cols-2 gap-[12px]">
+              
+              <!-- Erkak Option -->
+              <label class="cursor-pointer">
+                <input type="radio" name="gender" value="male" class="peer hidden" required />
+                <div class="w-full py-[12px] px-[16px] text-center rounded-lg border border-[#2A2F3A] bg-[#0D0E12] text-[#99A0AC] peer-checked:border-[#ECC246] peer-checked:bg-[#ECC246]/10 peer-checked:text-[#ECC246] hover:border-[#5C6470] transition-all font-medium text-[14px]">
+                  Erkak
+                </div>
+              </label>
+
+              <!-- Ayol Option -->
+              <label class="cursor-pointer">
+                <input type="radio" name="gender" value="female" class="peer hidden" required />
+                <div class="w-full py-[12px] px-[16px] text-center rounded-lg border border-[#2A2F3A] bg-[#0D0E12] text-[#99A0AC] peer-checked:border-[#ECC246] peer-checked:bg-[#ECC246]/10 peer-checked:text-[#ECC246] hover:border-[#5C6470] transition-all font-medium text-[14px]">
+                  Ayol
+                </div>
+              </label>
+
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="flex items-center gap-[12px] pt-[12px]">
+            <a
+              href="./hisob4.html"
+              class="w-1/3 py-[12px] text-center border border-[#2A2F3A] rounded-lg text-[#99A0AC] hover:text-[#E2E2E8] hover:border-[#5C6470] transition-colors font-medium text-[14px]"
+            >
+              Orqaga
+            </a>
+            <button
+              type="submit"
+              class="w-2/3 py-[12px] bg-[#ECC246] text-[#0D0E12] rounded-lg font-semibold hover:bg-[#d8ae3a] transition-colors text-[14px] cursor-pointer"
+            >
+              Yakunlash va kirish
+            </button>
+          </div>
+
+        </form>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-[20px] text-center border-t border-[#2A2F3A] text-[11px] text-[#5C6470]">
+      © 2024 ZAR INVEST. BARCHA HUQUQLAR HIMOYALANGAN.
+    </footer>
+
+    <script src="../../js/main.js"></script>
+  </body>
+</html>
