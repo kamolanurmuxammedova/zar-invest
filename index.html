@@ -8,7 +8,7 @@
   </head>
   <body class="bg-[#0D0E12] text-[#D1C5AF]">
 
-    <!-- HEADER -->
+   
     <header class=" border-b border-[#2A2F3A]">
       <div class="max-w-[1450px] mx-auto px-[24px] py-[15px] flex justify-between items-center">
         <!-- LOGO -->
@@ -33,7 +33,7 @@
       </div>
     </header>
 
-    <!-- ASOSIY QISM (HERO SECTION) -->
+    
     <main class="mx-auto py-[80px]">
         <section class="w-full bg-[#101012]  px-8 py-14 md:px-16 md:py-16">
  
@@ -140,27 +140,19 @@
       <div class="grid grid-cols-1 md:grid-cols-3 max-w-[1500px] mx-auto">
         <!-- Column 1 -->
         <div class="px-[40px] py-[50px] border-b md:border-b-0 md:border-r border-[#2A2F3A]">
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#2DD9C0" stroke-width="1.6" class="mb-[24px]">
-            <path d="M3 10l9-6 9 6" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M5 10v9M9 10v9M15 10v9M19 10v9" stroke-linecap="round" />
-            <path d="M3 19h18" stroke-linecap="round" />
-          </svg>
+          <img src="./images/bank.svg" alt="" class="py-[14px]">
           <h3 class="text-[18px] text-[#F4F1EA] mb-[16px]">Eskrou hisobvarag'i</h3>
-          <p class="text-[14px] text-[#99A0AC] leading-[22px]">
-            Barcha mablag'lar "Kapitalbank" ATBdagi maxsus eskrou hisobida saqlanadi.
+          <p class="text-[20px] text-[#99A0AC] leading-[40px]">
+            Barcha mablag'lar "Kapitalbank" ATBdagi <br>maxsus eskrou hisobida saqlanadi. <br>
             Quruvchi pulni faqat ish yakunlangach oladi.
           </p>
         </div>
  
         <!-- Column 2 -->
         <div class="px-[40px] py-[50px] border-b md:border-b-0 md:border-r border-[#2A2F3A]">
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#2DD9C0" stroke-width="1.6" class="mb-[24px]">
-            <path d="M6 3h9l5 5v13a1 1 0 01-1 1H6a1 1 0 01-1-1V4a1 1 0 011-1z" stroke-linejoin="round" />
-            <path d="M15 3v5h5" stroke-linejoin="round" />
-            <path d="M8 13h8M8 17h5" stroke-linecap="round" />
-          </svg>
+          <img src="./images/doc.svg" alt="" class="py-[14px]">
           <h3 class="text-[18px] text-[#F4F1EA] mb-[16px]">Mustaqil Audit</h3>
-          <p class="text-[14px] text-[#99A0AC] leading-[22px] mb-[20px]">
+          <p class="text-[20px] text-[#99A0AC] leading-[40px] mb-[20px]">
             Har bir loyiha KPMG yoki PWC kabi xalqaro auditorlar tomonidan tekshiriladi.
             Hisobotlar barcha investorlar uchun ochiq.
           </p>
@@ -174,25 +166,108 @@
         </div>
  
         <!-- Column 3 -->
-        <div class="px-[40px] py-[50px]">
-          <img src="./images/bank.svg" alt="">
+        <div class="px-[40px] py-[30px]">
+          <img src="./images/secure.svg" alt="" class="py-[14px]">
           <h3 class="text-[18px] text-[#F4F1EA] mb-[16px]">Shariat Kengashi</h3>
-          <p class="text-[14px] text-[#99A0AC] leading-[22px] mb-[20px]">
+          <p class="text-[20px] text-[#99A0AC] leading-[40px] mb-[20px]">
             Moliyaviy operatsiyalar va shartnomalar tan olingan ulamolar va islom
             moliyasi ekspertlari nazorati ostida.
           </p>
-          <div class="flex gap-[10px]">
-            <span class="w-[26px] h-[26px] flex items-center justify-center rounded-full border border-[#2A2F3A] text-[10px] text-[#99A0AC]">RU</span>
-            <span class="w-[26px] h-[26px] flex items-center justify-center rounded-full border border-[#2A2F3A] text-[10px] text-[#99A0AC]">UZ</span>
-            <span class="w-[26px] h-[26px] flex items-center justify-center rounded-full border border-[#2A2F3A] text-[10px] text-[#99A0AC]">EN</span>
-          </div>
+          <img src="./images/Container.svg" alt="">
         </div>
       </div>
     </section>
  
+      <section class="bg-[#0D0E12] text-[#D1C5AF] py-[80px] max-[400px]:py-[48px] border-t-[1px] border-[#1F2229]">
+      <div class="text-[20px] mx-auto px-[24px] max-[400px]:px-[16px]" id="steps-wrapper">
+ 
+        <p class=" tracking-[0.2em] text-[#ECC246] mb-[16px]">JARAYON</p>
+        <h2 class="font-['Playfair_Display'] text-[34px] max-[400px]:text-[24px] text-[#F4F1EA] mb-[56px] max-[400px]:mb-[36px]">
+          Sarmoya kiritish bosqichlari
+        </h2>
+ 
+        <!-- Hidden radios: single source of truth for which step is active -->
+        <input type="radio" name="step" id="step-1" class="hidden" checked />
+        <input type="radio" name="step" id="step-2" class="hidden" />
+        <input type="radio" name="step" id="step-3" class="hidden" />
+        <input type="radio" name="step" id="step-4" class="hidden" />
+ 
+        <div class="grid grid-cols-4 max-[900px]:grid-cols-2 max-[500px]:grid-cols-1 gap-x-[40px] gap-y-[40px]">
+ 
+          <!-- Step 1 -->
+          <div>
+            <label for="step-1" class="cursor-pointer w-[52px] h-[52px] flex items-center justify-center border text-[20px] font-semibold mb-[24px] transition-colors duration-200 border-[#2A2F3A] text-[#5C6470] [#steps-wrapper:has(#step-1:checked)_&]:border-[#ECC246] [#steps-wrapper:has(#step-1:checked)_&]:text-[#ECC246]">
+              01
+            </label>
+            <h3 class="text-[20px] font-semibold text-[#F4F1EA] mb-[10px]">Hisob ochish</h3>
+            <p class="text-[20px] text-[#99A0AC] leading-[1.6] mb-[18px]">
+              Shaxsingizni tasdiqlang va sarmoyador profilini yarating.
+            </p>
+            <span class="text-[20px] tracking-[0.1em] text-[#ECC246]">~ 5 MINUT</span>
+          </div>
+ 
+          <!-- Step 2 -->
+          <div>
+            <label for="step-2" class="cursor-pointer w-[52px] h-[52px] flex items-center justify-center border text-[20px] font-semibold mb-[24px] transition-colors duration-200 border-[#2A2F3A] text-[#5C6470] [#steps-wrapper:has(#step-2:checked)_&]:border-[#ECC246] [#steps-wrapper:has(#step-2:checked)_&]:text-[#ECC246]">
+              02
+            </label>
+            <h3 class="text-[20px] font-semibold text-[#F4F1EA] mb-[10px]">Loyihani tanlash</h3>
+            <p class="text-[20px] text-[#99A0AC] leading-[1.6] mb-[18px]">
+              Mavjud obʼektlarni va ularning risklarini tahlil qiling.
+            </p>
+            <span class="text-[18px] tracking-[0.1em] text-[#ECC246]">CHEKSIZ</span>
+          </div>
+ 
+          <!-- Step 3 -->
+          <div>
+            <label for="step-3" class="cursor-pointer w-[52px] h-[52px] flex items-center justify-center border text-[20px] font-semibold mb-[24px] transition-colors duration-200 border-[#2A2F3A] text-[#5C6470] [#steps-wrapper:has(#step-3:checked)_&]:border-[#ECC246] [#steps-wrapper:has(#step-3:checked)_&]:text-[#ECC246]">
+              03
+            </label>
+            <h3 class="text-[20px] font-semibold text-[#F4F1EA] mb-[10px]">Ulush sotib olish</h3>
+            <p class="text-[20px] text-[#99A0AC] leading-[1.6] mb-[18px]">
+              Kerakli sarmoya miqdorini kiritib, shartnomani imzolang.
+            </p>
+            <span class="text-[18px] tracking-[0.1em] text-[#ECC246]">INSTANT</span>
+          </div>
+ 
+          <!-- Step 4 -->
+          <div>
+            <label for="step-4" class="cursor-pointer w-[52px] h-[52px] flex items-center justify-center border text-[20px] font-semibold mb-[24px] transition-colors duration-200 border-[#2A2F3A] text-[#5C6470] [#steps-wrapper:has(#step-4:checked)_&]:border-[#ECC246] [#steps-wrapper:has(#step-4:checked)_&]:text-[#ECC246]">
+              04
+            </label>
+            <h3 class="text-[20px] font-semibold text-[#F4F1EA] mb-[10px]">Daromad olish</h3>
+            <p class="text-[20px] text-[#99A0AC] leading-[1.6] mb-[18px]">
+              Loyiha yakunida foydani oʻz hisobingizga qabul qiling.
+            </p>
+            <span class="text-[18px] tracking-[0.1em] text-[#ECC246]">OYLIK/KVARTAL</span>
+          </div>
+ 
+        </div>
+ 
+        <!-- Panels the number-buttons route to (pure CSS, no JS). Swap the text for real per-step content. -->
+        <div class="mt-[40px]">
+          <div class="hidden [#steps-wrapper:has(#step-1:checked)_&]:block border border-[#2A2F3A] p-[24px] text-[13px] text-[#99A0AC]">
+            <span class="text-[#ECC246]">01 — Hisob ochish:</span> shu yerga birinchi bosqich uchun batafsil kontent qo‘yiladi.
+          </div>
+          <div class="hidden [#steps-wrapper:has(#step-2:checked)_&]:block border border-[#2A2F3A] p-[24px] text-[13px] text-[#99A0AC]">
+            <span class="text-[#ECC246]">02 — Loyihani tanlash:</span> shu yerga ikkinchi bosqich uchun batafsil kontent qo‘yiladi.
+          </div>
+          <div class="hidden [#steps-wrapper:has(#step-3:checked)_&]:block border border-[#2A2F3A] p-[24px] text-[13px] text-[#99A0AC]">
+            <span class="text-[#ECC246]">03 — Ulush sotib olish:</span> shu yerga uchinchi bosqich uchun batafsil kontent qo‘yiladi.
+          </div>
+          <div class="hidden [#steps-wrapper:has(#step-4:checked)_&]:block border border-[#2A2F3A] p-[24px] text-[13px] text-[#99A0AC]">
+            <span class="text-[#ECC246]">04 — Daromad olish:</span> shu yerga to‘rtinchi bosqich uchun batafsil kontent qo‘yiladi.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="#2A2F3A">
+      
+    </section>
     </main>
 
-    <!-- FOOTER -->
+
     <footer class="border-t border-[#2A2F3A] py-[20px]">
       <div class="max-w-[1200px] mx-auto px-[24px] flex justify-between items-center text-[11px] text-[#5C6470]">
         <p>© 2024 ZAR INVEST. BARCHA HUQUQLAR HIMOYALANGAN.</p>
@@ -200,7 +275,7 @@
       </div>
     </footer>
 
-    <!-- MAIN JS -->
+  
     <script src="./js/main.js"></script>
   </body>
 </html>
