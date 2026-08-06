@@ -63,3 +63,52 @@
     }
   }
 })();
+
+/**
+ * Zar Invest — Kalkulyator logic.
+ * Reads the two range sliders (amount, term) and recomputes the
+ * projected profit / total payout on every input event.
+ *
+ * Formula used (annual rate applied pro-rata to the chosen term):
+ *   foyda = miqdor * (yillikDaromad / 100) * (muddat / 12)
+ *   jamiQaytim = miqdor + foyda - platformaXizmati
+ */
+(function () {
+  const YILLIK_DAROMAD = 16.5; // %, fixed demo rate — wire this up to real project data later
+  const PLATFORMA_XIZMATI = 0; // UZS, flat for now
+
+  const amountSlider = document.getElementById("amount-slider");
+  const termSlider = document.getElementById("term-slider");
+
+  const amountValueEl = document.getElementById("amount-value");
+  const termValueEl = document.getElementById("term-value");
+  const rateValueEl = document.getElementById("rate-value");
+  const profitValueEl = document.getElementById("profit-value");
+  const feeValueEl = document.getElementById("fee-value");
+  const totalValueEl = document.getElementById("total-value");
+
+  function formatNumber(n) {
+    return Math.round(n).toLocaleString("en-US");
+  }
+
+  function recalculate() {
+    const amount = Number(amountSlider.value);
+    const termMonths = Number(termSlider.value);
+
+    const profit = amount * (YILLIK_DAROMAD / 100) * (termMonths / 12);
+    const total = amount + profit - PLATFORMA_XIZMATI;
+
+    amountValueEl.textContent = formatNumber(amount);
+    termValueEl.textContent = termMonths;
+    rateValueEl.textContent = `${YILLIK_DAROMAD}%`;
+    profitValueEl.textContent = `${formatNumber(profit)} UZS`;
+    feeValueEl.textContent = `${formatNumber(PLATFORMA_XIZMATI)} UZS`;
+    totalValueEl.textContent = formatNumber(total);
+  }
+
+  amountSlider.addEventListener("input", recalculate);
+  termSlider.addEventListener("input", recalculate);
+
+  // Initial paint on page load
+  recalculate();
+})();
