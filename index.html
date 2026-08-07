@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  
     <title>Zar Invest</title>
   </head>
   <body class="bg-[#0D0E12] text-[#D1C5AF]">
@@ -453,7 +459,7 @@
             <!-- Card 1 -->
             <article class="project-card" data-category="turar-joy">
               <div
-                class="bg-[#15171C] border border-[#2A2F3A] rounded-[10px] overflow-hidden flex flex-col h-full "
+                class="bg-[#15171C] border border-[#2A2F3A] rounded-[10px] overflow-hidden flex flex-col h-full"
               >
                 <div
                   class="relative h-[340px] bg-[url('./images/uy1.svg')] bg-cover bg-center bg-no-repeat"
@@ -672,106 +678,173 @@
         </div>
       </section>
 
-      <section class="bg-[#0D0E12] text-[#D1C5AF] py-[80px] max-[500px]:py-[48px]">
-      <div class="max-w-[1000px] mx-auto px-[24px] max-[750px]:px-[16px]">
- 
-        <!-- Heading -->
-        <div class="text-center mb-[40px]">
-          <p class="text-[12px] tracking-[0.2em] text-[#ECC246] mb-[14px]">KALKULYATOR</p>
-          <h2 class="font-['Playfair_Display'] text-[32px] max-[500px]:text-[24px] text-[#F4F1EA]">Daromadingizni rejalashtiring</h2>
-        </div>
- 
-        <!-- Calculator card -->
-        <div id="calculator" class="grid grid-cols-2 max-[600px]:grid-cols-1 border border-[#2A2F3A] rounded-[10px] overflow-hidden">
- 
-          <!-- Left: inputs -->
-          <div class="bg-[#15171C] p-[28px] max-[500px]:p-[20px]">
- 
-            <!-- Amount -->
-            <div class="flex items-center justify-between mb-[14px]">
-              <span class="text-[11px] tracking-[0.08em] text-[#5C6470]">SARMOYA MIQDORI (UZS)</span>
-              <span id="amount-value" class="text-[16px] font-semibold text-[#ECC246]">10,000,000</span>
-            </div>
-            <input
-              type="range"
-              id="amount-slider"
-              min="1000000"
-              max="500000000"
-              step="500000"
-              value="10000000"
-              class="w-full accent-[#ECC246] h-[3px] bg-[#2A2F3A] rounded-full appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-[14px] [&::-webkit-slider-thumb]:h-[14px] [&::-webkit-slider-thumb]:bg-[#ECC246] [&::-webkit-slider-thumb]:rounded-[3px] [&::-webkit-slider-thumb]:cursor-pointer [&::-moz-range-thumb]:w-[14px] [&::-moz-range-thumb]:h-[14px] [&::-moz-range-thumb]:bg-[#ECC246] [&::-moz-range-thumb]:border-0 [&::-moz-range-thumb]:rounded-[3px]"
-            />
-            <div class="flex justify-between mt-[6px] mb-[28px]">
-              <span class="text-[10px] text-[#5C6470]">1,000,000</span>
-              <span class="text-[10px] text-[#5C6470]">500,000,000</span>
-            </div>
- 
-            <!-- Term -->
-            <div class="flex items-center justify-between mb-[14px]">
-              <span class="text-[11px] tracking-[0.08em] text-[#5C6470]">SARMOYA MUDDATI (OY)</span>
-              <span id="term-value" class="text-[16px] font-semibold text-[#ECC246]">12</span>
-            </div>
-            <input
-              type="range"
-              id="term-slider"
-              min="6"
-              max="48"
-              step="1"
-              value="12"
-              class="w-full accent-[#ECC246] h-[3px] bg-[#2A2F3A] rounded-full appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-[14px] [&::-webkit-slider-thumb]:h-[14px] [&::-webkit-slider-thumb]:bg-[#ECC246] [&::-webkit-slider-thumb]:rounded-[3px] [&::-webkit-slider-thumb]:cursor-pointer [&::-moz-range-thumb]:w-[14px] [&::-moz-range-thumb]:h-[14px] [&::-moz-range-thumb]:bg-[#ECC246] [&::-moz-range-thumb]:border-0 [&::-moz-range-thumb]:rounded-[3px]"
-            />
-            <div class="flex justify-between mt-[6px] mb-[28px]">
-              <span class="text-[10px] text-[#5C6470]">6 OY</span>
-              <span class="text-[10px] text-[#5C6470]">48 OY</span>
-            </div>
- 
-            <div class="border border-[#2A2F3A] rounded-[6px] p-[16px]">
-              <p class="text-[12px] text-[#99A0AC] italic leading-[1.6]">
-                "Ushbu hisob-kitoblar Musharaka va Ijara shartnomalari asosida taqsimlanadigan bashoratli foydani aks ettiradi."
-              </p>
-            </div>
+      <section
+        class="bg-[#0D0E12] text-[#D1C5AF] py-[80px] max-[500px]:py-[48px]"
+      >
+        <div class="max-w-[1000px] mx-auto px-[24px] max-[750px]:px-[16px]">
+          <!-- Heading -->
+          <div class="text-center mb-[40px]">
+            <p class="text-[12px] tracking-[0.2em] text-[#ECC246] mb-[14px]">
+              KALKULYATOR
+            </p>
+            <h2
+              class="font-['Playfair_Display'] text-[32px] max-[500px]:text-[24px] text-[#F4F1EA]"
+            >
+              Daromadingizni rejalashtiring
+            </h2>
           </div>
- 
-          <!-- Right: results -->
-          <div class="bg-[#1B2029] p-[28px] max-[500px]:p-[20px] flex flex-col">
-            <p class="text-[10px] tracking-[0.12em] text-[#4A5261] mb-[24px]">HISOBLANGAN LOYIHA</p>
- 
-            <div class="flex items-center justify-between py-[14px] border-b border-[#2A2F3A]">
-              <span class="text-[12px] text-[#99A0AC]">Kutilayotgan yillik daromad</span>
-              <span id="rate-value" class="text-[14px] font-semibold text-[#2DD4BF]">16.5%</span>
-            </div>
-            <div class="flex items-center justify-between py-[14px] border-b border-[#2A2F3A]">
-              <span class="text-[12px] text-[#99A0AC]">Umumiy foyda (bashorat)</span>
-              <span id="profit-value" class="text-[14px] font-semibold text-[#F4F1EA]">1,650,000 UZS</span>
-            </div>
-            <div class="flex items-center justify-between py-[14px] border-b border-[#2A2F3A] mb-[24px]">
-              <span class="text-[12px] text-[#99A0AC]">Platforma xizmati</span>
-              <span id="fee-value" class="text-[14px] font-semibold text-[#F4F1EA]">0 UZS</span>
-            </div>
- 
-            <div class="flex items-end justify-between mb-[24px]">
-              <span class="text-[13px] font-semibold text-[#F4F1EA]">Jami qaytim</span>
-              <div class="text-right">
-                <div id="total-value" class="text-[24px] font-semibold text-[#ECC246] leading-none">11,650,000</div>
-                <div class="text-[9px] tracking-[0.08em] text-[#5C6470] mt-[4px]">UZS (BASHORAT)</div>
+
+          <!-- Calculator card -->
+          <div
+            id="calculator"
+            class="grid grid-cols-2 max-[600px]:grid-cols-1 border border-[#2A2F3A] rounded-[10px] overflow-hidden"
+          >
+            <!-- Left: inputs -->
+            <div class="bg-[#15171C] p-[28px] max-[500px]:p-[20px]">
+              <!-- Amount -->
+              <div class="flex items-center justify-between mb-[14px]">
+                <span class="text-[11px] tracking-[0.08em] text-[#5C6470]"
+                  >SARMOYA MIQDORI (UZS)</span
+                >
+                <span
+                  id="amount-value"
+                  class="text-[16px] font-semibold text-[#ECC246]"
+                  >10,000,000</span
+                >
+              </div>
+              <input
+                type="range"
+                id="amount-slider"
+                min="1000000"
+                max="500000000"
+                step="500000"
+                value="10000000"
+                class="w-full accent-[#ECC246] h-[3px] bg-[#2A2F3A] rounded-full appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-[14px] [&::-webkit-slider-thumb]:h-[14px] [&::-webkit-slider-thumb]:bg-[#ECC246] [&::-webkit-slider-thumb]:rounded-[3px] [&::-webkit-slider-thumb]:cursor-pointer [&::-moz-range-thumb]:w-[14px] [&::-moz-range-thumb]:h-[14px] [&::-moz-range-thumb]:bg-[#ECC246] [&::-moz-range-thumb]:border-0 [&::-moz-range-thumb]:rounded-[3px]"
+              />
+              <div class="flex justify-between mt-[6px] mb-[28px]">
+                <span class="text-[10px] text-[#5C6470]">1,000,000</span>
+                <span class="text-[10px] text-[#5C6470]">500,000,000</span>
+              </div>
+
+              <!-- Term -->
+              <div class="flex items-center justify-between mb-[14px]">
+                <span class="text-[11px] tracking-[0.08em] text-[#5C6470]"
+                  >SARMOYA MUDDATI (OY)</span
+                >
+                <span
+                  id="term-value"
+                  class="text-[16px] font-semibold text-[#ECC246]"
+                  >12</span
+                >
+              </div>
+              <input
+                type="range"
+                id="term-slider"
+                min="6"
+                max="48"
+                step="1"
+                value="12"
+                class="w-full accent-[#ECC246] h-[3px] bg-[#2A2F3A] rounded-full appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-[14px] [&::-webkit-slider-thumb]:h-[14px] [&::-webkit-slider-thumb]:bg-[#ECC246] [&::-webkit-slider-thumb]:rounded-[3px] [&::-webkit-slider-thumb]:cursor-pointer [&::-moz-range-thumb]:w-[14px] [&::-moz-range-thumb]:h-[14px] [&::-moz-range-thumb]:bg-[#ECC246] [&::-moz-range-thumb]:border-0 [&::-moz-range-thumb]:rounded-[3px]"
+              />
+              <div class="flex justify-between mt-[6px] mb-[28px]">
+                <span class="text-[10px] text-[#5C6470]">6 OY</span>
+                <span class="text-[10px] text-[#5C6470]">48 OY</span>
+              </div>
+
+              <div class="border border-[#2A2F3A] rounded-[6px] p-[16px]">
+                <p class="text-[12px] text-[#99A0AC] italic leading-[1.6]">
+                  "Ushbu hisob-kitoblar Musharaka va Ijara shartnomalari asosida
+                  taqsimlanadigan bashoratli foydani aks ettiradi."
+                </p>
               </div>
             </div>
- 
-            <button class="bg-[#ECC246] text-[#0D0E12] text-[13px] font-semibold tracking-[0.03em] py-[14px] rounded-[6px] mb-[16px]">
-              SARMOYA KIRITISHNI BOSHLASH
-            </button>
- 
-            <div class="flex gap-[10px] border border-[#5C2A2A] bg-[#2A1414] rounded-[6px] p-[12px]">
-              <span class="text-[#E27C7C] text-[13px] leading-none">⚠</span>
-              <p class="text-[10px] text-[#C99] leading-[1.6]">
-                Sarmoya kiritish har doim xavf bilan bogʻliq. Koʻchmas mulk narxi oʻzgarishi mumkin. Platforma daromadni 100% kafolatlamaydi.
+
+            <!-- Right: results -->
+            <div
+              class="bg-[#1B2029] p-[28px] max-[500px]:p-[20px] flex flex-col"
+            >
+              <p class="text-[10px] tracking-[0.12em] text-[#4A5261] mb-[24px]">
+                HISOBLANGAN LOYIHA
               </p>
+
+              <div
+                class="flex items-center justify-between py-[14px] border-b border-[#2A2F3A]"
+              >
+                <span class="text-[12px] text-[#99A0AC]"
+                  >Kutilayotgan yillik daromad</span
+                >
+                <span
+                  id="rate-value"
+                  class="text-[14px] font-semibold text-[#2DD4BF]"
+                  >16.5%</span
+                >
+              </div>
+              <div
+                class="flex items-center justify-between py-[14px] border-b border-[#2A2F3A]"
+              >
+                <span class="text-[12px] text-[#99A0AC]"
+                  >Umumiy foyda (bashorat)</span
+                >
+                <span
+                  id="profit-value"
+                  class="text-[14px] font-semibold text-[#F4F1EA]"
+                  >1,650,000 UZS</span
+                >
+              </div>
+              <div
+                class="flex items-center justify-between py-[14px] border-b border-[#2A2F3A] mb-[24px]"
+              >
+                <span class="text-[12px] text-[#99A0AC]"
+                  >Platforma xizmati</span
+                >
+                <span
+                  id="fee-value"
+                  class="text-[14px] font-semibold text-[#F4F1EA]"
+                  >0 UZS</span
+                >
+              </div>
+
+              <div class="flex items-end justify-between mb-[24px]">
+                <span class="text-[13px] font-semibold text-[#F4F1EA]"
+                  >Jami qaytim</span
+                >
+                <div class="text-right">
+                  <div
+                    id="total-value"
+                    class="text-[24px] font-semibold text-[#ECC246] leading-none"
+                  >
+                    11,650,000
+                  </div>
+                  <div
+                    class="text-[9px] tracking-[0.08em] text-[#5C6470] mt-[4px]"
+                  >
+                    UZS (BASHORAT)
+                  </div>
+                </div>
+              </div>
+
+              <button
+                class="bg-[#ECC246] text-[#0D0E12] text-[13px] font-semibold tracking-[0.03em] py-[14px] rounded-[6px] mb-[16px]"
+              >
+                SARMOYA KIRITISHNI BOSHLASH
+              </button>
+
+              <div
+                class="flex gap-[10px] border border-[#5C2A2A] bg-[#2A1414] rounded-[6px] p-[12px]"
+              >
+                <span class="text-[#E27C7C] text-[13px] leading-none">⚠</span>
+                <p class="text-[10px] text-[#C99] leading-[1.6]">
+                  Sarmoya kiritish har doim xavf bilan bogʻliq. Koʻchmas mulk
+                  narxi oʻzgarishi mumkin. Platforma daromadni 100%
+                  kafolatlamaydi.
+                </p>
+              </div>
             </div>
           </div>
- 
         </div>
-      </div>
-    </section>
+      </section>
+
+      
     </main>
 
     <footer class="border-t border-[#2A2F3A] py-[20px]">
@@ -783,7 +856,8 @@
       </div>
     </footer>
 
-    <script src="./js/index.js"></script>
+
+    <script src="index.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>

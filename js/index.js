@@ -112,3 +112,4 @@
   // Initial paint on page load
   recalculate();
 })();
+
