@@ -1,195 +1,146 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="uz">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hisob ochish — 4/5 — ZAR INVEST</title>
-    <!-- Tailwind CSS v4 CDN -->
+
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- Google Fonts: Cinzel & Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <style type="text/css">
-        body { font-family: 'Inter', sans-serif; }
-        .font-cinzel { font-family: 'Cinzel', serif; }
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <style>
+      body { font-family: "Inter", sans-serif; }
+      .font-cinzel { font-family: "Cinzel", serif; }
+      ::selection { background: #ECC246; color: #0D0E12; }
     </style>
-</head>
-<body class="bg-[#0b0d10] text-white min-h-screen">
+  </head>
+  <body data-page="hisob" class="bg-[#0D0E12] text-white min-h-screen">
+    <site-loader></site-loader>
 
     <div class="flex flex-col justify-between min-h-screen">
-        
-        <!-- Header -->
-        <header class="h-[60px] px-4 sm:px-6 md:px-10 flex justify-between items-center border-b border-[#1f242d]">
-            <div class="flex items-center gap-3">
-                <a href="./hisob3.html" class="text-[#8b93a0] hover:text-white transition-colors text-lg mr-2">
-                    &larr;
-                </a>
-                <div class="font-cinzel text-base sm:text-lg font-bold tracking-[1.5px] text-[#dfb954]">
-                    ZAR INVEST
-                </div>
+      <header class="h-[70px] px-4 sm:px-6 md:px-10 flex justify-between items-center border-b border-[#2A2F3A]">
+        <div class="flex items-center gap-3">
+          <a href="./hisob3.html" class="text-[#99A0AC] hover:text-white transition-colors text-lg mr-2">&larr;</a>
+          <a href="../../index.html" class="font-cinzel text-base sm:text-lg font-bold tracking-[1.5px] text-[#ECC246]">ZAR INVEST</a>
+        </div>
+        <div class="flex items-center gap-4 sm:gap-6">
+          <div class="flex items-center gap-2 sm:gap-3 text-xs tracking-wider">
+            <span class="text-[#99A0AC] hidden sm:inline">QADAM</span>
+            <span class="text-white font-semibold">4 / 5</span>
+            <div class="w-16 sm:w-24 h-1 bg-[#2A2F3A] rounded-full overflow-hidden ml-1 sm:ml-2">
+              <div class="h-full bg-[#ECC246] transition-all duration-500" style="width:80%"></div>
             </div>
-            
-            <div class="flex items-center gap-4">
-                <div class="text-xs tracking-widest text-[#8b93a0]">
-                    QADAM <span class="text-white font-bold ml-1">4 / 5</span>
+          </div>
+          <a href="../../index.html" class="text-xs text-[#99A0AC] hover:text-white flex items-center gap-1"><span>✕</span> <span class="hidden sm:inline">Chiqish</span></a>
+        </div>
+      </header>
+
+      <main class="flex flex-col lg:flex-row flex-1">
+        <section class="flex-1 flex justify-center items-center p-5 sm:p-8 md:p-10 border-b lg:border-b-0 lg:border-r border-[#2A2F3A]">
+          <div data-animate="fade-up" class="max-w-[440px] w-full py-2 sm:py-4">
+            <h1 class="font-cinzel text-2xl sm:text-3xl md:text-4xl font-normal leading-tight mb-3 text-white">To'lov usulini bog'lash</h1>
+            <p class="text-[#99A0AC] text-xs leading-relaxed mb-6 sm:mb-8">
+              Kelajakda loyihalarga sarmoya kiritishda ishlatiladigan asosiy to'lov usulini tanlang. Buni istalgan vaqt Sozlamalardan o'zgartirishingiz mumkin.
+            </p>
+
+            <form id="payment-form" class="flex flex-col gap-5 sm:gap-6">
+              <div>
+                <label class="block text-[10px] tracking-[1.5px] text-[#99A0AC] font-semibold uppercase mb-3">TO'LOV USULINI TANLANG</label>
+                <div class="flex flex-col gap-3">
+                  <label data-option-card class="border border-[#2A2F3A] bg-[#12141A] rounded-lg p-4 cursor-pointer block transition-colors">
+                    <input type="radio" name="payment_method" value="uzcard_humo" class="hidden" />
+                    <div class="flex items-center justify-between">
+                      <div class="flex items-center gap-3.5">
+                        <div class="text-[#ECC246]">
+                          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg>
+                        </div>
+                        <div>
+                          <div class="font-semibold text-sm text-white">Uzcard / Humo</div>
+                          <div class="text-xs text-[#99A0AC] mt-0.5">Milliy to'lov tizimlari orqali</div>
+                        </div>
+                      </div>
+                    </div>
+                  </label>
+
+                  <label data-option-card class="border border-[#2A2F3A] bg-[#12141A] rounded-lg p-4 cursor-pointer block transition-colors">
+                    <input type="radio" name="payment_method" value="bank" class="hidden" />
+                    <div class="flex items-center justify-between">
+                      <div class="flex items-center gap-3.5">
+                        <div class="text-[#99A0AC]">
+                          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M3 10h18M5 10v11M19 10v11M9 10v11M15 10v11M12 3l9 7H3l9-7z"></path></svg>
+                        </div>
+                        <div>
+                          <div class="font-semibold text-sm text-white">Bank o'tkazmasi</div>
+                          <div class="text-xs text-[#99A0AC] mt-0.5">Invoys orqali hisob-raqamga</div>
+                        </div>
+                      </div>
+                    </div>
+                  </label>
                 </div>
-                <div class="w-6 h-6 rounded-full border border-[#1f242d] flex items-center justify-center text-[#8b93a0] text-xs cursor-pointer hover:border-[#dfb954] hover:text-white transition-colors">
-                    i
-                </div>
+              </div>
+
+              <div>
+                <button type="submit" class="w-full h-12 bg-[#ECC246] hover:bg-[#d8ae3a] text-[#0D0E12] font-semibold text-xs rounded uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer transition-colors shadow-lg shadow-[#ECC246]/10">
+                  Keyingisi <span>&rarr;</span>
+                </button>
+                <div class="text-[10px] text-center text-[#99A0AC] font-mono tracking-widest uppercase mt-3">XAVFSIZ • TLS 1.3 ENCRYPTION</div>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        <section class="flex-1 flex justify-center items-center p-5 sm:p-8 md:p-10 bg-[#0B0C0F] lg:min-h-full">
+          <div data-animate="scale-in" data-delay="0.1" class="max-w-[420px] w-full">
+            <div class="text-[10px] tracking-[1.5px] text-[#99A0AC] font-semibold uppercase mb-4">HISOB TAYYORGARLIGI</div>
+            <div class="flex flex-col gap-3">
+              <div class="flex items-center gap-3 bg-[#12141A] border border-[#26D07C]/30 rounded-lg p-3.5">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#26D07C" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>
+                <span class="text-sm text-white">Telefon raqami tasdiqlandi</span>
+              </div>
+              <div class="flex items-center gap-3 bg-[#12141A] border border-[#26D07C]/30 rounded-lg p-3.5">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#26D07C" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>
+                <span class="text-sm text-white">Shaxsni tasdiqlovchi hujjat yuklandi</span>
+              </div>
+              <div class="flex items-center gap-3 bg-[#12141A] border border-[#26D07C]/30 rounded-lg p-3.5">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#26D07C" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>
+                <span class="text-sm text-white">Investor profili yaratildi</span>
+              </div>
+              <div class="flex items-center gap-3 bg-[#12141A] border border-[#ECC246]/40 rounded-lg p-3.5">
+                <span class="w-4 h-4 rounded-full border-2 border-[#ECC246] border-t-transparent animate-spin shrink-0"></span>
+                <span class="text-sm text-white">To'lov usuli bog'lanmoqda...</span>
+              </div>
+              <div class="flex items-center gap-3 bg-[#12141A] border border-[#2A2F3A] rounded-lg p-3.5 opacity-50">
+                <span class="w-4 h-4 rounded-full border border-[#2A2F3A] shrink-0"></span>
+                <span class="text-sm text-[#99A0AC]">Shaxsiy ma'lumotlar</span>
+              </div>
             </div>
-        </header>
 
-        <!-- Main Content -->
-        <main class="flex flex-col lg:flex-row flex-1">
-            
-            <!-- Left Panel: Form & Payment Selection -->
-            <section class="flex-1 flex justify-center items-center p-5 sm:p-8 md:p-10 border-b lg:border-b-0 lg:border-r border-[#1f242d]">
-                <div class="max-w-[440px] w-full py-2 sm:py-4">
-                    
-                    <h1 class="font-cinzel text-2xl sm:text-3xl md:text-4xl font-normal leading-tight mb-6 sm:mb-8 text-white">
-                        Hisob ochish
-                    </h1>
+            <p class="text-[11px] text-[#99A0AC] leading-relaxed mt-6">
+              Yakunlangandan so'ng hisobingiz faollashadi va katalogdagi barcha loyihalarga sarmoya kirita olasiz.
+            </p>
+          </div>
+        </section>
+      </main>
 
-                    <form id="payment-form" action="./hisob5.html" method="GET" class="flex flex-col gap-5 sm:gap-6">
-                        
-                        <!-- TO'LOV USULINI TANLANING -->
-                        <div>
-                            <label class="block text-[10px] tracking-[1.5px] text-[#8b93a0] font-semibold uppercase mb-3">
-                                TO'LOV USULINI TANLANING
-                            </label><div class="flex flex-col gap-3">
-                                <!-- Option 1: Uzcard / Humo -->
-                                <div class="payment-option border border-[#dfb954] bg-[#14171f] rounded-lg p-4 cursor-pointer transition-colors" data-value="uzcard_humo">
-                                    <div class="flex items-center justify-between">
-                                        <div class="flex items-center gap-3.5">
-                                            <div class="icon-box text-[#dfb954]">
-                                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                                    <rect x="2" y="5" width="20" height="14" rx="2"></rect>
-                                                    <line x1="2" y1="10" x2="22" y2="10"></line>
-                                                </svg>
-                                            </div>
-                                            <div>
-                                                <div class="font-semibold text-sm text-white">Uzcard / Humo</div>
-                                                <div class="text-xs text-[#8b93a0] mt-0.5">Milliy to'lov tizimlari orqali</div>
-                                            </div>
-                                        </div>
-                                        <input type="radio" name="payment_method" value="uzcard_humo" checked class="accent-[#dfb954] w-4 h-4 cursor-pointer">
-                                    </div>
-                                </div>
-
-                                <!-- Option 2: Bank o'tkazmasi -->
-                                <div class="payment-option border border-[#1f242d] bg-[#12141a] hover:border-[#383f4d] rounded-lg p-4 cursor-pointer transition-colors" data-value="bank">
-                                    <div class="flex items-center justify-between">
-                                        <div class="flex items-center gap-3.5">
-                                            <div class="icon-box text-[#8b93a0]">
-                                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                                    <path d="M3 21h18M3 10h18M5 10v11M19 10v11M9 10v11M15 10v11M12 3l9 7H3l9-7z"></path>
-                                                </svg>
-                                            </div>
-                                            <div>
-                                                <div class="font-semibold text-sm text-white">Bank o'tkazmasi</div>
-                                                <div class="text-xs text-[#8b93a0] mt-0.5">Invoys orqali hisob-raqamga</div>
-                                            </div>
-                                        </div>
-                                        <input type="radio" name="payment_method" value="bank" class="accent-[#dfb954] w-4 h-4 cursor-pointer">
-                                    </div>
-                                </div><!-- Submit Button -->
-                        <div>
-                            <button 
-                                type="submit" 
-                                class="w-full h-12 bg-[#dfb954] hover:bg-[#cb9f3f] text-[#101216] font-semibold text-xs rounded uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer transition-colors shadow-lg shadow-[#dfb954]/10"
-                            >
-                                Keyingisi <span>&rarr;</span>
-                            </button>
-                            <div class="text-[10px] text-center text-[#8b93a0] font-mono tracking-widest uppercase mt-3">
-                                XAVFSIZ TO'LOV • TLS 1.3 ENCRYPTION
-                            </div>
-                        </div>
-
-                    </form>
-
-                </div>
-            </section>
-
-            <!-- Right Panel: Certificate & Summary -->
-            <section class="flex-1 flex justify-center items-center p-5 sm:p-8 md:p-10 bg-[#090b0e] lg:min-h-full">
-                <div class="max-w-[420px] w-full flex flex-col gap-6 pb-8 lg:pb-0">
-                    
-                    <!-- SERTIFIKAT PREVYU -->
-                    <div>
-                        <div class="text-[10px] tracking-[1.5px] text-[#8b93a0] font-semibold uppercase mb-3">
-                            SERTIFIKAT PREVYU
-                        </div>
-
-                        <div class="w-full border border-[#1f242d] rounded-xl p-5 sm:p-6 bg-[#0c0e12] relative overflow-hidden">
-                            <div class="absolute -right-6 -bottom-6 w-36 h-36 border border-[#dfb954]/5 rounded-full pointer-events-none"></div>
-
-                            <div class="flex justify-between items-start mb-6">
-                                <div>
-                                    <div class="text-[9px] tracking-[1.5px] text-[#8b93a0] font-semibold uppercase">O'ZBEKISTON RESPUBLIKASI</div>
-                                    <div class="font-cinzel text-lg sm:text-xl text-white font-normal mt-1">Ulush Sertifikati</div>
-                                </div>
-                                <div class="w-8 h-8 rounded border border-[#dfb954]/30 bg-[#dfb954]/10 flex items-center justify-center text-[#dfb954]">
-                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                                        <path d="M9 12l2 2 4-4"></path>
-                                    </svg>
-                                </div>
-                            </div>
-
-                            <div class="mb-6">
-                                <div class="text-[9px] text-[#8b93a0] uppercase tracking-wider mb-0.5">LOYIHA:</div>
-                                <div class="text-sm font-semibold text-white">Mirabad Avenue — Block D</div>
-                            </div><div class="flex justify-between items-end border-t border-[#1f242d] pt-4">
-                                <div>
-                                    <div class="text-[9px] text-[#8b93a0] uppercase tracking-wider mb-0.5">NOMINAL QIYMATI</div>
-                                    <div class="text-sm sm:text-base font-semibold text-[#dfb954] font-mono">
-                                        25 000 000 <span class="text-xs font-sans text-white">UZS</span>
-                                    </div>
-                                </div>
-                                <div class="flex flex-col items-end">
-                                    <span class="text-[8px] text-[#8b93a0] font-mono tracking-wider mb-1">Shariat Muhrlangan</span>
-                                    <div class="w-7 h-7 rounded border border-[#dfb954]/30 bg-[#12151c] flex items-center justify-center text-[#dfb954]">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
-                                            <line x1="7" y1="7" x2="7.01" y2="7"></line>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- SARMOYA XULOSASI -->
-                    <div>
-                        <div class="text-[10px] tracking-[1.5px] text-[#8b93a0] font-semibold uppercase mb-3">
-                            SARMOYA XULOSASI
-                        </div>
-
-                        <div class="w-full border border-[#1f242d] rounded-xl p-5 bg-[#0c0e12] flex flex-col gap-3.5">
-                            <div class="flex justify-between items-center text-xs">
-                                <span class="text-[#8b93a0]">Sarmoya miqdori</span>
-                                <span class="font-mono text-white font-medium">25 000 000 UZS</span>
-                            </div>
-
-                            <div class="flex justify-between items-center text-xs">
-                                <span class="text-[#8b93a0]">Platforma komissiyasi (0%)</span>
-                                <span class="font-mono text-[#26d07c] font-medium">0 UZS</span>
-                            </div>
-
-                            <div class="border-t border-[#1f242d] pt-3.5 flex justify-between items-center text-sm">
-                                <span class="font-semibold text-white">Jami to'lov</span>
-                                <span class="font-mono font-semibold text-[#dfb954]">25 000 000 UZS</span>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </section>
-        </main>
-
+      <footer class="min-h-[60px] px-4 sm:px-6 md:px-10 flex flex-col sm:flex-row justify-between items-center border-t border-[#2A2F3A] text-xs text-[#99A0AC] gap-3 sm:gap-0 py-4">
+        <div class="font-cinzel text-[#ECC246] font-semibold">ZAR INVEST</div>
+        <div class="flex flex-wrap justify-center gap-4 sm:gap-6">
+          <a href="#" class="hover:text-white transition-colors">Yordam markazi</a>
+          <a href="#" class="hover:text-white transition-colors">Maxfiylik siyosati</a>
+          <a href="#" class="hover:text-white transition-colors">Litsenziyalar</a>
+        </div>
+        <div>© 2024–2026 ZAR INVEST</div>
+      </footer>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="../../js/storage.js"></script>
+    <script src="../../js/partials.js"></script>
     <script src="../../js/main.js"></script>
-</body>
+    <script src="../../js/animations.js"></script>
+  </body>
 </html>

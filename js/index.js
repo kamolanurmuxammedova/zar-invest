@@ -1,80 +1,55 @@
 /**
- * Ochiq loyihalar — filter tabs logic.
- * Expects markup like:
- *   <button class="filter-tab" data-filter="all|turar-joy|tijorat|yaqinda">
- *   <article class="project-card" data-category="turar-joy|tijorat|yaqinda">
+ * index.html page script — featured project grid + filter tabs + calculator.
+ * Relies on js/projects-data.js, js/storage.js and js/animations.js already
+ * being loaded (see index.html's script order).
  */
 (function () {
-  const tabs = document.querySelectorAll(".filter-tab");
-  const cards = document.querySelectorAll(".project-card");
-  const emptyState = document.getElementById("empty-state");
+  const FEATURED_IDS = [
+    "mirabad-avenue-tower",
+    "samarqand-it-hub",
+    "bukhara-smart-city",
+    "yunusabad-residence",
+    "tashkent-city-offices",
+    "khiva-boutique-hotel",
+  ];
 
-  const ACTIVE_CLASSES = ["text-[#ECC246]", "border-[#ECC246]"];
-  const INACTIVE_CLASSES = ["text-[#99A0AC]", "border-transparent"];
-
-  function setActiveTab(activeTab) {
-    tabs.forEach((tab) => {
-      const isActive = tab === activeTab;
-      tab.classList.toggle(ACTIVE_CLASSES[0], isActive);
-      tab.classList.toggle(ACTIVE_CLASSES[1], isActive);
-      tab.classList.toggle(INACTIVE_CLASSES[0], !isActive);
-      tab.classList.toggle(INACTIVE_CLASSES[1], !isActive);
-      tab.setAttribute("aria-current", isActive ? "true" : "false");
-    });
-  }
-
-  function applyFilter(filterValue) {
-    let visibleCount = 0;
-
-    cards.forEach((card) => {
-      const matches = filterValue === "all" || card.dataset.category === filterValue;
-      card.classList.toggle("hidden", !matches);
-      if (matches) visibleCount++;
+  const grid = document.getElementById("project-grid");
+  if (grid) {
+    const featured = FEATURED_IDS.map((id) =>
+      window.ZarProjects.getProjectById(id),
+    ).filter(Boolean);
+    window.ZarProjects.renderGrid(grid, featured, {
+      assetsBase: "./",
+      linkBase: "./pages/",
     });
 
-    if (emptyState) {
-      emptyState.classList.toggle("hidden", visibleCount > 0);
-    }
-  }
-
-  tabs.forEach((tab) => {
-    tab.addEventListener("click", () => {
-      setActiveTab(tab);
-      applyFilter(tab.dataset.filter);
-
-      // keep the chosen filter shareable via URL, e.g. ?filter=tijorat
-      const url = new URL(window.location.href);
-      if (tab.dataset.filter === "all") {
-        url.searchParams.delete("filter");
-      } else {
-        url.searchParams.set("filter", tab.dataset.filter);
-      }
-      history.replaceState(null, "", url);
+    window.ZarProjects.initFilterTabs({
+      tabsSelector: "#filter-tabs .filter-tab",
+      cardsContainer: grid,
+      emptyStateSelector: "#empty-state",
+      urlSync: true,
     });
-  });
-
-  // Restore filter from URL on load, e.g. page opened with ?filter=turar-joy
-  const initialFilter = new URLSearchParams(window.location.search).get("filter");
-  if (initialFilter) {
-    const matchingTab = Array.from(tabs).find((t) => t.dataset.filter === initialFilter);
-    if (matchingTab) {
-      setActiveTab(matchingTab);
-      applyFilter(initialFilter);
-    }
   }
 })();
 
 /**
  * Zar Invest — Kalkulyator logic.
  * Reads the two range sliders (amount, term) and recomputes the
- * projected profit / total payout on every input event.
+ * projected profit / total payout on every input event. The headline
+ * rate is derived from the live ZAR_PROJECTS dataset rather than a
+ * hardcoded number, so it stays truthful if project data changes.
  *
  * Formula used (annual rate applied pro-rata to the chosen term):
  *   foyda = miqdor * (yillikDaromad / 100) * (muddat / 12)
  *   jamiQaytim = miqdor + foyda - platformaXizmati
  */
 (function () {
-  const YILLIK_DAROMAD = 16.5; // %, fixed demo rate — wire this up to real project data later
+  const rates = (window.ZAR_PROJECTS || [])
+    .map((p) => p.annualReturnPct)
+    .filter((r) => typeof r === "number");
+  const YILLIK_DAROMAD = rates.length
+    ? Math.round((rates.reduce((a, b) => a + b, 0) / rates.length) * 10) / 10
+    : 16.5;
   const PLATFORMA_XIZMATI = 0; // UZS, flat for now
 
   const amountSlider = document.getElementById("amount-slider");
@@ -86,6 +61,9 @@
   const profitValueEl = document.getElementById("profit-value");
   const feeValueEl = document.getElementById("fee-value");
   const totalValueEl = document.getElementById("total-value");
+  const ctaBtn = document.getElementById("calc-cta-btn");
+
+  if (!amountSlider || !termSlider) return;
 
   function formatNumber(n) {
     return Math.round(n).toLocaleString("en-US");
@@ -108,8 +86,19 @@
 
   amountSlider.addEventListener("input", recalculate);
   termSlider.addEventListener("input", recalculate);
-
-  // Initial paint on page load
   recalculate();
-})();
 
+  // NOTE: moved inside this IIFE (was previously referencing ctaBtn outside
+  // its declaring scope, which threw "ReferenceError: ctaBtn is not defined").
+  if (ctaBtn) {
+    ctaBtn.addEventListener("click", () => {
+      window.ZarAnim.setLoading(ctaBtn, true, "Yo'naltirilmoqda...");
+      const nextUrl = window.ZarStorage.hasAccount()
+        ? "./pages/katalog.html"
+        : "./pages/hisob-pages/hisob1.html";
+      setTimeout(() => {
+        window.location.href = nextUrl;
+      }, 550);
+    });
+  }
+})();

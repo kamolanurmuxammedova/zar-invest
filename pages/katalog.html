@@ -1,73 +1,96 @@
 <!doctype html>
-<html lang="en">
+<html lang="uz">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="ZAR Invest — barcha ochiq va yakunlangan investitsiya loyihalari katalogi." />
+    <title>Loyihalar katalogi — ZAR Invest</title>
+
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>Zar Invest</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <style>
+      html { scroll-behavior: smooth; }
+      body { font-family: "Inter", sans-serif; }
+      .font-cinzel { font-family: "Cinzel", serif; }
+      ::selection { background: #ECC246; color: #0D0E12; }
+      @view-transition { navigation: auto; }
+      @keyframes pulse-soft { 0%, 100% { opacity: .5; } 50% { opacity: 1; } }
+      .skeleton { animation: pulse-soft 1.4s ease-in-out infinite; }
+    </style>
   </head>
-  <body>
-    <header class="bg-[#0D0E12] text-[#D1C5AF]">
-      <!-- checkbox drives the mobile menu, pure CSS, no JS -->
-      <input type="checkbox" id="nav-toggle" class="peer hidden" />
+  <body data-page="katalog" class="bg-[#0D0E12] text-[#D1C5AF] antialiased">
+    <site-loader></site-loader>
+    <site-header base="../"></site-header>
 
-      
-      <div class="flex lg:hidden items-center justify-between px-[24px] max-[400px]:px-[14px] py-[15px] max-[400px]:py-[10px]">
-        <label for="nav-toggle" class="cursor-pointer shrink-0" aria-label="Menyu">
-          <svg width="22" height="16" viewBox="0 0 22 16" fill="none">
-            <rect width="22" height="2" rx="1" fill="#D1C5AF" />
-            <rect y="7" width="22" height="2" rx="1" fill="#D1C5AF" />
-            <rect y="14" width="22" height="2" rx="1" fill="#D1C5AF" />
-          </svg>
-        </label>
+    <main>
+      <!-- HEADER BANNER -->
+      <section class="bg-[#101012] border-b border-[#2A2F3A] px-6 md:px-16 py-16 max-[500px]:py-12">
+        <div class="max-w-[1450px] mx-auto">
+          <p data-animate="fade-in" class="text-[12px] tracking-[0.2em] text-[#ECC246] mb-[14px]">KATALOG</p>
+          <h1 data-animate="fade-up" data-delay="0.05" class="font-cinzel text-[36px] max-[500px]:text-[26px] text-white mb-4">Barcha loyihalar</h1>
+          <p data-animate="fade-up" data-delay="0.1" class="text-white/50 max-w-xl text-[15px] leading-relaxed">
+            Ochiq, yaqinda boshlanadigan va yakunlangan barcha investitsiya loyihalarini ko'rib chiqing, taqqoslang va o'zingizga mosini tanlang.
+          </p>
+        </div>
+      </section>
 
-        <a href="../index.html" class="flex-1 flex justify-center">
-          <img src="../images/logo.svg" alt="" class="max-[400px]:h-[22px]" />
-        </a>
+      <!-- FILTER BAR -->
+      <section class="bg-[#0D0E12] border-b border-[#2A2F3A] sticky top-[70px] z-30 backdrop-blur-md bg-[#0D0E12]/90">
+        <div class="max-w-[1450px] mx-auto px-6 max-[500px]:px-4 py-5 flex flex-wrap items-center gap-4 justify-between">
+          <div id="filter-tabs" class="flex gap-[24px] max-[500px]:gap-[14px] flex-wrap text-[12px] tracking-[0.05em]">
+            <button type="button" data-filter="all" class="filter-tab text-[#ECC246] border-b-2 border-[#ECC246] pb-[6px] transition-colors">BARCHASI</button>
+            <button type="button" data-filter="turar-joy" class="filter-tab text-[#99A0AC] border-b-2 border-transparent hover:text-[#D1C5AF] pb-[6px] transition-colors">TURAR-JOY</button>
+            <button type="button" data-filter="tijorat" class="filter-tab text-[#99A0AC] border-b-2 border-transparent hover:text-[#D1C5AF] pb-[6px] transition-colors">TIJORAT</button>
+            <button type="button" data-filter="yaqinda" class="filter-tab text-[#99A0AC] border-b-2 border-transparent hover:text-[#D1C5AF] pb-[6px] transition-colors">YAQINDA</button>
+          </div>
 
-        <button class="relative shrink-0" aria-label="Bildirishnomalar">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D1C5AF" stroke-width="1.6">
-            <path d="M18 8a6 6 0 10-12 0c0 7-3 9-3 9h18s-3-2-3-9" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M13.73 21a2 2 0 01-3.46 0" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-          <span class="absolute -top-[2px] -right-[2px] w-[7px] h-[7px] rounded-full bg-[#ECC246] border border-[#0D0E12]"></span>
-        </button>
-      </div>
-
-      <div class="hidden lg:flex mx-auto px-[24px] py-[15px] items-center">
-        <a href="../index.html">
-          <img src="../images/logo.svg" alt="" />
-        </a>
-        <div class="flex justify-between w-full items-center">
-          <ul class="flex pl-[50px] gap-[30px]">
-            <li class="hover:text-[#ECC246] hover:border-b border-4px">Loyihalar</li>
-            <li class="hover:text-[#ECC246] hover:border-b border-4px">Qanday ishlaydi</li>
-            <li class="hover:text-[#ECC246] hover:border-b border-4px">Sanat kehgashi</li>
-            <li class="hover:text-[#ECC246] hover:border-b border-4px">Hisobatlar</li>
-            <li class="hover:text-[#ECC246] hover:border-b border-4px">Kalkulyator</li>
-          </ul>
-
-          <div class="flex gap-[30px] items-center">
-            <button class="px-[16px] py-[10px]">Kirish</button>
-            <button class="px-[16px] py-[10px] bg-[#ECC246] text-[#0D0E12]">Hisob ochish</button>
+          <div class="flex items-center gap-3 w-full sm:w-auto">
+            <div class="relative flex-1 sm:flex-initial">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="absolute left-3 top-1/2 -translate-y-1/2 text-[#5C6470]"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+              <input id="search-input" type="search" placeholder="Loyiha nomini qidirish..." aria-label="Loyiha qidirish"
+                class="w-full sm:w-[220px] bg-[#15171C] border border-[#2A2F3A] rounded-lg pl-9 pr-3 py-2.5 text-[13px] text-[#E2E2E8] placeholder-[#5C6470] focus:outline-none focus:border-[#ECC246] transition-colors" />
+            </div>
+            <select id="sort-select" aria-label="Saralash" class="bg-[#15171C] border border-[#2A2F3A] rounded-lg px-3 py-2.5 text-[13px] text-[#D1C5AF] focus:outline-none focus:border-[#ECC246] transition-colors cursor-pointer">
+              <option value="popular">Eng mashhur</option>
+              <option value="return">Yuqori daromad</option>
+              <option value="term">Qisqa muddat</option>
+            </select>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="hidden peer-checked:flex lg:hidden flex-col px-[24px] max-[400px]:px-[14px] pb-[20px] gap-[20px]">
-        <ul class="flex flex-col gap-[16px]">
-          <li class="hover:text-[#ECC246]">Loyihalar</li>
-          <li class="hover:text-[#ECC246]">Qanday ishlaydi</li>
-          <li class="hover:text-[#ECC246]">Sanat kehgashi</li>
-          <li class="hover:text-[#ECC246]">Hisobatlar</li>
-          <li class="hover:text-[#ECC246]">Kalkulyator</li>
-        </ul>
-        <div class="flex flex-col gap-[12px]">
-          <button class="px-[16px] py-[10px] border border-[#2A2F3A]">Kirish</button>
-          <button class="px-[16px] py-[10px] bg-[#ECC246] text-[#0D0E12]">Hisob ochish</button>
+      <!-- GRID -->
+      <section class="py-[56px] max-[500px]:py-[36px]">
+        <div class="max-w-[1450px] mx-auto px-6 max-[500px]:px-4">
+          <p id="results-count" class="text-[12px] text-[#5C6470] mb-[24px]">Yuklanmoqda...</p>
+
+          <div id="skeleton-grid" class="grid grid-cols-3 max-[900px]:grid-cols-2 max-[600px]:grid-cols-1 gap-[24px]">
+            <div class="skeleton h-[380px] rounded-[10px] bg-[#15171C] border border-[#2A2F3A]"></div>
+            <div class="skeleton h-[380px] rounded-[10px] bg-[#15171C] border border-[#2A2F3A]" style="animation-delay:.1s"></div>
+            <div class="skeleton h-[380px] rounded-[10px] bg-[#15171C] border border-[#2A2F3A]" style="animation-delay:.2s"></div>
+          </div>
+
+          <div id="project-grid" data-stagger="0.08" class="hidden grid grid-cols-3 max-[900px]:grid-cols-2 max-[600px]:grid-cols-1 gap-[24px]"></div>
+
+          <p id="empty-state" class="hidden text-center text-[13px] text-[#5C6470] py-[60px]">
+            Bu qidiruv bo'yicha loyihalar topilmadi.
+          </p>
         </div>
-      </div>
-    </header>
+      </section>
+    </main>
 
+    <site-footer base="../"></site-footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="../js/projects-data.js"></script>
+    <script src="../js/storage.js"></script>
+    <script src="../js/partials.js"></script>
+    <script src="../js/animations.js"></script>
+    <script src="../js/katalog.js"></script>
   </body>
 </html>

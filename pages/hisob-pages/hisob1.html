@@ -3,144 +3,79 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hisob ochish — 1/4 — ZAR INVEST</title>
+    <title>Hisob ochish — 1/5 — ZAR INVEST</title>
 
-    <!-- Tailwind CSS v4 CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-    <!-- Google Fonts: Cinzel & Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-    <style type="text/css">
-      body {
-        font-family: "Inter", sans-serif;
-      }
-      .font-cinzel {
-        font-family: "Cinzel", serif;
-      }
+    <style>
+      body { font-family: "Inter", sans-serif; }
+      .font-cinzel { font-family: "Cinzel", serif; }
+      ::selection { background: #ECC246; color: #0D0E12; }
     </style>
   </head>
-  <body class="bg-[#101216] text-white min-h-screen">
+  <body data-page="hisob" class="bg-[#0D0E12] text-white min-h-screen">
+    <site-loader></site-loader>
+
     <div class="flex flex-col justify-between min-h-screen">
-      <!-- Header -->
-      <header
-        class="h-[70px] px-4 sm:px-6 md:px-10 flex justify-between items-center border-b border-[#242933]"
-      >
-        <div
-          class="font-cinzel text-base sm:text-lg font-bold tracking-[1.5px] text-[#dfb954] relative py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-36 sm:after:w-60 after:h-[2px] after:bg-[#dfb954]"
-        >
-          ZAR INVEST
-        </div>
-        <div class="text-[#8b93a0] text-xs sm:text-sm font-medium tracking-widest">
-          1 / 4
+      <header class="h-[70px] px-4 sm:px-6 md:px-10 flex justify-between items-center border-b border-[#2A2F3A]">
+        <a href="../../index.html" class="font-cinzel text-base sm:text-lg font-bold tracking-[1.5px] text-[#ECC246]">ZAR INVEST</a>
+        <div class="flex items-center gap-4 sm:gap-6">
+          <div class="flex items-center gap-2 sm:gap-3 text-xs tracking-wider">
+            <span class="text-[#99A0AC] hidden sm:inline">QADAM</span>
+            <span class="text-white font-semibold">1 / 5</span>
+            <div class="w-16 sm:w-24 h-1 bg-[#2A2F3A] rounded-full overflow-hidden ml-1 sm:ml-2">
+              <div class="h-full bg-[#ECC246] transition-all duration-500" style="width:20%"></div>
+            </div>
+          </div>
+          <a href="../../index.html" class="text-xs text-[#99A0AC] hover:text-white flex items-center gap-1"><span>✕</span> <span class="hidden sm:inline">Chiqish</span></a>
         </div>
       </header>
 
-      <!-- Main Content -->
       <main class="flex flex-col lg:flex-row flex-1">
-        <!-- Left Panel (Form) -->
-        <section
-          class="flex-1 flex justify-center items-center p-5 sm:p-8 md:p-10 border-b lg:border-b-0 lg:border-r border-[#242933]"
-        >
-          <div class="max-w-[380px] w-full">
-            <h1
-              class="font-cinzel text-2xl sm:text-3xl md:text-4xl font-normal leading-tight mb-3 text-[#f1f3f5]"
-            >
+        <section class="flex-1 flex justify-center items-center p-5 sm:p-8 md:p-10 border-b lg:border-b-0 lg:border-r border-[#2A2F3A]">
+          <div data-animate="fade-up" class="max-w-[380px] w-full">
+            <h1 class="font-cinzel text-2xl sm:text-3xl md:text-4xl font-normal leading-tight mb-3 text-white">
               Telefon raqamini<br />tasdiqlash
             </h1>
-            <p class="text-[#8b93a0] text-xs sm:text-sm mb-6 sm:mb-8">
-              Xavfsizlik uchun raqamingizni tasdiqlang.
-            </p>
+            <p class="text-[#99A0AC] text-xs sm:text-sm mb-6 sm:mb-8">Xavfsizlik uchun raqamingizni tasdiqlang.</p>
 
-            <form
-              id="phone-form"
-              class="flex flex-col gap-4 mb-8 sm:mb-10"
-            >
-              <label
-                for="phone"
-                class="text-[11px] tracking-[1.5px] text-[#8b93a0] font-semibold uppercase"
-              >
-                TELEFON RAQAMI
-              </label>
-              <div class="w-full">
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  value="+998 90 123 45 67"
-                  placeholder="+998 90 123 45 67"
-                  required
-                  class="w-full h-[48px] sm:h-[50px] bg-[#1a1e26] border border-transparent focus:border-[#dfb954] rounded px-4 text-white text-sm sm:text-base font-medium tracking-wide outline-none transition-colors duration-200"
-                />
-              </div>
-              <button
-                type="submit"
-                class="w-full h-[48px] sm:h-[50px] bg-[#dfb954] hover:bg-[#cb9f3f] text-[#101216] font-semibold text-sm sm:text-base rounded flex items-center justify-center gap-2 cursor-pointer transition-colors duration-200"
-              >
+            <form id="phone-form" class="flex flex-col gap-4 mb-8 sm:mb-10">
+              <label for="phone" class="text-[11px] tracking-[1.5px] text-[#99A0AC] font-semibold uppercase">TELEFON RAQAMI</label>
+              <input type="tel" id="phone" name="phone" value="+998 " placeholder="+998 90 123 45 67" required
+                class="w-full h-[48px] sm:h-[50px] bg-[#15171C] border border-[#2A2F3A] focus:border-[#ECC246] rounded-lg px-4 text-white text-sm sm:text-base font-medium tracking-wide outline-none transition-colors duration-200" />
+              <button type="submit" class="w-full h-[48px] sm:h-[50px] bg-[#ECC246] hover:bg-[#d8ae3a] text-[#0D0E12] font-semibold text-sm sm:text-base rounded-lg flex items-center justify-center gap-2 cursor-pointer transition-colors duration-200">
                 Keyingisi <span>&rarr;</span>
               </button>
             </form>
 
-            <div class="border-t border-[#242933] pt-5 sm:pt-6">
-              <p class="text-xs leading-relaxed text-[#8b93a0]">
-                <strong class="text-[#dfb954]">ZAR INVEST</strong> – bu Shariat
-                tamoyillariga asoslangan ishonchli investitsiya ekotizimi.
-                Ma’lumotlaringiz xavfsizligi biz uchun ustuvor vazifadir.
+            <div class="border-t border-[#2A2F3A] pt-5 sm:pt-6">
+              <p class="text-xs leading-relaxed text-[#99A0AC]">
+                <strong class="text-[#ECC246]">ZAR INVEST</strong> – bu Shariat tamoyillariga asoslangan ishonchli investitsiya ekotizimi. Ma'lumotlaringiz xavfsizligi biz uchun ustuvor vazifadir.
               </p>
             </div>
           </div>
-        </section><!-- Right Panel (Preview Card) -->
-        <section
-          class="flex-1 flex justify-center items-center p-5 sm:p-8 md:p-10 bg-[#0d0e12]"
-        >
-          <div class="flex flex-col items-center max-w-[420px] w-full">
-            <div
-              class="w-full h-[230px] sm:h-[250px] border border-[#242933] rounded-lg p-5 sm:p-6 flex flex-col justify-between bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#151922] to-[#0d0e12]"
-            >
+        </section>
+
+        <section class="flex-1 flex justify-center items-center p-5 sm:p-8 md:p-10 bg-[#0B0C0F]">
+          <div data-animate="scale-in" data-delay="0.1" class="flex flex-col items-center max-w-[420px] w-full">
+            <div class="w-full h-[230px] sm:h-[250px] border border-[#2A2F3A] rounded-xl p-5 sm:p-6 flex flex-col justify-between bg-gradient-to-br from-[#151922] to-[#0D0E12]">
               <div>
-                <div
-                  class="flex justify-between text-[9px] sm:text-[10px] tracking-[1.2px] text-[#8b93a0]"
-                >
+                <div class="flex justify-between text-[9px] sm:text-[10px] tracking-[1.2px] text-[#99A0AC]">
                   <span>O'ZBEKISTON RESPUBLIKASI</span>
-                  <span>REYESTh IP</span>
+                  <span>REYESTR IP</span>
                 </div>
-                <div class="font-cinzel text-[#dfb954] text-base sm:text-lg mt-2">
-                  Ulush Sertifikati
-                </div>
-                <div class="text-[#242933] text-xs tracking-[2px]">
-                  -------------
-                </div>
+                <div class="font-cinzel text-[#ECC246] text-base sm:text-lg mt-2">Ulush Sertifikati</div>
+                <div class="text-[#2A2F3A] text-xs tracking-[2px]">-------------</div>
               </div>
 
-              <!-- Lock Icon Wrapper -->
               <div class="flex justify-center items-center my-auto">
-                <div
-                  class="w-[50px] h-[50px] sm:w-[60px] sm:h-[60px] rounded-xl border border-[#dfb954]/20 bg-[#dfb954]/5 flex justify-center items-center"
-                >
-                  <svg
-                    width="28"
-                    height="28"
-                    class="sm:w-[32px] sm:h-[32px]"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#e6c253"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <rect
-                      x="3"
-                      y="11"
-                      width="18"
-                      height="11"
-                      rx="2"
-                      ry="2"
-                    ></rect>
+                <div class="w-[50px] h-[50px] sm:w-[60px] sm:h-[60px] rounded-xl border border-[#ECC246]/20 bg-[#ECC246]/5 flex justify-center items-center">
+                  <svg width="28" height="28" class="sm:w-[32px] sm:h-[32px]" viewBox="0 0 24 24" fill="none" stroke="#ECC246" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
                     <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
                     <circle cx="12" cy="16" r="1"></circle>
                     <polyline points="12 17 12 18"></polyline>
@@ -148,35 +83,35 @@
                 </div>
               </div>
 
-              <!-- Skeleton Lines -->
               <div class="flex flex-col items-center gap-2">
-                <div class="h-2.5 bg-[#1a1e29] rounded-full w-[60%]"></div>
-                <div class="h-2.5 bg-[#1a1e29] rounded-full w-[40%]"></div>
+                <div class="h-2.5 bg-[#1A1C20] rounded-full w-[60%]"></div>
+                <div class="h-2.5 bg-[#1A1C20] rounded-full w-[40%]"></div>
               </div>
             </div>
 
-            <p
-              class="text-[9px] sm:text-[10px] tracking-[1.5px] text-[#8b93a0] mt-5 sm:mt-6 text-center"
-            >
+            <p class="text-[9px] sm:text-[10px] tracking-[1.5px] text-[#99A0AC] mt-5 sm:mt-6 text-center">
               AKKREDITATSIYADAN O'TGANDAN SO'NG SERTIFIKAT FAOL BO'LADI
             </p>
           </div>
         </section>
       </main>
 
-      <!-- Footer -->
-      <footer
-        class="min-h-[60px] px-4 sm:px-6 md:px-10 flex flex-col sm:flex-row justify-between items-center border-t border-[#242933] text-xs text-[#8b93a0] gap-3 sm:gap-0 py-4"
-      >
-        <div>© 2024 ZAR INVEST. Barcha huquqlar himoyalangan.</div>
-        <div class="flex gap-4 sm:gap-5">
-          <a href="#" class="hover:text-white transition-colors duration-200">Yordam</a>
-          <a href="#" class="hover:text-white transition-colors duration-200">Maxfiylik</a>
-          <a href="#" class="hover:text-white transition-colors duration-200">Litsenziya</a>
+      <footer class="min-h-[60px] px-4 sm:px-6 md:px-10 flex flex-col sm:flex-row justify-between items-center border-t border-[#2A2F3A] text-xs text-[#99A0AC] gap-3 sm:gap-0 py-4">
+        <div class="font-cinzel text-[#ECC246] font-semibold">ZAR INVEST</div>
+        <div class="flex flex-wrap justify-center gap-4 sm:gap-6">
+          <a href="#" class="hover:text-white transition-colors">Yordam markazi</a>
+          <a href="#" class="hover:text-white transition-colors">Maxfiylik siyosati</a>
+          <a href="#" class="hover:text-white transition-colors">Litsenziyalar</a>
         </div>
+        <div>© 2024–2026 ZAR INVEST</div>
       </footer>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="../../js/storage.js"></script>
+    <script src="../../js/partials.js"></script>
     <script src="../../js/main.js"></script>
+    <script src="../../js/animations.js"></script>
   </body>
 </html>

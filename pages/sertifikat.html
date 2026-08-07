@@ -1,73 +1,71 @@
 <!doctype html>
-<html lang="en">
+<html lang="uz">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="ZAR Invest — sizning ulush sertifikatlaringiz." />
+    <title>Sertifikatlarim — ZAR Invest</title>
+
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>Zar Invest</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <style>
+      html { scroll-behavior: smooth; }
+      body { font-family: "Inter", sans-serif; }
+      .font-cinzel { font-family: "Cinzel", serif; }
+      ::selection { background: #ECC246; color: #0D0E12; }
+      @view-transition { navigation: auto; }
+      @media print {
+        site-header, site-footer, #cert-actions { display: none !important; }
+        body { background: white !important; }
+      }
+    </style>
   </head>
-  <body>
-    <header class="bg-[#0D0E12] text-[#D1C5AF]">
-      <!-- checkbox drives the mobile menu, pure CSS, no JS -->
-      <input type="checkbox" id="nav-toggle" class="peer hidden" />
+  <body data-page="sertifikat" class="bg-[#0D0E12] text-[#D1C5AF] antialiased">
+    <site-loader></site-loader>
+    <site-header base="../"></site-header>
 
-      
-      <div class="flex lg:hidden items-center justify-between px-[24px] max-[400px]:px-[14px] py-[15px] max-[400px]:py-[10px]">
-        <label for="nav-toggle" class="cursor-pointer shrink-0" aria-label="Menyu">
-          <svg width="22" height="16" viewBox="0 0 22 16" fill="none">
-            <rect width="22" height="2" rx="1" fill="#D1C5AF" />
-            <rect y="7" width="22" height="2" rx="1" fill="#D1C5AF" />
-            <rect y="14" width="22" height="2" rx="1" fill="#D1C5AF" />
-          </svg>
-        </label>
-
-        <a href="../index.html" class="flex-1 flex justify-center">
-          <img src="../images/logo.svg" alt="" class="max-[400px]:h-[22px]" />
-        </a>
-
-        <button class="relative shrink-0" aria-label="Bildirishnomalar">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D1C5AF" stroke-width="1.6">
-            <path d="M18 8a6 6 0 10-12 0c0 7-3 9-3 9h18s-3-2-3-9" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M13.73 21a2 2 0 01-3.46 0" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-          <span class="absolute -top-[2px] -right-[2px] w-[7px] h-[7px] rounded-full bg-[#ECC246] border border-[#0D0E12]"></span>
-        </button>
-      </div>
-
-      <div class="hidden lg:flex mx-auto px-[24px] py-[15px] items-center">
-        <a href="../index.html">
-          <img src="../images/logo.svg" alt="" />
-        </a>
-        <div class="flex justify-between w-full items-center">
-          <ul class="flex pl-[50px] gap-[30px]">
-            <li class="hover:text-[#ECC246] hover:border-b border-4px">Loyihalar</li>
-            <li class="hover:text-[#ECC246] hover:border-b border-4px">Qanday ishlaydi</li>
-            <li class="hover:text-[#ECC246] hover:border-b border-4px">Sanat kehgashi</li>
-            <li class="hover:text-[#ECC246] hover:border-b border-4px">Hisobatlar</li>
-            <li class="hover:text-[#ECC246] hover:border-b border-4px">Kalkulyator</li>
-          </ul>
-
-          <div class="flex gap-[30px] items-center">
-            <button class="px-[16px] py-[10px]">Kirish</button>
-            <button class="px-[16px] py-[10px] bg-[#ECC246] text-[#0D0E12]">Hisob ochish</button>
+    <main>
+      <section class="bg-[#101012] border-b border-[#2A2F3A] px-6 md:px-16 py-16 max-[500px]:py-12">
+        <div class="max-w-[1450px] mx-auto flex items-end justify-between flex-wrap gap-6">
+          <div>
+            <p data-animate="fade-in" class="text-[12px] tracking-[0.2em] text-[#ECC246] mb-[14px]">RAQAMLI GUVOHNOMALAR</p>
+            <h1 data-animate="fade-up" data-delay="0.05" class="font-cinzel text-[36px] max-[500px]:text-[26px] text-white">Sertifikatlarim</h1>
+          </div>
+          <div id="cert-actions" data-animate="fade-up" data-delay="0.1">
+            <button type="button" id="print-btn" class="hidden items-center gap-2 border border-[#2A2F3A] hover:border-[#ECC246] text-[#D1C5AF] hover:text-[#ECC246] text-[13px] px-5 py-3 rounded-lg transition-colors">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+              PDF sifatida saqlash
+            </button>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="hidden peer-checked:flex lg:hidden flex-col px-[24px] max-[400px]:px-[14px] pb-[20px] gap-[20px]">
-        <ul class="flex flex-col gap-[16px]">
-          <li class="hover:text-[#ECC246]">Loyihalar</li>
-          <li class="hover:text-[#ECC246]">Qanday ishlaydi</li>
-          <li class="hover:text-[#ECC246]">Sanat kehgashi</li>
-          <li class="hover:text-[#ECC246]">Hisobatlar</li>
-          <li class="hover:text-[#ECC246]">Kalkulyator</li>
-        </ul>
-        <div class="flex flex-col gap-[12px]">
-          <button class="px-[16px] py-[10px] border border-[#2A2F3A]">Kirish</button>
-          <button class="px-[16px] py-[10px] bg-[#ECC246] text-[#0D0E12]">Hisob ochish</button>
+      <section class="py-[56px] max-[500px]:py-[36px]">
+        <div class="max-w-[1450px] mx-auto px-6 max-[500px]:px-4">
+          <div id="cert-grid" data-stagger="0.1" class="grid grid-cols-1 md:grid-cols-2 gap-[28px]"></div>
+
+          <div id="cert-empty" class="hidden text-center py-[80px] max-w-[440px] mx-auto">
+            <i class="text-[40px] text-[#2A2F3A] mb-4 block">◆</i>
+            <h2 class="font-cinzel text-[20px] text-white mb-3">Hali sertifikatingiz yo'q</h2>
+            <p class="text-[#99A0AC] text-[14px] mb-6">Loyihaga sarmoya kiritganingizdan so'ng, raqamli ulush sertifikatingiz shu yerda paydo bo'ladi.</p>
+            <a href="./katalog.html" class="inline-flex items-center gap-2 bg-[#ECC246] text-[#0D0E12] font-semibold text-sm px-6 py-3 rounded-lg hover:bg-[#d8ae3a] transition-colors">Loyihalarni ko'rish</a>
+          </div>
         </div>
-      </div>
-    </header>
+      </section>
+    </main>
 
+    <site-footer base="../"></site-footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="../js/projects-data.js"></script>
+    <script src="../js/storage.js"></script>
+    <script src="../js/partials.js"></script>
+    <script src="../js/animations.js"></script>
+    <script src="../js/sertifikat.js"></script>
   </body>
 </html>
