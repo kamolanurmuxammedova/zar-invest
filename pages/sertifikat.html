@@ -10,14 +10,10 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/theme.css" />
 
     <style>
-      html { scroll-behavior: smooth; }
-      body { font-family: "Inter", sans-serif; }
-      .font-cinzel { font-family: "Cinzel", serif; }
-      ::selection { background: #ECC246; color: #0D0E12; }
-      @view-transition { navigation: auto; }
       @media print {
         site-header, site-footer, #cert-actions { display: none !important; }
         body { background: white !important; }
@@ -26,17 +22,23 @@
   </head>
   <body data-page="sertifikat" class="bg-[#0D0E12] text-[#D1C5AF] antialiased">
     <site-loader></site-loader>
+
+    <div class="aurora-field is-fixed opacity-50" aria-hidden="true">
+      <span class="aurora-blob gold w-[460px] h-[460px] -top-32 -right-24"></span>
+      <span class="aurora-blob violet w-[360px] h-[360px] bottom-[-140px] left-[-80px]"></span>
+    </div>
+
     <site-header base="../"></site-header>
 
-    <main>
-      <section class="bg-[#101012] border-b border-[#2A2F3A] px-6 md:px-16 py-16 max-[500px]:py-12">
-        <div class="max-w-[1450px] mx-auto flex items-end justify-between flex-wrap gap-6">
+    <main class="relative">
+      <section class="px-6 md:px-16 pt-10 pb-14 max-[500px]:pt-6 max-[500px]:pb-10">
+        <div class="max-w-[1240px] mx-auto flex items-end justify-between flex-wrap gap-6">
           <div>
-            <p data-animate="fade-in" class="text-[12px] tracking-[0.2em] text-[#ECC246] mb-[14px]">RAQAMLI GUVOHNOMALAR</p>
-            <h1 data-animate="fade-up" data-delay="0.05" class="font-cinzel text-[36px] max-[500px]:text-[26px] text-white">Sertifikatlarim</h1>
+            <p data-animate="fade-in" class="text-[12px] tracking-[0.2em] text-[#ECC246] mb-[14px] uppercase">Raqamli guvohnomalar</p>
+            <h1 data-animate="fade-up" data-delay="0.05" class="font-display font-medium text-[34px] sm:text-[42px] max-[500px]:text-[26px] text-white tracking-[-0.02em]">Sertifikatlarim</h1>
           </div>
           <div id="cert-actions" data-animate="fade-up" data-delay="0.1">
-            <button type="button" id="print-btn" class="hidden items-center gap-2 border border-[#2A2F3A] hover:border-[#ECC246] text-[#D1C5AF] hover:text-[#ECC246] text-[13px] px-5 py-3 rounded-lg transition-colors">
+            <button type="button" id="print-btn" class="hidden btn-ghost items-center gap-2 text-[13px] px-5 py-3">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
               PDF sifatida saqlash
             </button>
@@ -44,15 +46,17 @@
         </div>
       </section>
 
-      <section class="py-[56px] max-[500px]:py-[36px]">
-        <div class="max-w-[1450px] mx-auto px-6 max-[500px]:px-4">
+      <section class="relative px-6 md:px-16 py-[56px] max-[500px]:py-[36px]">
+        <div class="max-w-[1240px] mx-auto">
           <div id="cert-grid" data-stagger="0.1" class="grid grid-cols-1 md:grid-cols-2 gap-[28px]"></div>
 
           <div id="cert-empty" class="hidden text-center py-[80px] max-w-[440px] mx-auto">
-            <i class="text-[40px] text-[#2A2F3A] mb-4 block">◆</i>
-            <h2 class="font-cinzel text-[20px] text-white mb-3">Hali sertifikatingiz yo'q</h2>
-            <p class="text-[#99A0AC] text-[14px] mb-6">Loyihaga sarmoya kiritganingizdan so'ng, raqamli ulush sertifikatingiz shu yerda paydo bo'ladi.</p>
-            <a href="./katalog.html" class="inline-flex items-center gap-2 bg-[#ECC246] text-[#0D0E12] font-semibold text-sm px-6 py-3 rounded-lg hover:bg-[#d8ae3a] transition-colors">Loyihalarni ko'rish</a>
+            <div class="w-16 h-16 mx-auto mb-6 rounded-2xl glass flex items-center justify-center">
+              <span class="text-[26px] text-[#ECC246]">◆</span>
+            </div>
+            <h2 class="font-display font-medium text-[20px] text-white mb-3">Hali sertifikatingiz yo'q</h2>
+            <p class="text-white/40 text-[14px] mb-6">Loyihaga sarmoya kiritganingizdan so'ng, raqamli ulush sertifikatingiz shu yerda paydo bo'ladi.</p>
+            <a href="./katalog.html" class="btn-primary inline-flex items-center gap-2 text-sm px-6 py-3">Loyihalarni ko'rish</a>
           </div>
         </div>
       </section>

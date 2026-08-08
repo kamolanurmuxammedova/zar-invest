@@ -10,51 +10,48 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-
-    <style>
-      html { scroll-behavior: smooth; }
-      body { font-family: "Inter", sans-serif; }
-      .font-cinzel { font-family: "Cinzel", serif; }
-      ::selection { background: #ECC246; color: #0D0E12; }
-      @view-transition { navigation: auto; }
-      @keyframes pulse-soft { 0%, 100% { opacity: .5; } 50% { opacity: 1; } }
-      .skeleton { animation: pulse-soft 1.4s ease-in-out infinite; }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/theme.css" />
   </head>
   <body data-page="katalog" class="bg-[#0D0E12] text-[#D1C5AF] antialiased">
     <site-loader></site-loader>
+
+    <div class="aurora-field is-fixed opacity-50" aria-hidden="true">
+      <span class="aurora-blob gold w-[480px] h-[480px] -top-40 -left-24"></span>
+      <span class="aurora-blob violet w-[380px] h-[380px] top-[30%] -right-32"></span>
+    </div>
+
     <site-header base="../"></site-header>
 
-    <main>
+    <main class="relative">
       <!-- HEADER BANNER -->
-      <section class="bg-[#101012] border-b border-[#2A2F3A] px-6 md:px-16 py-16 max-[500px]:py-12">
-        <div class="max-w-[1450px] mx-auto">
-          <p data-animate="fade-in" class="text-[12px] tracking-[0.2em] text-[#ECC246] mb-[14px]">KATALOG</p>
-          <h1 data-animate="fade-up" data-delay="0.05" class="font-cinzel text-[36px] max-[500px]:text-[26px] text-white mb-4">Barcha loyihalar</h1>
-          <p data-animate="fade-up" data-delay="0.1" class="text-white/50 max-w-xl text-[15px] leading-relaxed">
+      <section class="px-6 md:px-16 pt-10 pb-14 max-[500px]:pt-6 max-[500px]:pb-10">
+        <div class="max-w-[1240px] mx-auto">
+          <p data-animate="fade-in" class="text-[12px] tracking-[0.2em] text-[#ECC246] mb-[14px] uppercase">Katalog</p>
+          <h1 data-animate="fade-up" data-delay="0.05" class="font-display font-medium text-[34px] sm:text-[42px] max-[500px]:text-[26px] text-white mb-4 tracking-[-0.02em]">Barcha loyihalar</h1>
+          <p data-animate="fade-up" data-delay="0.1" class="text-white/40 max-w-xl text-[15px] leading-relaxed">
             Ochiq, yaqinda boshlanadigan va yakunlangan barcha investitsiya loyihalarini ko'rib chiqing, taqqoslang va o'zingizga mosini tanlang.
           </p>
         </div>
       </section>
 
       <!-- FILTER BAR -->
-      <section class="bg-[#0D0E12] border-b border-[#2A2F3A] sticky top-[70px] z-30 backdrop-blur-md bg-[#0D0E12]/90">
-        <div class="max-w-[1450px] mx-auto px-6 max-[500px]:px-4 py-5 flex flex-wrap items-center gap-4 justify-between">
-          <div id="filter-tabs" class="flex gap-[24px] max-[500px]:gap-[14px] flex-wrap text-[12px] tracking-[0.05em]">
-            <button type="button" data-filter="all" class="filter-tab text-[#ECC246] border-b-2 border-[#ECC246] pb-[6px] transition-colors">BARCHASI</button>
-            <button type="button" data-filter="turar-joy" class="filter-tab text-[#99A0AC] border-b-2 border-transparent hover:text-[#D1C5AF] pb-[6px] transition-colors">TURAR-JOY</button>
-            <button type="button" data-filter="tijorat" class="filter-tab text-[#99A0AC] border-b-2 border-transparent hover:text-[#D1C5AF] pb-[6px] transition-colors">TIJORAT</button>
-            <button type="button" data-filter="yaqinda" class="filter-tab text-[#99A0AC] border-b-2 border-transparent hover:text-[#D1C5AF] pb-[6px] transition-colors">YAQINDA</button>
+      <section class="sticky top-[76px] sm:top-[84px] z-30 px-6 md:px-16 mb-2">
+        <div class="max-w-[1240px] mx-auto glass-strong rounded-2xl px-5 max-[500px]:px-4 py-4 flex flex-wrap items-center gap-4 justify-between shadow-[0_20px_50px_-20px_rgba(0,0,0,.6)]">
+          <div id="filter-tabs" class="flex gap-[10px] max-[500px]:gap-[8px] flex-wrap text-[12px] tracking-[0.05em]">
+            <button type="button" data-filter="all" class="filter-tab text-[#ECC246] border-[#ECC246] border rounded-full px-4 py-2 transition-all duration-300">BARCHASI</button>
+            <button type="button" data-filter="turar-joy" class="filter-tab text-[#99A0AC] border-transparent border rounded-full px-4 py-2 hover:text-white hover:bg-white/5 transition-all duration-300">TURAR-JOY</button>
+            <button type="button" data-filter="tijorat" class="filter-tab text-[#99A0AC] border-transparent border rounded-full px-4 py-2 hover:text-white hover:bg-white/5 transition-all duration-300">TIJORAT</button>
+            <button type="button" data-filter="yaqinda" class="filter-tab text-[#99A0AC] border-transparent border rounded-full px-4 py-2 hover:text-white hover:bg-white/5 transition-all duration-300">YAQINDA</button>
           </div>
 
           <div class="flex items-center gap-3 w-full sm:w-auto">
             <div class="relative flex-1 sm:flex-initial">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="absolute left-3 top-1/2 -translate-y-1/2 text-[#5C6470]"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="absolute left-3.5 top-1/2 -translate-y-1/2 text-white/30"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
               <input id="search-input" type="search" placeholder="Loyiha nomini qidirish..." aria-label="Loyiha qidirish"
-                class="w-full sm:w-[220px] bg-[#15171C] border border-[#2A2F3A] rounded-lg pl-9 pr-3 py-2.5 text-[13px] text-[#E2E2E8] placeholder-[#5C6470] focus:outline-none focus:border-[#ECC246] transition-colors" />
+                class="w-full sm:w-[220px] glass rounded-full pl-10 pr-4 py-2.5 text-[13px] text-white placeholder-white/30 focus:outline-none focus:border-[#ECC246]/50 transition-colors" />
             </div>
-            <select id="sort-select" aria-label="Saralash" class="bg-[#15171C] border border-[#2A2F3A] rounded-lg px-3 py-2.5 text-[13px] text-[#D1C5AF] focus:outline-none focus:border-[#ECC246] transition-colors cursor-pointer">
+            <select id="sort-select" aria-label="Saralash" class="glass rounded-full px-4 py-2.5 text-[13px] text-[#D1C5AF] focus:outline-none focus:border-[#ECC246]/50 transition-colors cursor-pointer">
               <option value="popular">Eng mashhur</option>
               <option value="return">Yuqori daromad</option>
               <option value="term">Qisqa muddat</option>
@@ -64,19 +61,19 @@
       </section>
 
       <!-- GRID -->
-      <section class="py-[56px] max-[500px]:py-[36px]">
-        <div class="max-w-[1450px] mx-auto px-6 max-[500px]:px-4">
-          <p id="results-count" class="text-[12px] text-[#5C6470] mb-[24px]">Yuklanmoqda...</p>
+      <section class="relative px-6 md:px-16 py-[56px] max-[500px]:py-[36px]">
+        <div class="max-w-[1240px] mx-auto">
+          <p id="results-count" class="text-[12px] text-white/30 mb-[24px]">Yuklanmoqda...</p>
 
           <div id="skeleton-grid" class="grid grid-cols-3 max-[900px]:grid-cols-2 max-[600px]:grid-cols-1 gap-[24px]">
-            <div class="skeleton h-[380px] rounded-[10px] bg-[#15171C] border border-[#2A2F3A]"></div>
-            <div class="skeleton h-[380px] rounded-[10px] bg-[#15171C] border border-[#2A2F3A]" style="animation-delay:.1s"></div>
-            <div class="skeleton h-[380px] rounded-[10px] bg-[#15171C] border border-[#2A2F3A]" style="animation-delay:.2s"></div>
+            <div class="skeleton h-[380px] card-radius glass"></div>
+            <div class="skeleton h-[380px] card-radius glass" style="animation-delay:.1s"></div>
+            <div class="skeleton h-[380px] card-radius glass" style="animation-delay:.2s"></div>
           </div>
 
           <div id="project-grid" data-stagger="0.08" class="hidden grid grid-cols-3 max-[900px]:grid-cols-2 max-[600px]:grid-cols-1 gap-[24px]"></div>
 
-          <p id="empty-state" class="hidden text-center text-[13px] text-[#5C6470] py-[60px]">
+          <p id="empty-state" class="hidden text-center text-[13px] text-white/30 py-[60px]">
             Bu qidiruv bo'yicha loyihalar topilmadi.
           </p>
         </div>

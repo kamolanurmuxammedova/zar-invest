@@ -201,9 +201,9 @@
   }
 
   const STATUS_BADGE = {
-    ochiq: { text: "OCHIQ", cls: "bg-[#ECC246] text-[#0D0E12]" },
-    yakunlangan: { text: "YAKUNLANDI", cls: "bg-[#1A2E22] text-[#26D07C] border border-[#26D07C]/30" },
-    yaqinda: { text: "TEZ ORADA", cls: "bg-[#1A1C20] text-[#ECC246] border border-[#ECC246]/30" },
+    ochiq: { text: "OCHIQ", cls: "bg-gradient-to-r from-[#F8DD94] to-[#ECC246] text-[#14110A] shadow-[0_4px_16px_-4px_rgba(236,194,70,.7)]" },
+    yakunlangan: { text: "YAKUNLANDI", cls: "glass-strong text-[#5EEAD4] border border-[#2DD4BF]/30" },
+    yaqinda: { text: "TEZ ORADA", cls: "glass-strong text-[#C4B5FD] border border-[#8B7CFF]/30" },
   };
 
   function renderProjectCard(p, opts) {
@@ -215,54 +215,54 @@
     const href = `${linkBase}loyiha.html?id=${p.id}`;
 
     const progressBlock = isWaiting
-      ? `<div class="flex items-center justify-between mb-[8px]">
-           <span class="text-[10px] tracking-[0.1em] text-[#5C6470]">NAVBATDA</span>
-           <span class="text-[12px] text-[#E2E2E8]">${money(p.investorsCount)} kishi</span>
+      ? `<div class="flex items-center justify-between mb-[10px]">
+           <span class="text-[10px] tracking-[0.1em] text-white/35">NAVBATDA</span>
+           <span class="text-[12px] text-white/70">${money(p.investorsCount)} kishi</span>
          </div>
-         <div class="w-full h-[4px] rounded-full bg-[#2A2F3A] overflow-hidden mb-[20px]"></div>`
-      : `<div class="flex items-center justify-between mb-[8px]">
-           <span class="text-[10px] tracking-[0.1em] text-[#5C6470]">YIG'ILGAN</span>
-           <span class="text-[12px] text-[#E2E2E8]"><span class="text-[#F4F1EA] font-medium">${compact(p.fundingRaised)}</span> / ${compact(p.fundingGoal)}</span>
+         <div class="w-full h-[5px] rounded-full bg-white/8 overflow-hidden mb-[22px]"></div>`
+      : `<div class="flex items-center justify-between mb-[10px]">
+           <span class="text-[10px] tracking-[0.1em] text-white/35">YIG'ILGAN</span>
+           <span class="text-[12px] text-white/70"><span class="text-white font-medium">${compact(p.fundingRaised)}</span> / ${compact(p.fundingGoal)}</span>
          </div>
-         <div class="w-full h-[4px] rounded-full bg-[#2A2F3A] overflow-hidden mb-[20px]">
-           <div class="h-full rounded-full bg-[#ECC246] transition-all duration-700" style="width:${pct}%"></div>
+         <div class="w-full h-[5px] rounded-full bg-white/8 overflow-hidden mb-[22px]">
+           <div class="h-full rounded-full bg-gradient-to-r from-[#F8DD94] to-[#ECC246] shadow-[0_0_10px_rgba(236,194,70,.6)] transition-all duration-700" style="width:${pct}%"></div>
          </div>`;
 
     const ctaLabel = isWaiting ? "XABARDOR BO'LISH" : p.status === "yakunlangan" ? "NATIJALARNI KO'RISH" : "BATAFSIL KO'RISH";
 
     return `
-      <article class="project-card group" data-category="${p.category}" data-animate-item>
-        <a href="${href}" class="block bg-[#15171C] border border-[#2A2F3A] rounded-[10px] overflow-hidden flex flex-col h-full transition-all duration-300 hover:border-[#ECC246]/50 hover:-translate-y-1 hover:shadow-2xl hover:shadow-black/40">
-          <div class="relative h-[240px] overflow-hidden">
-            <div class="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-500 group-hover:scale-105" style="background-image:url('${assetsBase}${p.coverImage}')"></div>
-            <div class="absolute inset-0 bg-gradient-to-t from-[#0D0E12]/80 via-transparent to-transparent"></div>
-            <span class="absolute top-[14px] left-[14px] ${badge.cls} text-[10px] font-semibold tracking-[0.05em] px-[10px] py-[5px] rounded-[4px]">${badge.text}</span>
-            <button type="button" data-wishlist-btn data-project-id="${p.id}" aria-label="Saqlash" class="absolute top-[12px] right-[12px] w-[32px] h-[32px] rounded-full bg-[#0D0E12]/70 backdrop-blur flex items-center justify-center text-[#D1C5AF] hover:text-[#ECC246] transition-colors">
+      <article class="project-card ring-card group" data-category="${p.category}" data-animate-item>
+        <a href="${href}" class="relative block glass card-radius overflow-hidden flex flex-col h-full transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_80px_-24px_rgba(236,194,70,.35)]">
+          <div class="relative h-[220px] overflow-hidden">
+            <div class="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-700 group-hover:scale-110" style="background-image:url('${assetsBase}${p.coverImage}')"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0D0E12] via-[#0D0E12]/15 to-transparent"></div>
+            <span class="absolute top-[14px] left-[14px] ${badge.cls} text-[10px] font-semibold tracking-[0.05em] px-[12px] py-[6px] rounded-full">${badge.text}</span>
+            <button type="button" data-wishlist-btn data-project-id="${p.id}" aria-label="Saqlash" class="absolute top-[12px] right-[12px] w-[34px] h-[34px] rounded-full glass-strong flex items-center justify-center text-white/70 hover:text-[#ECC246] transition-colors">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.6l-1-1a5.5 5.5 0 00-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 000-7.8z"/></svg>
             </button>
           </div>
-          <div class="p-[22px] flex flex-col flex-1">
-            <div class="flex items-center gap-[6px] text-[11px] text-[#5C6470] mb-[8px]">
+          <div class="p-[24px] flex flex-col flex-1">
+            <div class="flex items-center gap-[6px] text-[11px] text-white/35 mb-[10px]">
               <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4.5 8-11.8A8 8 0 004 10.2C4 17.5 12 22 12 22z"/><circle cx="12" cy="10" r="3"/></svg>
               ${p.location}
             </div>
-            <h3 class="text-[17px] font-semibold text-[#F4F1EA] mb-[10px]">${p.name}</h3>
-            <p class="text-[13px] text-[#99A0AC] leading-[1.6] mb-[20px]">${p.shortDescription}</p>
+            <h3 class="font-display text-[18px] font-medium text-white mb-[10px]">${p.name}</h3>
+            <p class="text-[13px] text-white/45 leading-[1.6] mb-[20px]">${p.shortDescription}</p>
 
             ${progressBlock}
 
-            <div class="flex justify-between border-t border-[#2A2F3A] pt-[16px] mb-[20px]">
+            <div class="flex justify-between border-t border-white/8 pt-[18px] mb-[20px]">
               <div>
-                <p class="text-[9px] tracking-[0.1em] text-[#5C6470] mb-[6px]">DAROMAD</p>
-                <p class="text-[13px] ${p.annualReturnPct ? "text-[#ECC246]" : "text-[#5C6470]"}">${p.annualReturnPct ? p.annualReturnPct + "% yillik" : "--% yillik"}</p>
+                <p class="text-[9px] tracking-[0.1em] text-white/30 mb-[6px]">DAROMAD</p>
+                <p class="text-[13px] font-medium ${p.annualReturnPct ? "text-[#ECC246]" : "text-white/30"}">${p.annualReturnPct ? p.annualReturnPct + "% yillik" : "--% yillik"}</p>
               </div>
               <div class="text-right">
-                <p class="text-[9px] tracking-[0.1em] text-[#5C6470] mb-[6px]">MUDDAT</p>
-                <p class="text-[13px] text-[#D1C5AF]">${p.termMonths} oy</p>
+                <p class="text-[9px] tracking-[0.1em] text-white/30 mb-[6px]">MUDDAT</p>
+                <p class="text-[13px] text-white/70">${p.termMonths} oy</p>
               </div>
             </div>
 
-            <span class="mt-auto border border-[#2A2F3A] text-[#D1C5AF] text-[12px] tracking-[0.05em] py-[12px] rounded-[6px] text-center group-hover:border-[#ECC246] group-hover:text-[#ECC246] transition-colors">
+            <span class="mt-auto btn-ghost text-[12px] tracking-[0.05em] py-[13px] rounded-full group-hover:border-[#ECC246]/50 group-hover:text-[#ECC246] group-hover:bg-[#ECC246]/8">
               ${ctaLabel}
             </span>
           </div>

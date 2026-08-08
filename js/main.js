@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (uploadText) uploadText.textContent = `Yuklandi: ${name}`;
     if (statusBadge) {
       statusBadge.textContent = "YUKLANDI";
-      statusBadge.className = "inline-block bg-[#1a2e22] text-[#26d07c] text-xs font-mono px-3 py-1 rounded border border-[#26d07c]/30 tracking-widest transition-colors";
+      statusBadge.className = "inline-block bg-[#1a2e22] text-[#26d07c] text-xs font-mono px-3 py-1 rounded-full border border-[#26d07c]/30 tracking-widest transition-colors";
     }
   }
 
@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (uploadText) uploadText.textContent = "Hujjatning old tomonini ramka ichiga joylashtiring";
       if (statusBadge) {
         statusBadge.textContent = "KUTILMOQDA...";
-        statusBadge.className = "inline-block bg-[#242118] text-[#ECC246] text-xs font-mono px-3 py-1 rounded border border-[#ECC246]/30 tracking-widest transition-colors";
+        statusBadge.className = "inline-block bg-[#242118] text-[#ECC246] text-xs font-mono px-3 py-1 rounded-full border border-[#ECC246]/30 tracking-widest transition-colors";
       }
     });
   }
@@ -261,14 +261,16 @@ document.addEventListener("DOMContentLoaded", () => {
       .map((order) => {
         const project = window.ZarProjects.getProjectById(order.projectId);
         return `
-        <div data-animate-item class="bg-[#12141A] border border-[#2A2F3A] rounded-xl p-5 flex items-center justify-between gap-4 flex-wrap">
+        <div data-animate-item class="glass hover-glow rounded-2xl p-5 flex items-center justify-between gap-4 flex-wrap transition-all duration-300">
           <div>
-            <p class="text-white font-medium">${project ? project.name : "Loyiha"}</p>
-            <p class="text-[12px] text-[#5C6470] mt-1">${order.id} • ${new Date(order.createdAt).toLocaleDateString("uz-UZ")}</p>
+            <p class="text-white font-medium font-display">${project ? project.name : "Loyiha"}</p>
+            <p class="text-[12px] text-white/30 mt-1">${order.id} • ${new Date(order.createdAt).toLocaleDateString("uz-UZ")}</p>
           </div>
           <div class="text-right">
-            <p class="text-[#ECC246] font-semibold">${window.ZarFormat.money(order.amount)} UZS</p>
-            <span class="inline-block mt-1 text-[10px] tracking-wider uppercase px-2 py-1 rounded bg-[#1A2E22] text-[#26D07C] border border-[#26D07C]/30">${order.status}</span>
+            <p class="text-gradient font-semibold">${window.ZarFormat.money(order.amount)} UZS</p>
+            <span class="inline-flex items-center gap-1.5 mt-1 text-[10px] tracking-wider uppercase px-2.5 py-1 rounded-full glass-strong text-[#5EEAD4] border-[#2DD4BF]/30">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#2DD4BF] shadow-[0_0_6px_#2DD4BF]"></span>${order.status}
+            </span>
           </div>
         </div>`;
       })

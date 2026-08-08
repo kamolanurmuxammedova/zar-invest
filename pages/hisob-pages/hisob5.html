@@ -9,55 +9,55 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-
-    <style>
-      body { font-family: "Inter", sans-serif; }
-      .font-cinzel { font-family: "Cinzel", serif; }
-      ::selection { background: #ECC246; color: #0D0E12; }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../../css/theme.css" />
   </head>
-  <body data-page="hisob" class="bg-[#0D0E12] text-[#D1C5AF] min-h-screen flex flex-col justify-between">
+  <body data-page="hisob" class="bg-[#0D0E12] text-[#D1C5AF] min-h-screen flex flex-col justify-between relative">
     <site-loader></site-loader>
 
-    <header class="h-[70px] px-4 sm:px-6 md:px-10 flex justify-between items-center border-b border-[#2A2F3A]">
-      <a href="../../index.html" class="font-cinzel text-base sm:text-lg font-bold tracking-[1.5px] text-[#ECC246]">ZAR INVEST</a>
+    <div class="aurora-field is-fixed opacity-50" aria-hidden="true">
+      <span class="aurora-blob gold w-[440px] h-[440px] -top-32 left-1/3"></span>
+      <span class="aurora-blob teal w-[340px] h-[340px] bottom-[-140px] -right-20"></span>
+    </div>
+
+    <header class="relative h-[74px] px-4 sm:px-6 md:px-10 flex justify-between items-center glass-strong border-b border-white/8">
+      <a href="../../index.html" class="font-display text-base sm:text-lg font-semibold tracking-[1px] text-gradient">ZAR INVEST</a>
       <div class="flex items-center gap-4 sm:gap-6">
         <div class="flex items-center gap-2 sm:gap-3 text-xs tracking-wider">
-          <span class="text-[#99A0AC] hidden sm:inline">QADAM</span>
+          <span class="text-white/40 hidden sm:inline">QADAM</span>
           <span class="text-white font-semibold">5 / 5</span>
-          <div class="w-16 sm:w-24 h-1 bg-[#2A2F3A] rounded-full overflow-hidden ml-1 sm:ml-2">
-            <div class="h-full bg-[#ECC246] transition-all duration-500" style="width:100%"></div>
+          <div class="w-16 sm:w-24 h-1.5 bg-white/10 rounded-full overflow-hidden ml-1 sm:ml-2">
+            <div class="h-full bg-gradient-to-r from-[#F8DD94] to-[#ECC246] shadow-[0_0_8px_rgba(236,194,70,.6)] transition-all duration-500" style="width:100%"></div>
           </div>
         </div>
-        <a href="../../index.html" class="text-xs text-[#99A0AC] hover:text-white flex items-center gap-1"><span>✕</span> <span class="hidden sm:inline">Chiqish</span></a>
+        <a href="../../index.html" class="text-xs text-white/40 hover:text-white flex items-center gap-1 transition-colors"><span>✕</span> <span class="hidden sm:inline">Chiqish</span></a>
       </div>
     </header>
 
-    <main class="flex-1 flex items-center justify-center py-[40px] px-[16px]">
-      <div data-animate="scale-in" class="w-full max-w-[540px] bg-[#12141A] border border-[#2A2F3A] rounded-2xl p-[24px] sm:p-[40px]">
+    <main class="relative flex-1 flex items-center justify-center py-[40px] px-[16px]">
+      <div data-animate="scale-in" class="w-full max-w-[540px] glass-strong grain card-radius glow-gold p-[24px] sm:p-[40px]">
         <div class="mb-[32px]">
-          <h1 class="font-cinzel text-[22px] sm:text-[26px] font-normal text-white mb-[8px]">Shaxsiy ma'lumotlar</h1>
-          <p class="text-[#99A0AC] text-[14px]">Hisobingizni to'liq faollashtirish uchun ma'lumotlaringizni kiriting.</p>
+          <h1 class="font-display text-[22px] sm:text-[26px] font-medium text-white mb-[8px] tracking-[-0.01em]">Shaxsiy ma'lumotlar</h1>
+          <p class="text-white/40 text-[14px]">Hisobingizni to'liq faollashtirish uchun ma'lumotlaringizni kiriting.</p>
         </div>
 
         <form id="step5-form" class="flex flex-col gap-[20px]">
           <div class="flex flex-col gap-[8px]">
             <label for="firstname" class="text-[13px] font-medium text-[#E2E2E8]">Ismingiz</label>
             <input type="text" id="firstname" required placeholder="Masalan: Ali"
-              class="w-full bg-[#0D0E12] border border-[#2A2F3A] rounded-lg px-[16px] py-[12px] text-[14px] text-[#E2E2E8] placeholder-[#5C6470] focus:outline-none focus:border-[#ECC246] transition-colors" />
+              class="w-full bg-white/[0.03] border border-white/10 rounded-xl px-[16px] py-[12px] text-[14px] text-[#E2E2E8] placeholder-white/25 focus:outline-none focus:border-[#ECC246]/50 transition-colors" />
           </div>
 
           <div class="flex flex-col gap-[8px]">
             <label for="lastname" class="text-[13px] font-medium text-[#E2E2E8]">Familiyangiz</label>
             <input type="text" id="lastname" required placeholder="Masalan: Valiyev"
-              class="w-full bg-[#0D0E12] border border-[#2A2F3A] rounded-lg px-[16px] py-[12px] text-[14px] text-[#E2E2E8] placeholder-[#5C6470] focus:outline-none focus:border-[#ECC246] transition-colors" />
+              class="w-full bg-white/[0.03] border border-white/10 rounded-xl px-[16px] py-[12px] text-[14px] text-[#E2E2E8] placeholder-white/25 focus:outline-none focus:border-[#ECC246]/50 transition-colors" />
           </div>
 
           <div class="flex flex-col gap-[8px]">
             <label for="age" class="text-[13px] font-medium text-[#E2E2E8]">Yoshingiz</label>
             <input type="number" id="age" min="18" max="100" required placeholder="Masalan: 25"
-              class="w-full bg-[#0D0E12] border border-[#2A2F3A] rounded-lg px-[16px] py-[12px] text-[14px] text-[#E2E2E8] placeholder-[#5C6470] focus:outline-none focus:border-[#ECC246] transition-colors" />
+              class="w-full bg-white/[0.03] border border-white/10 rounded-xl px-[16px] py-[12px] text-[14px] text-[#E2E2E8] placeholder-white/25 focus:outline-none focus:border-[#ECC246]/50 transition-colors" />
           </div>
 
           <div class="flex flex-col gap-[8px]">
@@ -65,24 +65,24 @@
             <div class="grid grid-cols-2 gap-[12px]">
               <label class="cursor-pointer">
                 <input type="radio" name="gender" value="male" class="peer hidden" required />
-                <div class="w-full py-[12px] px-[16px] text-center rounded-lg border border-[#2A2F3A] bg-[#0D0E12] text-[#99A0AC] peer-checked:border-[#ECC246] peer-checked:bg-[#ECC246]/10 peer-checked:text-[#ECC246] hover:border-[#5C6470] transition-all font-medium text-[14px]">Erkak</div>
+                <div class="w-full py-[12px] px-[16px] text-center rounded-xl border border-white/10 bg-white/[0.03] text-white/40 peer-checked:border-[#ECC246]/60 peer-checked:bg-[#ECC246]/10 peer-checked:text-[#ECC246] peer-checked:shadow-[0_0_16px_rgba(236,194,70,.3)] hover:border-white/25 transition-all font-medium text-[14px]">Erkak</div>
               </label>
               <label class="cursor-pointer">
                 <input type="radio" name="gender" value="female" class="peer hidden" required />
-                <div class="w-full py-[12px] px-[16px] text-center rounded-lg border border-[#2A2F3A] bg-[#0D0E12] text-[#99A0AC] peer-checked:border-[#ECC246] peer-checked:bg-[#ECC246]/10 peer-checked:text-[#ECC246] hover:border-[#5C6470] transition-all font-medium text-[14px]">Ayol</div>
+                <div class="w-full py-[12px] px-[16px] text-center rounded-xl border border-white/10 bg-white/[0.03] text-white/40 peer-checked:border-[#ECC246]/60 peer-checked:bg-[#ECC246]/10 peer-checked:text-[#ECC246] peer-checked:shadow-[0_0_16px_rgba(236,194,70,.3)] hover:border-white/25 transition-all font-medium text-[14px]">Ayol</div>
               </label>
             </div>
           </div>
 
           <div class="flex items-center gap-[12px] pt-[12px]">
-            <a href="./hisob4.html" class="w-1/3 py-[12px] text-center border border-[#2A2F3A] rounded-lg text-[#99A0AC] hover:text-[#E2E2E8] hover:border-[#5C6470] transition-colors font-medium text-[14px]">Orqaga</a>
-            <button type="submit" class="w-2/3 py-[12px] bg-[#ECC246] text-[#0D0E12] rounded-lg font-semibold hover:bg-[#d8ae3a] transition-colors text-[14px] cursor-pointer">Yakunlash va kirish</button>
+            <a href="./hisob4.html" class="w-1/3 py-[12px] text-center btn-ghost text-[14px]">Orqaga</a>
+            <button type="submit" class="btn-primary w-2/3 py-[12px] text-[14px] cursor-pointer">Yakunlash va kirish</button>
           </div>
         </form>
       </div>
     </main>
 
-    <footer class="py-[20px] text-center border-t border-[#2A2F3A] text-[11px] text-[#5C6470]">
+    <footer class="relative py-[20px] text-center glass-strong border-t border-white/8 text-[11px] text-white/30">
       © 2024–2026 ZAR INVEST. BARCHA HUQUQLAR HIMOYALANGAN.
     </footer>
 

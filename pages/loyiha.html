@@ -10,96 +10,95 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-
-    <style>
-      html { scroll-behavior: smooth; }
-      body { font-family: "Inter", sans-serif; }
-      .font-cinzel { font-family: "Cinzel", serif; }
-      ::selection { background: #ECC246; color: #0D0E12; }
-      @view-transition { navigation: auto; }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/theme.css" />
   </head>
   <body data-page="loyiha" class="bg-[#0D0E12] text-[#D1C5AF] antialiased">
     <site-loader></site-loader>
+
+    <div class="aurora-field is-fixed opacity-50" aria-hidden="true">
+      <span class="aurora-blob gold w-[460px] h-[460px] -top-32 -left-24"></span>
+      <span class="aurora-blob teal w-[360px] h-[360px] bottom-[-140px] right-[-80px]"></span>
+    </div>
+
     <site-header base="../"></site-header>
 
-    <main>
+    <main class="relative">
       <!-- NOT FOUND (shown only if ?id= doesn't resolve) -->
       <section id="not-found" class="hidden max-w-[600px] mx-auto text-center py-[120px] px-6">
         <p class="text-[#ECC246] text-[13px] tracking-[0.2em] mb-4">404</p>
-        <h1 class="font-cinzel text-[28px] text-white mb-4">Loyiha topilmadi</h1>
-        <p class="text-[#99A0AC] mb-8">Siz izlagan loyiha mavjud emas yoki olib tashlangan bo'lishi mumkin.</p>
-        <a href="./katalog.html" class="inline-flex items-center gap-2 bg-[#ECC246] text-[#0D0E12] font-semibold text-sm px-6 py-3 rounded-lg hover:bg-[#d8ae3a] transition-colors">Katalogga qaytish</a>
+        <h1 class="font-display font-medium text-[28px] text-white mb-4">Loyiha topilmadi</h1>
+        <p class="text-white/40 mb-8">Siz izlagan loyiha mavjud emas yoki olib tashlangan bo'lishi mumkin.</p>
+        <a href="./katalog.html" class="btn-primary inline-flex items-center gap-2 text-sm px-6 py-3">Katalogga qaytish</a>
       </section>
 
       <div id="detail-content" class="hidden">
         <!-- BREADCRUMB -->
-        <div class="max-w-[1250px] mx-auto px-6 max-[500px]:px-4 pt-8 text-[12px] text-[#5C6470] flex items-center gap-2 flex-wrap">
+        <div class="max-w-[1240px] mx-auto px-6 max-[500px]:px-4 pt-8 text-[12px] text-white/30 flex items-center gap-2 flex-wrap">
           <a href="./katalog.html" class="hover:text-[#ECC246] transition-colors">Loyihalar</a>
           <span>/</span>
-          <span id="breadcrumb-name" class="text-[#99A0AC]">...</span>
+          <span id="breadcrumb-name" class="text-white/50">...</span>
         </div>
 
         <!-- HERO -->
-        <section class="max-w-[1250px] mx-auto px-6 max-[500px]:px-4 pt-6 pb-10">
+        <section class="max-w-[1240px] mx-auto px-6 max-[500px]:px-4 pt-6 pb-10">
           <div class="grid lg:grid-cols-[1.5fr_1fr] gap-10">
             <div data-animate="fade-up">
-              <div class="relative h-[320px] max-[500px]:h-[220px] rounded-2xl overflow-hidden border border-[#2A2F3A] mb-6">
+              <div class="relative h-[320px] max-[500px]:h-[220px] card-radius overflow-hidden glass mb-6">
                 <div id="hero-cover" class="absolute inset-0 bg-cover bg-center" data-parallax="0.08"></div>
-                <div class="absolute inset-0 bg-gradient-to-t from-[#0D0E12]/85 via-transparent to-transparent"></div>
-                <span id="status-badge-detail" class="absolute top-4 left-4 text-[10px] font-semibold tracking-[0.05em] px-[10px] py-[5px] rounded-[4px]"></span>
-                <button type="button" id="wishlist-btn-detail" aria-label="Saqlash" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-[#0D0E12]/70 backdrop-blur flex items-center justify-center text-[#D1C5AF] hover:text-[#ECC246] transition-colors">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#0D0E12] via-[#0D0E12]/20 to-transparent"></div>
+                <span id="status-badge-detail" class="absolute top-4 left-4 text-[10px] font-semibold tracking-[0.05em] px-[12px] py-[6px] rounded-full"></span>
+                <button type="button" id="wishlist-btn-detail" aria-label="Saqlash" class="absolute top-4 right-4 w-10 h-10 rounded-full glass-strong flex items-center justify-center text-white/70 hover:text-[#ECC246] transition-colors">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.6l-1-1a5.5 5.5 0 00-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 000-7.8z"/></svg>
                 </button>
               </div>
 
-              <p id="category-label" class="text-[12px] tracking-[0.2em] text-[#ECC246] mb-3"></p>
-              <h1 id="project-name" class="font-cinzel text-[32px] max-[500px]:text-[24px] text-white mb-3"></h1>
-              <p id="project-location" class="flex items-center gap-2 text-[13px] text-[#99A0AC] mb-6"></p>
-              <p id="project-description" class="text-[15px] text-[#99A0AC] leading-[1.8] mb-8"></p>
+              <p id="category-label" class="text-[12px] tracking-[0.2em] text-[#ECC246] mb-3 uppercase"></p>
+              <h1 id="project-name" class="font-display font-medium text-[30px] max-[500px]:text-[24px] text-white mb-3 tracking-[-0.01em]"></h1>
+              <p id="project-location" class="flex items-center gap-2 text-[13px] text-white/40 mb-6"></p>
+              <p id="project-description" class="text-[15px] text-white/45 leading-[1.8] mb-8"></p>
 
               <ul id="highlights-list" class="grid sm:grid-cols-2 gap-3"></ul>
             </div>
 
             <!-- SIDEBAR CARD -->
-            <aside data-animate="scale-in" data-delay="0.1" class="bg-[#12141A] border border-[#2A2F3A] rounded-2xl p-6 h-fit lg:sticky lg:top-[100px]">
+            <aside data-animate="scale-in" data-delay="0.1" class="glass-panel card-radius p-6 h-fit lg:sticky lg:top-[110px] glow-gold">
               <div id="funding-block" class="mb-6">
                 <div class="flex items-center justify-between mb-2">
-                  <span class="text-[10px] tracking-[0.1em] text-[#5C6470]">YIG'ILGAN</span>
-                  <span class="text-[13px] text-[#E2E2E8]"><span id="funding-raised" class="text-white font-medium"></span> / <span id="funding-goal"></span></span>
+                  <span class="text-[10px] tracking-[0.1em] text-white/35">YIG'ILGAN</span>
+                  <span class="text-[13px] text-white/60"><span id="funding-raised" class="text-white font-medium"></span> / <span id="funding-goal"></span></span>
                 </div>
-                <div class="w-full h-[6px] rounded-full bg-[#2A2F3A] overflow-hidden mb-2">
-                  <div id="funding-pct-bar" class="h-full rounded-full bg-[#ECC246] transition-all duration-700" style="width:0%"></div>
+                <div class="w-full h-[6px] rounded-full bg-white/8 overflow-hidden mb-2">
+                  <div id="funding-pct-bar" class="h-full rounded-full bg-gradient-to-r from-[#F8DD94] to-[#ECC246] shadow-[0_0_10px_rgba(236,194,70,.6)] transition-all duration-700" style="width:0%"></div>
                 </div>
-                <p class="text-[11px] text-[#5C6470]"><span id="funding-investors"></span> investor qatnashmoqda</p>
+                <p class="text-[11px] text-white/30"><span id="funding-investors"></span> investor qatnashmoqda</p>
               </div>
 
-              <div class="grid grid-cols-2 gap-4 mb-6 border-t border-[#2A2F3A] pt-5">
+              <div class="grid grid-cols-2 gap-4 mb-6 border-t border-white/8 pt-5">
                 <div>
-                  <p class="text-[9px] tracking-[0.1em] text-[#5C6470] mb-1">DAROMAD</p>
+                  <p class="text-[9px] tracking-[0.1em] text-white/30 mb-1">DAROMAD</p>
                   <p id="fact-return" class="text-[15px] text-[#ECC246] font-semibold"></p>
                 </div>
                 <div>
-                  <p class="text-[9px] tracking-[0.1em] text-[#5C6470] mb-1">MUDDAT</p>
+                  <p class="text-[9px] tracking-[0.1em] text-white/30 mb-1">MUDDAT</p>
                   <p id="fact-term" class="text-[15px] text-white font-semibold"></p>
                 </div>
                 <div>
-                  <p class="text-[9px] tracking-[0.1em] text-[#5C6470] mb-1">XAVF DARAJASI</p>
+                  <p class="text-[9px] tracking-[0.1em] text-white/30 mb-1">XAVF DARAJASI</p>
                   <p id="fact-risk" class="text-[13px] text-[#D1C5AF]"></p>
                 </div>
                 <div>
-                  <p class="text-[9px] tracking-[0.1em] text-[#5C6470] mb-1">SHARTNOMA</p>
+                  <p class="text-[9px] tracking-[0.1em] text-white/30 mb-1">SHARTNOMA</p>
                   <p id="fact-contract" class="text-[13px] text-[#D1C5AF]"></p>
                 </div>
               </div>
 
-              <form id="invest-form" class="border-t border-[#2A2F3A] pt-5">
-                <label for="invest-amount" class="text-[11px] tracking-[0.08em] text-[#5C6470] block mb-2">SARMOYA MIQDORI (UZS) — min. <span id="fact-min"></span></label>
+              <form id="invest-form" class="border-t border-white/8 pt-5">
+                <label for="invest-amount" class="text-[11px] tracking-[0.08em] text-white/35 block mb-2">SARMOYA MIQDORI (UZS) — min. <span id="fact-min"></span></label>
                 <input type="number" id="invest-amount" step="500000" required
-                  class="w-full bg-[#0D0E12] border border-[#2A2F3A] rounded-lg px-4 py-3 text-[15px] text-white focus:outline-none focus:border-[#ECC246] transition-colors mb-4" />
-                <p id="invest-payment-note" class="text-[11px] text-[#5C6470] mb-4"></p>
-                <button type="submit" id="invest-submit-btn" class="w-full bg-[#ECC246] hover:bg-[#d8ae3a] text-[#0D0E12] font-semibold text-[13px] tracking-[0.03em] py-[14px] rounded-lg cursor-pointer transition-colors">
+                  class="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3 text-[15px] text-white focus:outline-none focus:border-[#ECC246]/50 transition-colors mb-4" />
+                <p id="invest-payment-note" class="text-[11px] text-white/35 mb-4"></p>
+                <button type="submit" id="invest-submit-btn" class="btn-primary w-full text-[13px] tracking-[0.03em] py-[14px] cursor-pointer">
                   SARMOYA KIRITISH
                 </button>
               </form>
@@ -108,9 +107,9 @@
         </section>
 
         <!-- RELATED -->
-        <section class="border-t border-[#2A2F3A] py-[64px]">
-          <div class="max-w-[1250px] mx-auto px-6 max-[500px]:px-4">
-            <h2 data-animate="fade-up" class="font-cinzel text-[24px] text-[#F4F1EA] mb-8">O'xshash loyihalar</h2>
+        <section class="border-t border-white/8 py-[64px]">
+          <div class="max-w-[1240px] mx-auto px-6 max-[500px]:px-4">
+            <h2 data-animate="fade-up" class="font-display font-medium text-[22px] text-white mb-8 tracking-[-0.01em]">O'xshash loyihalar</h2>
             <div id="related-grid" data-stagger="0.1" class="grid grid-cols-3 max-[900px]:grid-cols-2 max-[600px]:grid-cols-1 gap-[24px]"></div>
           </div>
         </section>
