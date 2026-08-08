@@ -9,87 +9,87 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-
-    <style>
-      body { font-family: "Inter", sans-serif; }
-      .font-cinzel { font-family: "Cinzel", serif; }
-      ::selection { background: #ECC246; color: #0D0E12; }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../../css/theme.css" />
   </head>
-  <body data-page="hisob" class="bg-[#0D0E12] text-white min-h-screen">
+  <body data-page="hisob" class="bg-[#0D0E12] text-white min-h-screen relative">
     <site-loader></site-loader>
 
-    <div class="flex flex-col justify-between min-h-screen">
-      <header class="h-[70px] px-4 sm:px-6 md:px-10 flex justify-between items-center border-b border-[#2A2F3A]">
-        <a href="../../index.html" class="font-cinzel text-base sm:text-lg font-bold tracking-[1.5px] text-[#ECC246]">ZAR INVEST</a>
+    <div class="aurora-field is-fixed opacity-50" aria-hidden="true">
+      <span class="aurora-blob gold w-[420px] h-[420px] -top-32 -left-24"></span>
+      <span class="aurora-blob violet w-[360px] h-[360px] bottom-[-140px] right-[-60px]"></span>
+    </div>
+
+    <div class="relative flex flex-col justify-between min-h-screen">
+      <header class="h-[74px] px-4 sm:px-6 md:px-10 flex justify-between items-center glass-strong border-b border-white/8">
+        <a href="../../index.html" class="font-display text-base sm:text-lg font-semibold tracking-[1px] text-gradient">ZAR INVEST</a>
         <div class="flex items-center gap-4 sm:gap-6">
           <div class="flex items-center gap-2 sm:gap-3 text-xs tracking-wider">
-            <span class="text-[#99A0AC] hidden sm:inline">QADAM</span>
+            <span class="text-white/40 hidden sm:inline">QADAM</span>
             <span class="text-white font-semibold">3 / 5</span>
-            <div class="w-16 sm:w-24 h-1 bg-[#2A2F3A] rounded-full overflow-hidden ml-1 sm:ml-2">
-              <div class="h-full bg-[#ECC246] transition-all duration-500" style="width:60%"></div>
+            <div class="w-16 sm:w-24 h-1.5 bg-white/10 rounded-full overflow-hidden ml-1 sm:ml-2">
+              <div class="h-full bg-gradient-to-r from-[#F8DD94] to-[#ECC246] shadow-[0_0_8px_rgba(236,194,70,.6)] transition-all duration-500" style="width:60%"></div>
             </div>
           </div>
-          <a href="../../index.html" class="text-xs text-[#99A0AC] hover:text-white flex items-center gap-1"><span>✕</span> <span class="hidden sm:inline">Chiqish</span></a>
+          <a href="../../index.html" class="text-xs text-white/40 hover:text-white flex items-center gap-1 transition-colors"><span>✕</span> <span class="hidden sm:inline">Chiqish</span></a>
         </div>
       </header>
 
       <main class="flex flex-col lg:flex-row flex-1">
-        <section class="flex-1 flex justify-center items-center p-5 sm:p-8 md:p-10 border-b lg:border-b-0 lg:border-r border-[#2A2F3A]">
+        <section class="flex-1 flex justify-center items-center p-5 sm:p-8 md:p-10 border-b lg:border-b-0 lg:border-r border-white/8">
           <div data-animate="fade-up" class="max-w-[460px] w-full py-2 sm:py-4">
-            <h1 class="font-cinzel text-2xl sm:text-3xl md:text-4xl font-normal leading-tight mb-6 sm:mb-8 text-white">Investor profili</h1>
+            <h1 class="font-display text-2xl sm:text-3xl md:text-4xl font-medium leading-tight mb-6 sm:mb-8 text-white tracking-[-0.01em]">Investor profili</h1>
 
             <form id="investor-profile-form" class="flex flex-col gap-6 sm:gap-7">
               <div>
-                <label class="block text-[10px] tracking-[1.5px] text-[#99A0AC] font-semibold uppercase mb-3">SARMOYA KIRITISHDAN ASOSIY MAQSAD</label>
+                <label class="block text-[10px] tracking-[1.5px] text-white/40 font-semibold uppercase mb-3">SARMOYA KIRITISHDAN ASOSIY MAQSAD</label>
                 <div class="flex flex-col gap-2.5">
-                  <label data-option-card class="border border-[#2A2F3A] bg-[#12141A] rounded-lg p-3.5 cursor-pointer block transition-colors">
+                  <label data-option-card class="border border-[#2A2F3A] bg-[#12141A] rounded-2xl p-3.5 cursor-pointer block transition-all duration-300 hover:border-white/20">
                     <input type="radio" name="goal" value="Kapitalni saqlash" class="hidden" />
                     <div class="font-semibold text-sm text-white">Kapitalni saqlash va himoya qilish</div>
-                    <div class="text-xs text-[#99A0AC] mt-0.5">Kam xatarli, barqaror daromad</div>
+                    <div class="text-xs text-white/40 mt-0.5">Kam xatarli, barqaror daromad</div>
                   </label>
-                  <label data-option-card class="border border-[#2A2F3A] bg-[#12141A] rounded-lg p-3.5 cursor-pointer block transition-colors">
+                  <label data-option-card class="border border-[#2A2F3A] bg-[#12141A] rounded-2xl p-3.5 cursor-pointer block transition-all duration-300 hover:border-white/20">
                     <input type="radio" name="goal" value="Portfelni kengaytirish" class="hidden" />
                     <div class="font-semibold text-sm text-white">Portfelni kengaytirish</div>
-                    <div class="text-xs text-[#99A0AC] mt-0.5">O'rtacha o'sish va diversifikatsiya</div>
+                    <div class="text-xs text-white/40 mt-0.5">O'rtacha o'sish va diversifikatsiya</div>
                   </label>
                 </div>
               </div>
 
               <div>
-                <label class="block text-[10px] tracking-[1.5px] text-[#99A0AC] font-semibold uppercase mb-3">SARMOYA MUDDATI</label>
+                <label class="block text-[10px] tracking-[1.5px] text-white/40 font-semibold uppercase mb-3">SARMOYA MUDDATI</label>
                 <div class="grid grid-cols-3 gap-2.5">
-                  <label data-option-card class="border border-[#2A2F3A] bg-[#12141A] rounded-lg p-3 cursor-pointer block text-center transition-colors">
+                  <label data-option-card class="border border-[#2A2F3A] bg-[#12141A] rounded-2xl p-3 cursor-pointer block text-center transition-all duration-300 hover:border-white/20">
                     <input type="radio" name="term" value="Qisqa muddat (6-12 oy)" class="hidden" />
                     <div class="font-semibold text-xs text-white">Qisqa</div>
-                    <div class="text-[10px] text-[#99A0AC] mt-0.5">6–12 oy</div>
+                    <div class="text-[10px] text-white/40 mt-0.5">6–12 oy</div>
                   </label>
-                  <label data-option-card class="border border-[#2A2F3A] bg-[#12141A] rounded-lg p-3 cursor-pointer block text-center transition-colors">
+                  <label data-option-card class="border border-[#2A2F3A] bg-[#12141A] rounded-2xl p-3 cursor-pointer block text-center transition-all duration-300 hover:border-white/20">
                     <input type="radio" name="term" value="O'rta muddat (12-24 oy)" class="hidden" />
                     <div class="font-semibold text-xs text-white">O'rta</div>
-                    <div class="text-[10px] text-[#99A0AC] mt-0.5">12–24 oy</div>
+                    <div class="text-[10px] text-white/40 mt-0.5">12–24 oy</div>
                   </label>
-                  <label data-option-card class="border border-[#2A2F3A] bg-[#12141A] rounded-lg p-3 cursor-pointer block text-center transition-colors">
+                  <label data-option-card class="border border-[#2A2F3A] bg-[#12141A] rounded-2xl p-3 cursor-pointer block text-center transition-all duration-300 hover:border-white/20">
                     <input type="radio" name="term" value="Uzoq muddat (24-36 oy)" class="hidden" />
                     <div class="font-semibold text-xs text-white">Uzoq</div>
-                    <div class="text-[10px] text-[#99A0AC] mt-0.5">24–36 oy</div>
+                    <div class="text-[10px] text-white/40 mt-0.5">24–36 oy</div>
                   </label>
                 </div>
               </div>
 
               <div>
-                <label class="block text-[10px] tracking-[1.5px] text-[#99A0AC] font-semibold uppercase mb-3">XAVFNI QABUL QILISH DARAJASI</label>
+                <label class="block text-[10px] tracking-[1.5px] text-white/40 font-semibold uppercase mb-3">XAVFNI QABUL QILISH DARAJASI</label>
                 <div class="grid grid-cols-3 gap-2.5">
-                  <label data-option-card class="border border-[#2A2F3A] bg-[#12141A] rounded-lg p-3 cursor-pointer block text-center transition-colors">
+                  <label data-option-card class="border border-[#2A2F3A] bg-[#12141A] rounded-2xl p-3 cursor-pointer block text-center transition-all duration-300 hover:border-white/20">
                     <input type="radio" name="risk" value="Past" class="hidden" />
                     <div class="font-semibold text-xs text-white">Past</div>
                   </label>
-                  <label data-option-card class="border border-[#2A2F3A] bg-[#12141A] rounded-lg p-3 cursor-pointer block text-center transition-colors">
+                  <label data-option-card class="border border-[#2A2F3A] bg-[#12141A] rounded-2xl p-3 cursor-pointer block text-center transition-all duration-300 hover:border-white/20">
                     <input type="radio" name="risk" value="O'rta" class="hidden" />
                     <div class="font-semibold text-xs text-white">O'rta</div>
                   </label>
-                  <label data-option-card class="border border-[#2A2F3A] bg-[#12141A] rounded-lg p-3 cursor-pointer block text-center transition-colors">
+                  <label data-option-card class="border border-[#2A2F3A] bg-[#12141A] rounded-2xl p-3 cursor-pointer block text-center transition-all duration-300 hover:border-white/20">
                     <input type="radio" name="risk" value="Yuqori" class="hidden" />
                     <div class="font-semibold text-xs text-white">Yuqori</div>
                   </label>
@@ -97,8 +97,8 @@
               </div>
 
               <div class="flex items-center justify-between pt-4 mt-2">
-                <a href="./hisob2.html" class="text-xs font-semibold tracking-wider text-[#99A0AC] hover:text-white uppercase transition-colors">ORQAGA</a>
-                <button type="submit" class="h-11 px-6 sm:px-8 bg-[#ECC246] hover:bg-[#d8ae3a] text-[#0D0E12] font-semibold text-xs rounded uppercase tracking-wider flex items-center gap-2 cursor-pointer transition-colors">
+                <a href="./hisob2.html" class="text-xs font-semibold tracking-wider text-white/40 hover:text-white uppercase transition-colors">ORQAGA</a>
+                <button type="submit" class="btn-primary h-11 px-6 sm:px-8 text-xs uppercase tracking-wider gap-2 cursor-pointer">
                   DAVOM ETISH <span>&rarr;</span>
                 </button>
               </div>
@@ -106,43 +106,43 @@
           </div>
         </section>
 
-        <section class="flex-1 flex justify-center items-center p-5 sm:p-8 md:p-10 bg-[#0B0C0F] relative lg:min-h-full">
+        <section class="flex-1 flex justify-center items-center p-5 sm:p-8 md:p-10 relative lg:min-h-full">
           <div data-animate="scale-in" data-delay="0.1" class="relative max-w-[420px] w-full pb-8 lg:pb-0">
-            <div class="w-full border border-[#2A2F3A] rounded-xl p-5 sm:p-6 bg-[#12141A]">
+            <div class="w-full glass card-radius p-5 sm:p-6">
               <div class="flex items-center gap-2.5 mb-6 text-[#ECC246]">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9 12l2 2 4-4"></path></svg>
                 <span class="text-[11px] tracking-[1.5px] font-semibold uppercase">Investor xulosangiz</span>
               </div>
 
               <div class="flex flex-col gap-4">
-                <div class="border-b border-[#2A2F3A] pb-3">
-                  <div class="text-[9px] text-[#99A0AC] uppercase tracking-wider mb-1">MAQSAD</div>
+                <div class="border-b border-white/8 pb-3">
+                  <div class="text-[9px] text-white/40 uppercase tracking-wider mb-1">MAQSAD</div>
                   <div id="preview-goal" class="text-sm text-white font-medium">—</div>
                 </div>
-                <div class="border-b border-[#2A2F3A] pb-3">
-                  <div class="text-[9px] text-[#99A0AC] uppercase tracking-wider mb-1">MUDDAT</div>
+                <div class="border-b border-white/8 pb-3">
+                  <div class="text-[9px] text-white/40 uppercase tracking-wider mb-1">MUDDAT</div>
                   <div id="preview-term" class="text-sm text-white font-medium">—</div>
                 </div>
                 <div>
-                  <div class="text-[9px] text-[#99A0AC] uppercase tracking-wider mb-1">XAVF DARAJASI</div>
+                  <div class="text-[9px] text-white/40 uppercase tracking-wider mb-1">XAVF DARAJASI</div>
                   <div id="preview-risk" class="text-sm text-white font-medium">—</div>
                 </div>
               </div>
             </div>
 
-            <div class="static lg:absolute lg:-bottom-6 lg:-right-2 w-full lg:max-w-[220px] bg-[#141720] border border-[#2A2F3A] rounded-lg p-3.5 shadow-2xl mt-4 lg:mt-0">
+            <div class="static lg:absolute lg:-bottom-6 lg:-right-2 w-full lg:max-w-[220px] glass-strong grain rounded-2xl p-3.5 glow-gold mt-4 lg:mt-0">
               <div class="flex items-center gap-1.5 text-[10px] font-semibold text-[#ECC246] tracking-wider uppercase mb-1">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path></svg>
                 DINAMIK PROFIL
               </div>
-              <p class="text-[11px] text-[#99A0AC] leading-snug">Sizning tanlovingiz katalogda tavsiya etiladigan loyihalarga ta'sir qiladi.</p>
+              <p class="text-[11px] text-white/40 leading-snug">Sizning tanlovingiz katalogda tavsiya etiladigan loyihalarga ta'sir qiladi.</p>
             </div>
           </div>
         </section>
       </main>
 
-      <footer class="min-h-[60px] px-4 sm:px-6 md:px-10 flex flex-col sm:flex-row justify-between items-center border-t border-[#2A2F3A] text-xs text-[#99A0AC] gap-3 sm:gap-0 py-4">
-        <div class="font-cinzel text-[#ECC246] font-semibold">ZAR INVEST</div>
+      <footer class="min-h-[60px] px-4 sm:px-6 md:px-10 flex flex-col sm:flex-row justify-between items-center glass-strong border-t border-white/8 text-xs text-white/40 gap-3 sm:gap-0 py-4">
+        <div class="font-display text-[#ECC246] font-semibold">ZAR INVEST</div>
         <div class="flex flex-wrap justify-center gap-4 sm:gap-6">
           <a href="#" class="hover:text-white transition-colors">Yordam markazi</a>
           <a href="#" class="hover:text-white transition-colors">Maxfiylik siyosati</a>

@@ -93,6 +93,20 @@
     onScroll();
   }
 
+  /* Cursor-following radial glow inside any [data-spotlight] section — a
+     cheap "premium" touch that degrades to a static glow on touch devices. */
+  function initSpotlight() {
+    const zones = document.querySelectorAll("[data-spotlight]");
+    if (!zones.length || window.matchMedia("(pointer: coarse)").matches) return;
+    zones.forEach((zone) => {
+      zone.addEventListener("pointermove", (e) => {
+        const rect = zone.getBoundingClientRect();
+        zone.style.setProperty("--x", `${e.clientX - rect.left}px`);
+        zone.style.setProperty("--y", `${e.clientY - rect.top}px`);
+      });
+    });
+  }
+
   function refresh() {
     initReveal(document);
     if (hasGSAP) ScrollTrigger.refresh();
@@ -129,6 +143,7 @@
   document.addEventListener("DOMContentLoaded", () => {
     initReveal(document);
     initHeaderShrink();
+    initSpotlight();
   });
   window.addEventListener("load", hideLoader);
   // Safety net: never let the loader block the page if "load" fires late/never.
